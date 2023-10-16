@@ -3,15 +3,8 @@
     enable = true;
     layout = "us";
 
-    windowManager.xmonad = {
-      enable = true;
-      enableContribAndExtras = true;
-    };
-
-    displayManager = {
-      defaultSession = "none+xmonad";
-      lightdm.enable = true;
-    };
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
     
     libinput.enable = true;
   };
@@ -30,12 +23,6 @@
     enable = true;
     support32Bit = true;
   };
-
-  programs.dconf.enable = true;
-  services.udisks2.enable = true;
-
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
 
   programs.clash-verge = {
     enable = true;

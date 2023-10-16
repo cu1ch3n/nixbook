@@ -3,7 +3,6 @@
 {
   imports =
     [
-      (modulesPath + "/installer/scan/not-detected.nix")
       inputs.hardware.nixosModules.common-cpu-amd
       inputs.hardware.nixosModules.common-cpu-amd-pstate
       inputs.hardware.nixosModules.common-gpu-amd
@@ -11,6 +10,10 @@
       inputs.hardware.nixosModules.common-pc-laptop-acpi_call
       inputs.hardware.nixosModules.common-pc-laptop-ssd
     ];
+  
+  # Use the systemd-boot EFI boot loader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   hardware.enableRedistributableFirmware = lib.mkDefault true;
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod" ];
