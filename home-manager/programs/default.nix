@@ -1,6 +1,5 @@
 {
   imports = [
-    ./xmonad
     ./git.nix
     ./zsh.nix
   ];
