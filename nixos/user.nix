@@ -1,4 +1,7 @@
 {
+  pkgs,
+  ...
+}: {
   users.users.chen = {
     initialPassword = "init_passwd";
     isNormalUser = true;
