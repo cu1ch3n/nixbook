@@ -8,6 +8,7 @@
 }: {
   imports = [
     ./programs
+    ./packages.nix
   ];
 
   nixpkgs = {
