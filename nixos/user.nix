@@ -8,4 +8,6 @@
     shell = pkgs.zsh;
     extraGroups = [ "wheel" "audio" "docker" "networkmanager" ];
   };
+
+  programs.zsh.enable = true;
 }
