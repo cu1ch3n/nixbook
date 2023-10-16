@@ -8,7 +8,7 @@
     home-manager.enable = true;
     tmux.enable = true;
     vim.enable = true;
-    exa = {
+    eza = {
       enable = true;
       enableAliases = true;
     };
