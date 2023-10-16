@@ -13,5 +13,6 @@
       enable = true;
       enableAliases = true;
     };
+    vscode.enable = true;
   };
 }
