@@ -10,6 +10,7 @@
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
+        "pop-shell@system76.com"
       ];
     };
     "org/gnome/desktop/interface".show-battery-percentage = true;
