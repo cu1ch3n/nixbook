@@ -2,9 +2,11 @@
   dconf.settings = {
     "org/gnome/shell" = {
       favorite-apps = [
-        "chromium.desktop"
+        "chromium-browser.desktop"
         "code.desktop"
-        "org.gnome.Terminal.desktop"
+        "org.gnome.Console.desktop"
+        "slack.desktop"
+        "clash-verge.desktop"
       ];
 
       enabled-extensions = [
