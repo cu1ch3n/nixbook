@@ -18,9 +18,16 @@
         "Vitals@CoreCoding.com"
       ];
 
+      "extensions/top-bar-organizer/left-box-order" = [
+        "activities"
+        "workspace-indicator"
+        "appMenu"
+      ];
+
+      "extensions/top-bar-organizer/center-box-order" = [];
+
       "extensions/top-bar-organizer/right-box-order" = [
         "vitalsMenu"
-        "workspace-indicator"
         "pop-shell"
         "appindicator-kstatusnotifieritem-tao application"
         "appindicator-kstatusnotifieritem-Fcitx"
@@ -30,6 +37,7 @@
         "a11y"
         "keyboard"
         "quickSettings"
+        "dateMenu"
       ];
     };
     "org/gnome/desktop/interface".show-battery-percentage = true;
