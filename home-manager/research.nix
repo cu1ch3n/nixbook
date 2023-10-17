@@ -1,5 +1,6 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; with coqPackages_8_15; [
+  home.packages = with pkgs;
+  with coqPackages_8_15; [
     coq
     metalib
     ott

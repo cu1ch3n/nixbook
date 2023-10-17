@@ -1,7 +1,11 @@
-{ stdenv, fetchgit, haskellPackages, lib
+{
+  stdenv,
+  fetchgit,
+  haskellPackages,
+  lib,
 }:
-
-with haskellPackages; mkDerivation {
+with haskellPackages;
+  mkDerivation {
     pname = "lngen";
     version = "b7de543";
     src = fetchgit {
@@ -11,8 +15,8 @@ with haskellPackages; mkDerivation {
     };
     isLibrary = true;
     isExecutable = true;
-    libraryHaskellDepends = [ base syb parsec containers mtl ];
-    executableHaskellDepends = [ base ];
+    libraryHaskellDepends = [base syb parsec containers mtl];
+    executableHaskellDepends = [base];
     homepage = https://github.com/plclub/lngen;
     description = "Tool for generating Locally Nameless definitions and proofs in Coq, working together with Ott";
     license = lib.licenses.mit;
