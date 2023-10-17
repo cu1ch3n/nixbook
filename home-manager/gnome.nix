@@ -12,7 +12,7 @@
         "appindicatorsupport@rgcjonas.gmail.com"
       ];
     };
-    "/org/gnome/desktop/interface/show-battery-percentage" = true;
+    "org/gnome/desktop/interface".show-battery-percentage = true;
   };
 
   home.packages = with pkgs.gnomeExtensions; [
