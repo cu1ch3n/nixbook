@@ -7,8 +7,9 @@
   ...
 }: {
   imports = [
-    ./gnome.nix
     ./programs
+    ./fonts.nix
+    ./gnome.nix
     ./packages.nix
   ];
 
