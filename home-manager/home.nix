@@ -10,6 +10,7 @@
     ./programs
     ./gnome.nix
     ./packages.nix
+    ./research.nix
   ];
 
   nixpkgs = {
