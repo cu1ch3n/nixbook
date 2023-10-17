@@ -2,9 +2,10 @@
   dconf.settings = {
     "org/gnome/shell" = {
       favorite-apps = [
+        "org.gnome.Nautilus.desktop"
+        "Alacritty.desktop"
         "chromium-browser.desktop"
         "code.desktop"
-        "Alacritty.desktop"
         "slack.desktop"
         "clash-verge.desktop"
       ];
