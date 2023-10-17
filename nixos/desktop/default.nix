@@ -16,16 +16,6 @@
     keyMap = "us";
   };
 
-  sound = {
-    enable = true;
-    mediaKeys.enable = true;
-  };
-
-  hardware.pulseaudio = {
-    enable = true;
-    support32Bit = true;
-  };
-
   programs.clash-verge = {
     enable = true;
     tunMode = true;

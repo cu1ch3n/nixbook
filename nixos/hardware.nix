@@ -59,6 +59,17 @@
   powerManagement.cpuFreqGovernor = "powersave";
   services.thermald.enable = true;
 
+  sound = {
+    enable = true;
+    mediaKeys.enable = true;
+  };
+
+  hardware.pulseaudio = {
+    enable = true;
+    support32Bit = true;
+  };
+
+  # Fingerprint
   services.fprintd.enable = true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
