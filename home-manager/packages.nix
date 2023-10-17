@@ -3,6 +3,8 @@
     _1password-gui
     qq
     screenfetch
+    slack
     vlc
+    zoom-us
   ];
 }
