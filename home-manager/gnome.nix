@@ -8,8 +8,8 @@
       ];
 
       enabled-extensions = [
-        "apps-menu@gnome-shell-extensions.gcampax.github.com"
         "appindicatorsupport@rgcjonas.gmail.com"
+        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
       ];
     };
     "org/gnome/desktop/interface".show-battery-percentage = true;
@@ -18,5 +18,6 @@
 
   home.packages = with pkgs.gnomeExtensions; [
     appindicator
+    pop-shell
   ];
 }
