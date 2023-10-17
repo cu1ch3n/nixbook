@@ -13,22 +13,25 @@
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
-        "pop-shell@system76.com"
+        # "pop-shell@system76.com"
         "top-bar-organizer@julian.gse.jsts.xyz"
-        "Vitals@CoreCoding.com"
+        # "Vitals@CoreCoding.com"
+        "Hide_Activities@shay.shayel.org"
       ];
 
       "extensions/top-bar-organizer/left-box-order" = [
         "activities"
-        "workspace-indicator"
         "appMenu"
       ];
 
-      "extensions/top-bar-organizer/center-box-order" = [];
+      "extensions/top-bar-organizer/center-box-order" = [
+        "dateMenu"
+      ];
 
       "extensions/top-bar-organizer/right-box-order" = [
-        "vitalsMenu"
-        "pop-shell"
+        # "vitalsMenu"
+        # "pop-shell"
+        "workspace-indicator"
         "appindicator-kstatusnotifieritem-tao application"
         "appindicator-kstatusnotifieritem-Fcitx"
         "screenRecording"
@@ -37,7 +40,6 @@
         "a11y"
         "keyboard"
         "quickSettings"
-        "dateMenu"
       ];
     };
     "org/gnome/desktop/interface".show-battery-percentage = true;
@@ -46,8 +48,9 @@
 
   home.packages = with pkgs.gnomeExtensions; [
     appindicator
-    pop-shell
+    hide-activities-button
+    # pop-shell
     top-bar-organizer
-    vitals
+    # vitals
   ];
 }
