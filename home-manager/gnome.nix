@@ -13,6 +13,7 @@
         "appindicatorsupport@rgcjonas.gmail.com"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "pop-shell@system76.com"
+        "Vitals@CoreCoding.com"
       ];
     };
     "org/gnome/desktop/interface".show-battery-percentage = true;
@@ -22,6 +23,7 @@
   home.packages = with pkgs.gnomeExtensions; [
     appindicator
     pop-shell
+    top-bar-organizer
     vitals
   ];
 }
