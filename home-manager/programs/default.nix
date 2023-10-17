@@ -1,5 +1,6 @@
 {
   imports = [
+    ./rime
     ./chromium.nix
     ./git.nix
     ./zsh.nix
