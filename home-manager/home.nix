@@ -44,6 +44,12 @@
     sessionPath = ["$HOME/bin"];
   };
 
+  home.sessionVariables = {
+    HTTP_PROXY = "http://127.0.0.1:7890";
+    HTTPS_PROXY = "http://127.0.0.1:7890";
+    ALL_PROXY = "socks5://127.0.0.1:7890";
+  };
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 

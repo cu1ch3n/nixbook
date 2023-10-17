@@ -6,6 +6,7 @@
     qq
     screenfetch
     slack
+    spotify
     tree
     vlc
     zoom-us
