@@ -13,6 +13,7 @@
       ];
     };
     "org/gnome/desktop/interface".show-battery-percentage = true;
+    "org/gnome/desktop/peripherals/touchpad".tap-to-click = true;
   };
 
   home.packages = with pkgs.gnomeExtensions; [
