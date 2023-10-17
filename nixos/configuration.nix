@@ -38,7 +38,7 @@
   networking.hostName = "nixbook";
   networking.networkmanager.enable = true;
 
-  environment.systemPackages = with pkgs; [ git htop wget ];
+  environment.systemPackages = with pkgs; [git htop wget];
 
   system.stateVersion = "23.11";
 }

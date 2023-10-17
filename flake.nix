@@ -19,7 +19,7 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
-    systems = [ "x86_64-linux" ];
+    systems = ["x86_64-linux"];
     forAllSystems = nixpkgs.lib.genAttrs systems;
     pkgsFor = forAllSystems (system: import nixpkgs {inherit system;});
   in {
@@ -36,7 +36,7 @@
     nixosConfigurations = {
       nixbook = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [ ./nixos/configuration.nix ];
+        modules = [./nixos/configuration.nix];
       };
     };
 
@@ -45,7 +45,7 @@
       "chen@nixbook" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};
-        modules = [ ./home-manager/home.nix ];
+        modules = [./home-manager/home.nix];
       };
     };
   };
