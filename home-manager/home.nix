@@ -8,7 +8,6 @@
 }: {
   imports = [
     ./programs
-    ./fonts.nix
     ./gnome.nix
     ./packages.nix
   ];

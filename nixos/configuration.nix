@@ -7,7 +7,7 @@
   ...
 }: {
   imports = [
-    ./desktop.nix
+    ./desktop
     ./hardware.nix
     ./locale.nix
     ./nix.nix
