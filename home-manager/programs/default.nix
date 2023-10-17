@@ -1,6 +1,7 @@
 {
   imports = [
     ./rime
+    ./alacritty.nix
     ./chromium.nix
     ./git.nix
     ./zsh.nix
