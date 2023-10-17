@@ -22,5 +22,6 @@
   home.packages = with pkgs.gnomeExtensions; [
     appindicator
     pop-shell
+    vitals
   ];
 }
