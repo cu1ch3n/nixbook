@@ -13,7 +13,22 @@
         "appindicatorsupport@rgcjonas.gmail.com"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "pop-shell@system76.com"
+        "top-bar-organizer@julian.gse.jsts.xyz"
         "Vitals@CoreCoding.com"
+      ];
+
+      "extensions/top-bar-organizer/right-box-order" = [
+        "vitalsMenu"
+        "workspace-indicator"
+        "pop-shell"
+        "appindicator-kstatusnotifieritem-tao application"
+        "appindicator-kstatusnotifieritem-Fcitx"
+        "screenRecording"
+        "screenSharing"
+        "dwellClick"
+        "a11y"
+        "keyboard"
+        "quickSettings"
       ];
     };
     "org/gnome/desktop/interface".show-battery-percentage = true;
