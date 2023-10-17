@@ -4,7 +4,7 @@
       favorite-apps = [
         "chromium-browser.desktop"
         "code.desktop"
-        "org.gnome.Console.desktop"
+        "Alacritty.desktop"
         "slack.desktop"
         "clash-verge.desktop"
       ];

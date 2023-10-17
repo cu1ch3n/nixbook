@@ -7,25 +7,25 @@
       };
       window = {
         padding = {
-          x = 24;
-          y = 24;
+          x = 12;
+          y = 12;
         };
         opacity = 0.90;
       };
       font = {
         normal = {
-          family = "Fira Code";
+          family = "Hack";
           style = "Regular";
         };
         bold = {
-          family = "Fira Code";
+          family = "Hack";
           style = "Bold";
         };
         italic = {
-          family = "Fira Code";
+          family = "Hack";
           style = "Italic";
         };
-        size = 24;
+        size = 12;
       };
       cursor.style = "Block";
       live_config_reload = true;
