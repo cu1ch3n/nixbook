@@ -5,6 +5,7 @@
     metalib
     ott
     lngen
+    texlive.combined.scheme-full
   ];
 
   home.sessionVariables = {
