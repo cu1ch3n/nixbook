@@ -11,6 +11,7 @@
     tree
     vlc
     wineWowPackages.waylandFull
+    yesplaymusic
     zoom-us
   ];
 }
