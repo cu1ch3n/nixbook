@@ -9,6 +9,7 @@
     spotify
     tree
     vlc
+    wineWowPackages.waylandFull
     zoom-us
   ];
 }
