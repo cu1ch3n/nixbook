@@ -57,6 +57,8 @@
 
   home.packages = with pkgs.gnomeExtensions; [
     appindicator
+    caffeine
+    gsconnect
     hide-activities-button
     logo-menu
     # pop-shell
