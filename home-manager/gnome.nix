@@ -12,15 +12,17 @@
 
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
-        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
+        "Hide_Activities@shay.shayel.org"
+        "logomenu@aryan_k"
         # "pop-shell@system76.com"
         "top-bar-organizer@julian.gse.jsts.xyz"
         # "Vitals@CoreCoding.com"
-        "Hide_Activities@shay.shayel.org"
+        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
       ];
 
       "extensions/top-bar-organizer/left-box-order" = [
         "activities"
+        "menuButton"
         "appMenu"
       ];
 
@@ -41,6 +43,13 @@
         "keyboard"
         "quickSettings"
       ];
+
+      "extensions/Logo-menu/menu-button-icon-image" = 45;
+      "extensions/Logo-menu/menu-button-icon-size" = 22;
+      "extensions/Logo-menu/hide-softwarecentre" = true;
+      "extensions/Logo-menu/menu-button-terminal" = "alacritty";
+      "extensions/Logo-menu/show-power-options" = true;
+      "extensions/Logo-menu/show-lockscreen" = true;
     };
     "org/gnome/desktop/interface".show-battery-percentage = true;
     "org/gnome/desktop/peripherals/touchpad".tap-to-click = true;
@@ -49,6 +58,7 @@
   home.packages = with pkgs.gnomeExtensions; [
     appindicator
     hide-activities-button
+    logo-menu
     # pop-shell
     top-bar-organizer
     # vitals
