@@ -7,7 +7,7 @@
     ott
   ];
   abellaPkgs = with pkgs; [
-    abella
+    # abella
     abella-modded
   ];
 in {
