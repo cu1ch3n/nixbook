@@ -1,6 +1,6 @@
 {
   stdenv,
-  fetchgit,
+  fetchFromGitHub,
   haskellPackages,
   lib,
 }:
@@ -8,8 +8,9 @@ with haskellPackages;
   mkDerivation {
     pname = "lngen";
     version = "b7de543";
-    src = fetchgit {
-      url = https://github.com/plclub/lngen;
+    src = fetchFromGitHub {
+      owner = "plclub";
+      repo = "lngen";
       rev = "b7de543bd2c4e57ffb4848558a3a97e25c562254";
       sha256 = "In8Yi2Gs7koZ3K4BKHH2PpBePCOxspXMqVAnfY3r+Sw=";
     };
