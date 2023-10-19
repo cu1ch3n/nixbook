@@ -12,6 +12,7 @@
     ./locale.nix
     ./nix.nix
     ./user.nix
+    ./virtualisation.nix
   ];
 
   nixpkgs = {
@@ -50,7 +51,6 @@
   '';
 
   environment.systemPackages = with pkgs; [git htop wget];
-  virtualisation.libvirtd.enable = true;
 
   system.stateVersion = "23.11";
 }
