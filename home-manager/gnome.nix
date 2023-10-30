@@ -17,6 +17,8 @@
         "caffeine@patapon.info"
         "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
         "gsconnect@andyholmes.github.io"
+        "blur-my-shell@aunetx"
+        "clipboard-history@alexsaveau.dev"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
@@ -52,6 +54,7 @@
         "workspace-indicator"
         "appindicator-kstatusnotifieritem-tao application"
         "appindicator-kstatusnotifieritem-Fcitx"
+        "Clipboard History Indicator"
         "screenRecording"
         "screenSharing"
         "dwellClick"
@@ -73,7 +76,9 @@
   with gnomeExtensions; [
     appindicator
     auto-move-windows
+    blur-my-shell
     caffeine
+    clipboard-history
     dconf2nix
     gsconnect
     hide-activities-button
