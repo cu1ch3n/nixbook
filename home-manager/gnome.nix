@@ -19,33 +19,7 @@
         # "Vitals@CoreCoding.com"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
       ];
-
-      "extensions/top-bar-organizer/left-box-order" = [
-        "activities"
-        "menuButton"
-        "appMenu"
-      ];
-
-      "extensions/top-bar-organizer/center-box-order" = [
-        "dateMenu"
-      ];
-
-      "extensions/top-bar-organizer/right-box-order" = [
-        # "vitalsMenu"
-        # "pop-shell"
-        "workspace-indicator"
-        "appindicator-kstatusnotifieritem-tao application"
-        "appindicator-kstatusnotifieritem-Fcitx"
-        "screenRecording"
-        "screenSharing"
-        "dwellClick"
-        "a11y"
-        "keyboard"
-        "quickSettings"
-      ];
     };
-    "org/gnome/desktop/interface".show-battery-percentage = true;
-    "org/gnome/desktop/peripherals/touchpad".tap-to-click = true;
 
     "org/gnome/shell/extensions/Logo-menu" = {
       hide-forcequit = false;
@@ -57,9 +31,39 @@
       show-lockscreen = true;
       show-power-options = true;
     };
+
+    "org/gnome/shell/extensions/caffeine" = {
+      enable-fullscreen = false;
+      indicator-position-max = 2;
+      show-indicator = "only-active";
+    };
+
+    "org/gnome/shell/extensions/top-bar-organizer" = {
+      center-box-order = ["dateMenu"];
+      left-box-order = ["activities" "menuButton" "appMenu"];
+      right-box-order = [
+        "workspace-indicator"
+        "appindicator-kstatusnotifieritem-tao application"
+        "appindicator-kstatusnotifieritem-Fcitx"
+        "screenRecording"
+        "screenSharing"
+        "dwellClick"
+        "a11y"
+        "keyboard"
+        "quickSettings"
+      ];
+    };
+
+    "org/gnome/desktop/peripherals/touchpad" = {
+      tap-to-click = true;
+      two-finger-scrolling-enabled = true;
+    };
+
+    "org/gnome/desktop/interface".show-battery-percentage = true;
   };
 
-  home.packages = with pkgs; with gnomeExtensions; [
+  home.packages = with pkgs;
+  with gnomeExtensions; [
     appindicator
     auto-move-windows
     caffeine
