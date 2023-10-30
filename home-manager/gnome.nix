@@ -26,6 +26,7 @@
         "chromium-browser.desktop"
         "code.desktop"
         "slack.desktop"
+        "yesplaymusic.desktop'"
         "clash-verge.desktop"
       ];
     };
