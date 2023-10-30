@@ -55,10 +55,11 @@
     "org/gnome/desktop/peripherals/touchpad".tap-to-click = true;
   };
 
-  home.packages = with pkgs.gnomeExtensions; [
+  home.packages = with pkgs; with gnomeExtensions; [
     appindicator
     auto-move-windows
     caffeine
+    dconf2nix
     gsconnect
     hide-activities-button
     logo-menu
