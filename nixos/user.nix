@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   users.users.chen = {
+    description = "Chen";
     initialPassword = "init_passwd";
     isNormalUser = true;
     shell = pkgs.zsh;
