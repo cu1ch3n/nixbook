@@ -1,6 +1,23 @@
 {pkgs, ...}: {
   dconf.settings = {
     "org/gnome/shell" = {
+      disabled-extensions = [
+        "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
+        "apps-menu@gnome-shell-extensions.gcampax.github.com"
+        "places-menu@gnome-shell-extensions.gcampax.github.com"
+        "drive-menu@gnome-shell-extensions.gcampax.github.com"
+        "window-list@gnome-shell-extensions.gcampax.github.com"
+      ];
+      enabled-extensions = [
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "Hide_Activities@shay.shayel.org"
+        "logomenu@aryan_k"
+        "top-bar-organizer@julian.gse.jsts.xyz"
+        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
+        "caffeine@patapon.info"
+        "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
+        "gsconnect@andyholmes.github.io"
+      ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
         "Alacritty.desktop"
@@ -8,16 +25,6 @@
         "code.desktop"
         "slack.desktop"
         "clash-verge.desktop"
-      ];
-
-      enabled-extensions = [
-        "appindicatorsupport@rgcjonas.gmail.com"
-        "Hide_Activities@shay.shayel.org"
-        "logomenu@aryan_k"
-        # "pop-shell@system76.com"
-        "top-bar-organizer@julian.gse.jsts.xyz"
-        # "Vitals@CoreCoding.com"
-        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
       ];
     };
 
@@ -71,8 +78,6 @@
     gsconnect
     hide-activities-button
     logo-menu
-    # pop-shell
     top-bar-organizer
-    # vitals
   ];
 }
