@@ -43,16 +43,20 @@
         "keyboard"
         "quickSettings"
       ];
-
-      "extensions/Logo-menu/menu-button-icon-image" = 45;
-      "extensions/Logo-menu/menu-button-icon-size" = 22;
-      "extensions/Logo-menu/hide-softwarecentre" = true;
-      "extensions/Logo-menu/menu-button-terminal" = "alacritty";
-      "extensions/Logo-menu/show-power-options" = true;
-      "extensions/Logo-menu/show-lockscreen" = true;
     };
     "org/gnome/desktop/interface".show-battery-percentage = true;
     "org/gnome/desktop/peripherals/touchpad".tap-to-click = true;
+
+    "org/gnome/shell/extensions/Logo-menu" = {
+      hide-forcequit = false;
+      hide-softwarecentre = true;
+      menu-button-icon-click-type = 3;
+      menu-button-icon-image = 45;
+      menu-button-icon-size = 22;
+      menu-button-terminal = "alacritty";
+      show-lockscreen = true;
+      show-power-options = true;
+    };
   };
 
   home.packages = with pkgs; with gnomeExtensions; [
