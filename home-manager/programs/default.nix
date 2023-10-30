@@ -4,6 +4,7 @@
     ./alacritty.nix
     ./chromium.nix
     ./git.nix
+    ./ssh.nix
     ./virt-manager.nix
     ./zsh.nix
   ];
