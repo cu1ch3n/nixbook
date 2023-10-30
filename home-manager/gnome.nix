@@ -52,6 +52,7 @@
       left-box-order = ["activities" "menuButton" "appMenu"];
       right-box-order = [
         "workspace-indicator"
+        "appindicator-kstatusnotifieritem-chrome_status_icon_1"
         "appindicator-kstatusnotifieritem-tao application"
         "appindicator-kstatusnotifieritem-Fcitx"
         "Clipboard History Indicator"
