@@ -57,6 +57,7 @@
 
   home.packages = with pkgs.gnomeExtensions; [
     appindicator
+    auto-move-windows
     caffeine
     gsconnect
     hide-activities-button
