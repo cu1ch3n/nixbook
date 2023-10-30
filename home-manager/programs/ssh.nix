@@ -6,7 +6,7 @@
         user = "git";
         hostname = "github.com";
         port = 22;
-        proxyCommand = "nc -x localhost:1089 %h %p";
+        proxyCommand = "nc -x localhost:7890 %h %p";
       };
     };
   };
