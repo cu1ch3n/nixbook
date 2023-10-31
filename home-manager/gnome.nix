@@ -82,7 +82,9 @@
     "org/gnome/shell/extensions/space-bar/behavior" = {
       indicator-style = "workspaces-bar";
       position = "right";
-      always-show-numbers = false;
+      always-show-numbers = true;
+      enable-activate-workspace-shortcuts = true;
+      enable-move-to-workspace-shortcuts = true;
     };
 
     "org/gnome/shell/extensions/top-bar-organizer" = {
