@@ -73,9 +73,9 @@
     "org/gnome/shell/extensions/just-perfection" = {
       accessibility-menu = true;
       activities-button = false;
-      # app-menu = false;
-      # app-menu-icon = true;
-      # app-menu-label = false;
+      app-menu = false;
+      app-menu-icon = true;
+      app-menu-label = false;
       dash-icon-size = 0;
       panel = true;
       panel-in-overview = true;
@@ -96,10 +96,9 @@
     };
 
     "org/gnome/shell/extensions/top-bar-organizer" = {
-      center-box-order = [];
-      left-box-order = ["activities" "menuButton" "appMenu"];
+      center-box-order = ["dateMenu"];
+      left-box-order = ["activities" "menuButton" "Space Bar" "appMenu"];
       right-box-order = [
-        "Space Bar"
         "appindicator-kstatusnotifieritem-chrome_status_icon_1"
         "appindicator-kstatusnotifieritem-tao application"
         "appindicator-kstatusnotifieritem-Fcitx"
@@ -110,7 +109,6 @@
         "a11y"
         "keyboard"
         "quickSettings"
-        "dateMenu"
       ];
     };
 
