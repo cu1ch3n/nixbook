@@ -74,7 +74,7 @@
       accessibility-menu = true;
       activities-button = false;
       app-menu = false;
-      app-menu-icon = true;
+      app-menu-icon = false;
       app-menu-label = false;
       dash-icon-size = 0;
       panel = true;
@@ -84,10 +84,11 @@
       show-apps-button = true;
       startup-status = 1;
       theme = false;
-      window-demands-attention-focus = false;
+      window-demands-attention-focus = true;
       window-picker-icon = true;
       workspace = true;
       workspaces-in-app-grid = true;
+      workspace-wrap-around = true;
     };
 
     "org/gnome/shell/extensions/space-bar/shortcuts" = {
@@ -117,7 +118,10 @@
       two-finger-scrolling-enabled = true;
     };
 
-    "org/gnome/desktop/interface".show-battery-percentage = true;
+    "org/gnome/desktop/interface" = {
+      enable-hot-corners = false;
+      show-battery-percentage = true;
+    };
 
     "org/gnome/shell/keybindings" = {
       switch-to-application-1 = [];
