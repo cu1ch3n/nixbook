@@ -12,6 +12,7 @@
       ];
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
+        "Hide_Activities@shay.shayel.org"
         "logomenu@aryan_k"
         "caffeine@patapon.info"
         "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
@@ -76,12 +77,15 @@
 
     "org/gnome/shell/extensions/space-bar/behavior" = {
       indicator-style = "workspaces-bar";
+      position = "right";
+      always-show-numbers = false;
     };
 
     "org/gnome/shell/extensions/top-bar-organizer" = {
       center-box-order = ["dateMenu"];
-      left-box-order = ["activities" "menuButton" "Space Bar" "appMenu"];
+      left-box-order = ["activities" "menuButton" "appMenu"];
       right-box-order = [
+        "Space Bar"
         "appindicator-kstatusnotifieritem-chrome_status_icon_1"
         "appindicator-kstatusnotifieritem-tao application"
         "appindicator-kstatusnotifieritem-Fcitx"
@@ -112,6 +116,7 @@
     caffeine
     dconf2nix
     gsconnect
+    hide-activities-button
     just-perfection
     logo-menu
     pano
