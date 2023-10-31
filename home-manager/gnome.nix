@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   dconf.settings = {
     "org/gnome/shell" = {
       disabled-extensions = [
@@ -105,9 +109,21 @@
     };
 
     "org/gnome/desktop/interface".show-battery-percentage = true;
+    "org/gnome/shell/keybindings" = {
+      switch-to-application-1 = [];
+      switch-to-application-2 = [];
+      switch-to-application-3 = [];
+      switch-to-application-4 = [];
+      switch-to-application-5 = [];
+      switch-to-application-6 = [];
+      switch-to-application-7 = [];
+      switch-to-application-8 = [];
+      switch-to-application-9 = [];
+    };
   };
 
   home.packages = with pkgs;
+  with gnome;
   with gnomeExtensions; [
     alphabetical-app-grid
     appindicator
@@ -122,5 +138,6 @@
     pano
     space-bar
     top-bar-organizer
+    dconf-editor
   ];
 }
