@@ -27,6 +27,7 @@
         "just-perfection-desktop@just-perfection"
         "AlphabeticalAppGrid@stuarthayhurst"
         "Vitals@CoreCoding.com"
+        "pop-shell@system76.com"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
@@ -90,6 +91,11 @@
       workspace = true;
       workspaces-in-app-grid = true;
       workspace-wrap-around = true;
+    };
+
+    "org/gnome/shell/extensions/pop-shell" = {
+      active-hint = true;
+      tile-by-default = true;
     };
 
     "org/gnome/shell/extensions/space-bar/shortcuts" = {
@@ -173,6 +179,7 @@
     just-perfection
     logo-menu
     pano
+    pop-shell
     space-bar
     top-bar-organizer
     vitals
