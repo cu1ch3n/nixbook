@@ -109,6 +109,7 @@
     };
 
     "org/gnome/desktop/interface".show-battery-percentage = true;
+
     "org/gnome/shell/keybindings" = {
       switch-to-application-1 = [];
       switch-to-application-2 = [];
@@ -119,6 +120,11 @@
       switch-to-application-7 = [];
       switch-to-application-8 = [];
       switch-to-application-9 = [];
+    };
+
+    "org/gnome/desktop/wm/preferences" = {
+      num-workspaces = 7;
+      workspace-names = ["🌐" "🗄️" "🐓" "💬" "🎵" "⚙️" "😅"];
     };
   };
 
