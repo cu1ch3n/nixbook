@@ -79,10 +79,17 @@
       send-notification-on-copy = false;
     };
 
+    "org/gnome/shell/extensions/space-bar/appearance" = {
+      workspace-margin = 0;
+    };
+
     "org/gnome/shell/extensions/space-bar/behavior" = {
       indicator-style = "workspaces-bar";
       position = "right";
       always-show-numbers = true;
+    };
+
+    "org/gnome/shell/extensions/space-bar/shortcuts" = {
       enable-activate-workspace-shortcuts = true;
       enable-move-to-workspace-shortcuts = true;
     };
