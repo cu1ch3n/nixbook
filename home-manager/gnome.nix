@@ -7,18 +7,21 @@
         "places-menu@gnome-shell-extensions.gcampax.github.com"
         "drive-menu@gnome-shell-extensions.gcampax.github.com"
         "window-list@gnome-shell-extensions.gcampax.github.com"
+        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
+        "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com"
       ];
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
-        "Hide_Activities@shay.shayel.org"
         "logomenu@aryan_k"
-        "top-bar-organizer@julian.gse.jsts.xyz"
-        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "caffeine@patapon.info"
         "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
         "gsconnect@andyholmes.github.io"
         "blur-my-shell@aunetx"
-        "clipboard-history@alexsaveau.dev"
+        "space-bar@luchrioh"
+        "top-bar-organizer@julian.gse.jsts.xyz"
+        "pano@elhan.io"
+        "just-perfection-desktop@just-perfection"
+        "AlphabeticalAppGrid@stuarthayhurst"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
@@ -29,6 +32,30 @@
         "yesplaymusic.desktop"
         "clash-verge.desktop"
       ];
+    };
+
+    "org/gnome/shell/extensions/caffeine" = {
+      enable-fullscreen = false;
+      indicator-position-max = 2;
+      show-indicator = "only-active";
+    };
+
+    "org/gnome/shell/extensions/just-perfection" = {
+      accessibility-menu = true;
+      app-menu = true;
+      app-menu-icon = true;
+      dash-icon-size = 0;
+      panel = true;
+      panel-in-overview = true;
+      ripple-box = true;
+      search = true;
+      show-apps-button = true;
+      startup-status = 1;
+      theme = false;
+      window-demands-attention-focus = false;
+      window-picker-icon = true;
+      workspace = true;
+      workspaces-in-app-grid = true;
     };
 
     "org/gnome/shell/extensions/Logo-menu" = {
@@ -42,21 +69,23 @@
       show-power-options = true;
     };
 
-    "org/gnome/shell/extensions/caffeine" = {
-      enable-fullscreen = false;
-      indicator-position-max = 2;
-      show-indicator = "only-active";
+    "org/gnome/shell/extensions/pano" = {
+      play-audio-on-copy = false;
+      send-notification-on-copy = false;
+    };
+
+    "org/gnome/shell/extensions/space-bar/behavior" = {
+      indicator-style = "workspaces-bar";
     };
 
     "org/gnome/shell/extensions/top-bar-organizer" = {
       center-box-order = ["dateMenu"];
-      left-box-order = ["activities" "menuButton" "appMenu"];
+      left-box-order = ["activities" "menuButton" "Space Bar" "appMenu"];
       right-box-order = [
-        "workspace-indicator"
         "appindicator-kstatusnotifieritem-chrome_status_icon_1"
         "appindicator-kstatusnotifieritem-tao application"
         "appindicator-kstatusnotifieritem-Fcitx"
-        "Clipboard History Indicator"
+        "pano@elhan.io"
         "screenRecording"
         "screenSharing"
         "dwellClick"
@@ -76,15 +105,17 @@
 
   home.packages = with pkgs;
   with gnomeExtensions; [
+    alphabetical-app-grid
     appindicator
     auto-move-windows
     blur-my-shell
     caffeine
-    clipboard-history
     dconf2nix
     gsconnect
-    hide-activities-button
+    just-perfection
     logo-menu
+    pano
+    space-bar
     top-bar-organizer
   ];
 }
