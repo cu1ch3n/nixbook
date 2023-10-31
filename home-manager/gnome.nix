@@ -16,7 +16,6 @@
       ];
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
-        "Hide_Activities@shay.shayel.org"
         "logomenu@aryan_k"
         "caffeine@patapon.info"
         "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
@@ -45,24 +44,6 @@
       show-indicator = "only-active";
     };
 
-    "org/gnome/shell/extensions/just-perfection" = {
-      accessibility-menu = true;
-      app-menu = true;
-      app-menu-icon = true;
-      dash-icon-size = 0;
-      panel = true;
-      panel-in-overview = true;
-      ripple-box = true;
-      search = true;
-      show-apps-button = true;
-      startup-status = 1;
-      theme = false;
-      window-demands-attention-focus = false;
-      window-picker-icon = true;
-      workspace = true;
-      workspaces-in-app-grid = true;
-    };
-
     "org/gnome/shell/extensions/Logo-menu" = {
       hide-forcequit = false;
       hide-softwarecentre = true;
@@ -89,13 +70,33 @@
       always-show-numbers = true;
     };
 
+    "org/gnome/shell/extensions/just-perfection" = {
+      accessibility-menu = true;
+      activities-button = false;
+      # app-menu = false;
+      # app-menu-icon = true;
+      # app-menu-label = false;
+      dash-icon-size = 0;
+      panel = true;
+      panel-in-overview = true;
+      ripple-box = true;
+      search = true;
+      show-apps-button = true;
+      startup-status = 1;
+      theme = false;
+      window-demands-attention-focus = false;
+      window-picker-icon = true;
+      workspace = true;
+      workspaces-in-app-grid = true;
+    };
+
     "org/gnome/shell/extensions/space-bar/shortcuts" = {
       enable-activate-workspace-shortcuts = true;
       enable-move-to-workspace-shortcuts = true;
     };
 
     "org/gnome/shell/extensions/top-bar-organizer" = {
-      center-box-order = ["dateMenu"];
+      center-box-order = [];
       left-box-order = ["activities" "menuButton" "appMenu"];
       right-box-order = [
         "Space Bar"
@@ -109,6 +110,7 @@
         "a11y"
         "keyboard"
         "quickSettings"
+        "dateMenu"
       ];
     };
 
@@ -147,7 +149,6 @@
     caffeine
     dconf2nix
     gsconnect
-    hide-activities-button
     just-perfection
     logo-menu
     pano
