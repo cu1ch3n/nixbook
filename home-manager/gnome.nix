@@ -26,6 +26,7 @@
         "pano@elhan.io"
         "just-perfection-desktop@just-perfection"
         "AlphabeticalAppGrid@stuarthayhurst"
+        "Vitals@CoreCoding.com"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
@@ -100,6 +101,7 @@
       center-box-order = ["dateMenu"];
       left-box-order = ["activities" "menuButton" "Space Bar" "appMenu"];
       right-box-order = [
+        "vitalsMenu"
         "appindicator-kstatusnotifieritem-chrome_status_icon_1"
         "appindicator-kstatusnotifieritem-tao application"
         "appindicator-kstatusnotifieritem-Fcitx"
@@ -111,6 +113,22 @@
         "keyboard"
         "quickSettings"
       ];
+    };
+
+    "org/gnome/shell/extensions/vitals" = {
+      fixed-widths = true;
+      hide-icons = false;
+      hide-zeros = false;
+      hot-sensors = [
+        "__network-tx_max__"
+        "__network-rx_max__"
+        "_processor_usage_"
+        "__temperature_avg__"
+        "_memory_free_"
+        "_system_uptime_"
+      ];
+      memory-measurement = 1;
+      show-battery = false;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
@@ -150,12 +168,13 @@
     blur-my-shell
     caffeine
     dconf2nix
+    dconf-editor
     gsconnect
     just-perfection
     logo-menu
     pano
     space-bar
     top-bar-organizer
-    dconf-editor
+    vitals
   ];
 }
