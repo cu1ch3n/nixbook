@@ -19,6 +19,15 @@
           "Source Han Serif SC"
         ];
       };
+      hinting = {
+        enable = true;
+        style = "full";
+        autohint = true;
+      };
+      subpixel = {
+        rgba = "rgb";
+        lcdfilter = "default";
+      };
     };
     fontDir.enable = true;
     enableGhostscriptFonts = true;
