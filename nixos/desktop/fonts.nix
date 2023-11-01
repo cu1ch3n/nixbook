@@ -1,4 +1,6 @@
 {pkgs, ...}: {
+  hardware.video.hidpi.enable = false;
+
   fonts = {
     enableDefaultPackages = true;
     fontconfig = {
@@ -6,12 +8,16 @@
       defaultFonts = {
         emoji = ["Noto Color Emoji"];
         monospace = [
+          "Hack"
           "Source Han Mono SC"
         ];
         sansSerif = [
+          "Inter"
+          "Liberation Sans"
           "Source Han Sans SC"
         ];
         serif = [
+          "Liberation Serif"
           "Source Han Serif SC"
         ];
       };
