@@ -9,7 +9,6 @@
   abellaPkgs = with pkgs; [
     # abella
     abella-modded
-    sublime4
   ];
 in {
   home.packages = with pkgs;
