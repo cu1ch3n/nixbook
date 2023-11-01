@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     _1password-gui
     gnumake
-    # obsidian
+    obsidian
     okular
     qq
     screenfetch
