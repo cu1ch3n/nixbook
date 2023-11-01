@@ -99,6 +99,7 @@
     "org/gnome/shell/extensions/pop-shell" = {
       active-hint = true;
       tile-by-default = true;
+      hint-color-rgba = "rgba(38, 194, 129, 1)";
     };
 
     "org/gnome/shell/extensions/space-bar/shortcuts" = {
