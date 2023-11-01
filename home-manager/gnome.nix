@@ -149,7 +149,6 @@
         "_processor_usage_"
         "__temperature_avg__"
         "_memory_free_"
-        "_system_uptime_"
       ];
       memory-measurement = 1;
       show-battery = false;

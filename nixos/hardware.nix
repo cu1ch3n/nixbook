@@ -28,7 +28,10 @@
 
   # disable Scatter/Gather APU recently enabled by default,
   # which results in white screen after display reconfiguration
-  boot.kernelParams = ["amdgpu.sg_display=0"];
+  boot.kernelParams = [
+    "amdgpu.sg_display=0"
+    "amd_pstate=active"
+  ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-label/nixos";

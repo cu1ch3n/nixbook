@@ -1,6 +1,4 @@
 {pkgs, ...}: {
-  hardware.video.hidpi.enable = false;
-
   fonts = {
     enableDefaultPackages = true;
     fontconfig = {

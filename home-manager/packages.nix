@@ -3,6 +3,7 @@
     _1password-gui
     discord
     gnumake
+    linuxKernel.packages.linux_latest_libre.cpupower
     obsidian
     okular
     qq
