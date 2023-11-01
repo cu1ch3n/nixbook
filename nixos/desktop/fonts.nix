@@ -6,16 +6,12 @@
       defaultFonts = {
         emoji = ["Noto Color Emoji"];
         monospace = [
-          "Hack"
           "Source Han Mono SC"
         ];
         sansSerif = [
-          "Inter"
-          "Liberation Sans"
           "Source Han Sans SC"
         ];
         serif = [
-          "Liberation Serif"
           "Source Han Serif SC"
         ];
       };
@@ -23,10 +19,6 @@
         enable = true;
         style = "full";
         autohint = true;
-      };
-      subpixel = {
-        rgba = "rgb";
-        lcdfilter = "default";
       };
     };
     fontDir.enable = true;
