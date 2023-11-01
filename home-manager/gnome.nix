@@ -67,9 +67,12 @@
     };
 
     "org/gnome/shell/extensions/space-bar/behavior" = {
+      always-show-numbers = true;
       indicator-style = "workspaces-bar";
       position = "right";
-      always-show-numbers = true;
+      position-index = 2;
+      smart-workspace-names = false;
+      toggle-overview = false;
     };
 
     "org/gnome/shell/extensions/just-perfection" = {
