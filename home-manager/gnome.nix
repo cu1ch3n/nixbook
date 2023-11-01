@@ -69,7 +69,7 @@
     "org/gnome/shell/extensions/space-bar/behavior" = {
       always-show-numbers = true;
       indicator-style = "workspaces-bar";
-      position = "right";
+      position = "left";
       position-index = 2;
       smart-workspace-names = false;
       toggle-overview = false;
@@ -109,7 +109,7 @@
 
     "org/gnome/shell/extensions/top-bar-organizer" = {
       center-box-order = ["dateMenu"];
-      left-box-order = ["activities" "menuButton" "Space Bar" "appMenu"];
+      left-box-order = ["activities" "menuButton" "appMenu" "Space Bar"];
       right-box-order = [
         "vitalsMenu"
         "appindicator-kstatusnotifieritem-chrome_status_icon_1"
