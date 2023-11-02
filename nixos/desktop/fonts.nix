@@ -6,16 +6,18 @@
       defaultFonts = {
         emoji = ["Noto Color Emoji"];
         monospace = [
-          "Hack"
+          "Roboto Mono"
+          "WenQuanYi Micro Hei Mono"
           "Source Han Mono SC"
         ];
         sansSerif = [
-          "Inter"
-          "Liberation Sans"
+          "Roboto"
+          "WenQuanYi Micro Hei"
           "Source Han Sans SC"
         ];
         serif = [
-          "Liberation Serif"
+          "Roboto Serif"
+          "WenQuanYi Zen Hei Sharp"
           "Source Han Serif SC"
         ];
       };
@@ -33,6 +35,8 @@
       liberation_ttf
       noto-fonts-color-emoji
       roboto
+      roboto-mono
+      roboto-serif
       sarasa-gothic
       source-han-mono
       source-han-sans

@@ -160,7 +160,14 @@
     };
 
     "org/gnome/desktop/interface" = {
+      color-scheme = "default";
+      document-font-name = "Roboto 11";
+      enable-animations = true;
       enable-hot-corners = false;
+      font-antialiasing = "rgba";
+      font-hinting = "full";
+      font-name = "Roboto 11";
+      monospace-font-name = "Roboto Mono 10";
       show-battery-percentage = true;
     };
 
@@ -192,6 +199,7 @@
     caffeine
     dconf2nix
     dconf-editor
+    gnome-tweaks
     gsconnect
     just-perfection
     logo-menu
