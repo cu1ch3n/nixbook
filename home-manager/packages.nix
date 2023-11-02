@@ -2,7 +2,9 @@
   home.packages = with pkgs; [
     _1password-gui
     discord
+    gimp-with-plugins
     gnumake
+    jetbrains.pycharm-community
     obsidian
     okular
     qq
@@ -12,6 +14,7 @@
     tree
     vlc
     wineWowPackages.waylandFull
+    wpsoffice
     yesplaymusic
     zoom-us
   ];
