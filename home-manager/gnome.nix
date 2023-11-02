@@ -164,7 +164,7 @@
       document-font-name = "Roboto 11";
       enable-animations = true;
       enable-hot-corners = false;
-      font-antialiasing = "rgba";
+      font-antialiasing = "grayscale";
       font-hinting = "full";
       font-name = "Roboto 11";
       monospace-font-name = "Roboto Mono 10";
