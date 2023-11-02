@@ -6,18 +6,14 @@
       defaultFonts = {
         emoji = ["Noto Color Emoji"];
         monospace = [
-          "Iosevka"
-          "WenQuanYi Micro Hei Mono"
+          "JetBrains Mono"
           "Source Han Mono SC"
         ];
         sansSerif = [
-          "Fira Sans Condensed"
-          "WenQuanYi Micro Hei"
+          "Inter"
           "Source Han Sans SC"
         ];
         serif = [
-          "Roboto Serif"
-          "WenQuanYi Zen Hei Sharp"
           "Source Han Serif SC"
         ];
       };
@@ -36,6 +32,7 @@
       hack-font
       inter
       iosevka
+      jetbrains-mono
       liberation_ttf
       noto-fonts-color-emoji
       roboto

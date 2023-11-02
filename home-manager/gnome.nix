@@ -161,13 +161,13 @@
 
     "org/gnome/desktop/interface" = {
       color-scheme = "default";
-      document-font-name = "Fira Sans Condensed, Condensed 11";
+      document-font-name = "Inter 11";
       enable-animations = true;
       enable-hot-corners = false;
       font-antialiasing = "rgba";
       font-hinting = "full";
-      font-name = "Fira Sans Condensed, Condensed 11";
-      monospace-font-name = "Iosevka 10";
+      font-name = "Inter 11";
+      monospace-font-name = "JetBrains Mono 10";
       show-battery-percentage = true;
     };
 
@@ -186,7 +186,7 @@
     "org/gnome/desktop/wm/preferences" = {
       num-workspaces = 7;
       workspace-names = ["🌐" "🗄️" "🐓" "💬" "🎵" "⚙️" "😅"];
-      titlebar-font = "Fira Sans Condensed, Bold Condensed 11";
+      titlebar-font = "Inter 11";
     };
   };
 
