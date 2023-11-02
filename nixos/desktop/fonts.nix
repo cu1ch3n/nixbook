@@ -6,12 +6,12 @@
       defaultFonts = {
         emoji = ["Noto Color Emoji"];
         monospace = [
-          "Roboto Mono"
+          "Iosevka"
           "WenQuanYi Micro Hei Mono"
           "Source Han Mono SC"
         ];
         sansSerif = [
-          "Roboto"
+          "Fira Sans Condensed"
           "WenQuanYi Micro Hei"
           "Source Han Sans SC"
         ];
@@ -30,8 +30,12 @@
     fontDir.enable = true;
     enableGhostscriptFonts = true;
     packages = with pkgs; [
+      fira
+      fira-mono
+      fira-code
       hack-font
       inter
+      iosevka
       liberation_ttf
       noto-fonts-color-emoji
       roboto
