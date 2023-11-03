@@ -53,5 +53,17 @@
   environment.systemPackages = with pkgs; [git htop wget];
   services.ntp.enable = true;
 
+  programs.proxychains = {
+    enable = true;
+    proxies = {
+      clash = {
+        enable = true;
+        type = "socks5";
+        host = "127.0.0.1";
+        port  = 7890;
+      };
+    };
+  };
+
   system.stateVersion = "23.11";
 }
