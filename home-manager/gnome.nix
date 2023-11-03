@@ -13,6 +13,7 @@
         "window-list@gnome-shell-extensions.gcampax.github.com"
         "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com"
+        "Vitals@CoreCoding.com"
       ];
       enabled-extensions = [
         "appindicatorsupport@rgcjonas.gmail.com"
@@ -26,7 +27,7 @@
         "pano@elhan.io"
         "just-perfection-desktop@just-perfection"
         "AlphabeticalAppGrid@stuarthayhurst"
-        "Vitals@CoreCoding.com"
+        # "Vitals@CoreCoding.com"
         "pop-shell@system76.com"
       ];
       favorite-apps = [
@@ -124,7 +125,7 @@
       center-box-order = ["dateMenu"];
       left-box-order = ["activities" "menuButton" "appMenu" "Space Bar"];
       right-box-order = [
-        "vitalsMenu"
+        # "vitalsMenu"
         "appindicator-kstatusnotifieritem-chrome_status_icon_1"
         "appindicator-kstatusnotifieritem-tao application"
         "appindicator-kstatusnotifieritem-Fcitx"
