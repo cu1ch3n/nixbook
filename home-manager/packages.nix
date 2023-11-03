@@ -2,8 +2,10 @@
   home.packages = with pkgs; [
     _1password-gui
     discord
+    evolution
     gimp-with-plugins
     gnumake
+    inkscape
     jetbrains.pycharm-community
     obsidian
     okular
