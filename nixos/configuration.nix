@@ -51,6 +51,7 @@
   '';
 
   environment.systemPackages = with pkgs; [git htop wget];
+  services.ntpd.enable = true;
 
   system.stateVersion = "23.11";
 }
