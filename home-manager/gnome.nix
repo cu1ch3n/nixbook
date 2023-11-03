@@ -186,7 +186,7 @@
 
     "org/gnome/desktop/wm/preferences" = {
       num-workspaces = 7;
-      workspace-names = ["🌐" "🗄️" "🐓" "💬" "🎵" "⚙️" "😅"];
+      workspace-names = ["🌐" "🗄️" "🐓" "💬" "🎵" "❄️" "😅"];
       titlebar-font = "Inter 11";
     };
   };

@@ -5,6 +5,7 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     extraGroups = ["wheel" "audio" "docker" "networkmanager"];
+    packages = with pkgs; [protontricks];
   };
 
   programs.zsh.enable = true;
