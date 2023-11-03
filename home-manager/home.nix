@@ -8,9 +8,9 @@
 }: {
   imports = [
     ./programs
+    ./research
     ./gnome.nix
     ./packages.nix
-    ./research.nix
   ];
 
   nixpkgs = {
