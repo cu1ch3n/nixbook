@@ -7,8 +7,8 @@
   ...
 }: {
   imports = [
+    ./development
     ./programs
-    ./research
     ./gnome.nix
     ./packages.nix
   ];
