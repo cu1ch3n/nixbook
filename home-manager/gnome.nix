@@ -47,6 +47,7 @@
         "org.gnome.Nautilus.desktop:2"
         "qq.desktop:4"
         "discord.desktop:4"
+        "wine-wechat.desktop:4"
         "spotify.desktop:5"
         "yesplaymusic.desktop:5"
         "org.gnome.Extensions.desktop:6"
