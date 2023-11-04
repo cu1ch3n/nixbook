@@ -19,6 +19,6 @@
     wpsoffice
     yesplaymusic
     zoom-us
-    # nur.repos.xddxdd.wine-wechat
+    nur.repos.xddxdd.wine-wechat
   ];
 }
