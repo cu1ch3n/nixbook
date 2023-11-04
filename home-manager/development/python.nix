@@ -4,5 +4,6 @@
       with ps; [
         requests
       ]))
+    jetbrains.pycharm-community
   ];
 }
