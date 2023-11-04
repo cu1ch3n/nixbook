@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     _1password-gui
+    activitywatch
     discord
     evolution
     gimp-with-plugins
