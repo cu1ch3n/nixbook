@@ -7,6 +7,7 @@
     gimp-with-plugins
     gnumake
     inkscape
+    marvin
     obsidian
     okular
     qq
