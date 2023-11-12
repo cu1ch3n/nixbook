@@ -26,6 +26,7 @@
     fontDir.enable = true;
     enableGhostscriptFonts = true;
     packages = with pkgs; [
+      eb-garamond
       fira
       fira-mono
       fira-code
