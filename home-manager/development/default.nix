@@ -1,6 +1,6 @@
 {
   imports = [
-    ./abella.nix
+    ./abella
     ./coq.nix
     ./haskell.nix
     ./latex.nix
