@@ -7,12 +7,12 @@
 with haskellPackages;
   mkDerivation {
     pname = "lngen";
-    version = "b7de543";
+    version = "unstable-2023-10-17";
     src = fetchFromGitHub {
       owner = "plclub";
       repo = "lngen";
-      rev = "b7de543bd2c4e57ffb4848558a3a97e25c562254";
-      sha256 = "In8Yi2Gs7koZ3K4BKHH2PpBePCOxspXMqVAnfY3r+Sw=";
+      rev = "c7645001404e0e2fec2c56f128e30079b5b3fac6";
+      sha256 = "2vUYHtl9yAadwdTtsjTI0klP+nRSYGXVpaSwD9EBTTI=";
     };
     isLibrary = true;
     isExecutable = true;
