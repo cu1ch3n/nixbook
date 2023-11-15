@@ -8,6 +8,7 @@
     gnumake
     inkscape
     marvin
+    nixpkgs-fmt
     obsidian
     okular
     qq
