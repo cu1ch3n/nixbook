@@ -18,7 +18,8 @@ with haskellPackages;
     isExecutable = true;
     libraryHaskellDepends = [base syb parsec containers mtl];
     executableHaskellDepends = [base];
-    homepage = https://github.com/plclub/lngen;
+    homepage = "https://github.com/plclub/lngen";
     description = "Tool for generating Locally Nameless definitions and proofs in Coq, working together with Ott";
+    maintainers = [];
     license = lib.licenses.mit;
   }
