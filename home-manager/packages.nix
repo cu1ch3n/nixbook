@@ -3,7 +3,7 @@
     _1password-gui
     activitywatch
     discord
-    evolution
+    # evolution
     gimp-with-plugins
     gnumake
     inkscape
@@ -21,6 +21,6 @@
     wpsoffice
     yesplaymusic
     zoom-us
-    nur.repos.xddxdd.wine-wechat
+    # nur.repos.xddxdd.wine-wechat
   ];
 }
