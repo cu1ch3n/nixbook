@@ -4,11 +4,13 @@
     activitywatch
     discord
     # evolution
+    gh
     gimp-with-plugins
     gnumake
     inkscape
     marvin
     nixpkgs-fmt
+    nixpkgs-review
     obsidian
     okular
     qq
