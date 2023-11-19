@@ -16,9 +16,11 @@
     keyMap = "us";
   };
 
-  programs.clash-verge = {
-    enable = true;
-    tunMode = true;
-    autoStart = true;
-  };
+  # programs.clash-verge = {
+  #   enable = true;
+  #   tunMode = true;
+  #   autoStart = true;
+  # };
+
+  services.v2raya.enable = true;
 }

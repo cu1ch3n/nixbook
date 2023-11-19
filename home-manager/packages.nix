@@ -18,6 +18,7 @@
     slack
     spotify
     tree
+    v2raya
     vlc
     wineWowPackages.waylandFull
     wpsoffice
