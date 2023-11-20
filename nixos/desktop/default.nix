@@ -15,12 +15,4 @@
     font = "Lat2-Terminus16";
     keyMap = "us";
   };
-
-  # programs.clash-verge = {
-  #   enable = true;
-  #   tunMode = true;
-  #   autoStart = true;
-  # };
-
-  services.v2raya.enable = true;
 }

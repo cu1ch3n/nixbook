@@ -38,7 +38,10 @@
 
   networking.hostName = "nixbook";
   networking.networkmanager.enable = true;
-  networking.proxy.default = "http://127.0.0.1:20170";
+  # networking.proxy.default = "http://127.0.0.1:20170";
+  # networking.proxy.allProxy = "http://127.0.0.1:20170";
+  # networking.proxy.httpProxy = "http://127.0.0.1:20171";
+  # networking.proxy.httpsProxy = "http://127.0.0.1:20171";
   networking.proxy.noProxy = "127.0.0.1,localhost,.localdomain";
 
   systemd.services.wpa_supplicant.environment.OPENSSL_CONF = pkgs.writeText "openssl.cnf" ''
@@ -60,16 +63,10 @@
     enable = true;
     proxies = {
       clash = {
-        enable = true;
+        enable = false;
         type = "socks5";
         host = "127.0.0.1";
         port = 7890;
-      };
-      v2ray = {
-        enable = true;
-        type = "socks5";
-        host = "127.0.0.1";
-        port = 20170;
       };
     };
   };
