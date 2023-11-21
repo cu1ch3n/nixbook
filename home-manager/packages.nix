@@ -4,6 +4,7 @@
     activitywatch
     clash-verge
     discord
+    element-desktop
     # evolution
     gh
     gimp-with-plugins
