@@ -29,6 +29,7 @@
         "AlphabeticalAppGrid@stuarthayhurst"
         # "Vitals@CoreCoding.com"
         "pop-shell@system76.com"
+        "kimpanel@kde.org"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
@@ -58,6 +59,10 @@
       enable-fullscreen = false;
       indicator-position-max = 2;
       show-indicator = "only-active";
+    };
+
+    "org/gnome/shell/extensions/kimpanel" = {
+      font = "Source Han Sans SC 11";
     };
 
     "org/gnome/shell/extensions/Logo-menu" = {
@@ -129,6 +134,7 @@
         "appindicator-kstatusnotifieritem-chrome_status_icon_1"
         "appindicator-kstatusnotifieritem-tao application"
         "appindicator-kstatusnotifieritem-Fcitx"
+        "kimpanel"
         "pop-shell"
         "pano@elhan.io"
         "screenRecording"
@@ -204,6 +210,7 @@
     gnome-tweaks
     gsconnect
     just-perfection
+    kimpanel
     logo-menu
     pano
     pop-shell
