@@ -59,18 +59,6 @@
   environment.systemPackages = with pkgs; [git htop wget];
   services.ntp.enable = true;
 
-  programs.proxychains = {
-    enable = true;
-    proxies = {
-      clash = {
-        enable = false;
-        type = "socks5";
-        host = "127.0.0.1";
-        port = 7890;
-      };
-    };
-  };
-
   services.v2raya.enable = true;
 
   system.stateVersion = "23.11";

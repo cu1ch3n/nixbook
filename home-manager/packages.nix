@@ -2,7 +2,6 @@
   home.packages = with pkgs; [
     _1password-gui
     activitywatch
-    clash-verge
     discord
     element-desktop
     # evolution
