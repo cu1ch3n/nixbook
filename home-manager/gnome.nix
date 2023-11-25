@@ -69,11 +69,12 @@
       hide-forcequit = false;
       hide-softwarecentre = true;
       menu-button-icon-click-type = 3;
-      menu-button-icon-image = 45;
+      menu-button-icon-image = 18;
       menu-button-icon-size = 22;
       menu-button-terminal = "alacritty";
       show-lockscreen = true;
       show-power-options = true;
+      symbolic-icon = false;
     };
 
     "org/gnome/shell/extensions/pano" = {
@@ -128,7 +129,7 @@
 
     "org/gnome/shell/extensions/top-bar-organizer" = {
       center-box-order = ["dateMenu"];
-      left-box-order = ["activities" "menuButton" "appMenu" "Space Bar"];
+      left-box-order = ["activities" "LogoMenu" "menuButton" "appMenu" "Space Bar"];
       right-box-order = [
         # "vitalsMenu"
         "appindicator-kstatusnotifieritem-chrome_status_icon_1"
@@ -212,7 +213,7 @@
     just-perfection
     kimpanel
     logo-menu
-    pano
+    # pano
     pop-shell
     space-bar
     top-bar-organizer
