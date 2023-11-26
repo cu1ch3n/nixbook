@@ -1,10 +1,10 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   fonts = {
     enableDefaultPackages = true;
     fontconfig = {
       enable = true;
       defaultFonts = {
-        emoji = ["Noto Color Emoji"];
+        emoji = [ "Noto Color Emoji" ];
         monospace = [
           "JetBrains Mono"
           "Source Han Mono SC"

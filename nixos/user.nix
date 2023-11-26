@@ -1,10 +1,10 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   users.users.chen = {
     description = "Chen";
     initialPassword = "init_passwd";
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = ["wheel" "audio" "docker" "networkmanager"];
+    extraGroups = [ "wheel" "audio" "docker" "networkmanager" ];
     packages = with pkgs; [
       # protontricks
     ];

@@ -1,10 +1,9 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, outputs
+, lib
+, config
+, pkgs
+, ...
 }: {
   imports = [
     ./development
@@ -46,7 +45,7 @@
   home = {
     username = "chen";
     homeDirectory = "/home/chen";
-    sessionPath = ["$HOME/bin"];
+    sessionPath = [ "$HOME/bin" ];
   };
 
   home.sessionVariables = {

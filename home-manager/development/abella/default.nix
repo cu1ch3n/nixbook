@@ -1,10 +1,11 @@
+{ pkgs
+, lib
+, ...
+}:
+let
+  merge = attrs: builtins.foldl' (x: y: x // y) { } (builtins.attrValues attrs);
+in
 {
-  pkgs,
-  lib,
-  ...
-}: let
-  merge = attrs: builtins.foldl' (x: y: x // y) {} (builtins.attrValues attrs);
-in {
   # Abella
   xdg.configFile."sublime-text/Packages/Abella".source = pkgs.fetchFromGitHub {
     owner = "JimmyZJX";
@@ -33,8 +34,8 @@ in {
     font = {
       font_size = 14;
       font_face = "JetBrains Mono";
-      font_options = ["gray_antialias"];
-      theme_font_options = ["gray_antialias"];
+      font_options = [ "gray_antialias" ];
+      theme_font_options = [ "gray_antialias" ];
     };
     format = {
       default_line_ending = "unix";
@@ -46,14 +47,14 @@ in {
       auto_complete_trailing_symbols = true;
     };
     misc = {
-      ignored_packages = ["Vintage"];
+      ignored_packages = [ "Vintage" ];
       file_exclude_patterns = import ./patterns.nix;
     };
   });
   home.packages = with pkgs;
-  with nur.repos.chen; [
-    abella
-    abella-modded
-    sublime4
-  ];
+    with nur.repos.chen; [
+      abella
+      abella-modded
+      sublime4
+    ];
 }

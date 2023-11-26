@@ -1,7 +1,6 @@
-{
-  pkgs,
-  lib,
-  ...
+{ pkgs
+, lib
+, ...
 }: {
   dconf.settings = {
     "org/gnome/shell" = {
@@ -128,8 +127,8 @@
     };
 
     "org/gnome/shell/extensions/top-bar-organizer" = {
-      center-box-order = ["dateMenu"];
-      left-box-order = ["activities" "LogoMenu" "menuButton" "appMenu" "Space Bar"];
+      center-box-order = [ "dateMenu" ];
+      left-box-order = [ "activities" "LogoMenu" "menuButton" "appMenu" "Space Bar" ];
       right-box-order = [
         # "vitalsMenu"
         "appindicator-kstatusnotifieritem-chrome_status_icon_1"
@@ -180,43 +179,43 @@
     };
 
     "org/gnome/shell/keybindings" = {
-      switch-to-application-1 = [];
-      switch-to-application-2 = [];
-      switch-to-application-3 = [];
-      switch-to-application-4 = [];
-      switch-to-application-5 = [];
-      switch-to-application-6 = [];
-      switch-to-application-7 = [];
-      switch-to-application-8 = [];
-      switch-to-application-9 = [];
+      switch-to-application-1 = [ ];
+      switch-to-application-2 = [ ];
+      switch-to-application-3 = [ ];
+      switch-to-application-4 = [ ];
+      switch-to-application-5 = [ ];
+      switch-to-application-6 = [ ];
+      switch-to-application-7 = [ ];
+      switch-to-application-8 = [ ];
+      switch-to-application-9 = [ ];
     };
 
     "org/gnome/desktop/wm/preferences" = {
       num-workspaces = 7;
-      workspace-names = ["🌐" "🗄️" "🐓" "💬" "🎵" "❄️" "😅"];
+      workspace-names = [ "🌐" "🗄️" "🐓" "💬" "🎵" "❄️" "😅" ];
       titlebar-font = "Inter 11";
     };
   };
 
   home.packages = with pkgs;
-  with gnome;
-  with gnomeExtensions; [
-    alphabetical-app-grid
-    appindicator
-    auto-move-windows
-    blur-my-shell
-    caffeine
-    dconf2nix
-    dconf-editor
-    gnome-tweaks
-    gsconnect
-    just-perfection
-    kimpanel
-    logo-menu
-    # pano
-    pop-shell
-    space-bar
-    top-bar-organizer
-    vitals
-  ];
+    with gnome;
+    with gnomeExtensions; [
+      alphabetical-app-grid
+      appindicator
+      auto-move-windows
+      blur-my-shell
+      caffeine
+      dconf2nix
+      dconf-editor
+      gnome-tweaks
+      gsconnect
+      just-perfection
+      kimpanel
+      logo-menu
+      # pano
+      pop-shell
+      space-bar
+      top-bar-organizer
+      vitals
+    ];
 }

@@ -1,10 +1,9 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, outputs
+, lib
+, config
+, pkgs
+, ...
 }: {
   imports = [
     ./desktop
@@ -56,7 +55,7 @@
     CipherString = Default:@SECLEVEL=0
   '';
 
-  environment.systemPackages = with pkgs; [git htop wget];
+  environment.systemPackages = with pkgs; [ git htop wget ];
   services.ntp.enable = true;
 
   services.v2raya.enable = true;

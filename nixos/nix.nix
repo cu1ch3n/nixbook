@@ -1,14 +1,13 @@
-{
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, outputs
+, lib
+, config
+, pkgs
+, ...
 }: {
   nix = {
     settings = {
-      substituters = ["https://mirrors.ustc.edu.cn/nix-channels/store"];
+      substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
       experimental-features = "nix-command flakes";
       auto-optimise-store = true;
     };
@@ -18,7 +17,7 @@
       options = "--delete-older-than +3";
     };
 
-    registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
+    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
     nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
   };
 }

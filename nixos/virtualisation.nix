@@ -1,7 +1,6 @@
-{
-  config,
-  pkgs,
-  ...
+{ config
+, pkgs
+, ...
 }: {
   virtualisation.libvirtd = {
     enable = true;
@@ -12,7 +11,7 @@
     qemu = {
       package = pkgs.qemu_kvm;
       ovmf.enable = true;
-      ovmf.packages = [pkgs.OVMFFull.fd];
+      ovmf.packages = [ pkgs.OVMFFull.fd ];
       swtpm.enable = true;
       runAsRoot = false;
     };
