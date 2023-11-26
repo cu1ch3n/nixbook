@@ -50,8 +50,10 @@ in {
       file_exclude_patterns = import ./patterns.nix;
     };
   });
-  home.packages = with pkgs; [
+  home.packages = with pkgs;
+  with nur.repos.chen; [
     abella
+    abella-modded
     sublime4
   ];
 }
