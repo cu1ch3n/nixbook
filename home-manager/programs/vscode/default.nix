@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   programs.vscode = {
     enable = true;
+    mutableExtensionsDir = true;
     extensions = with pkgs.vscode-marketplace; [
       akamud.vscode-theme-onedark
       akamud.vscode-theme-onelight
