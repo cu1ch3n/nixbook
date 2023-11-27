@@ -7,7 +7,6 @@ let
   pname = "marvin";
   version = "1.63.0";
   name = "Marvin-${version}";
-  nameExecutable = pname;
   src = fetchurl {
     url = "https://amazingmarvin.s3.amazonaws.com/Marvin-${version}.AppImage";
     name = "Marvin-${version}.AppImage";
