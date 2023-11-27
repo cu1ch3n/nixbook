@@ -3,7 +3,7 @@
     deadnix
     nixpkgs-fmt
     nixpkgs-review
-    rnix-lsp
+    nil
     statix
     yarn
     yarn2nix
