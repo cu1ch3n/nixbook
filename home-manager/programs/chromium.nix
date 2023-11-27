@@ -5,6 +5,8 @@
     extensions = [
       { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
       { id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa"; } # 1Password
+      { id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; } # Dark Reader
+      { id = "anmbbeeiaollmpadookgoakpfjkbidaf"; } # Volume Booster
     ];
   };
 }
