@@ -35,13 +35,11 @@
     };
   };
 
-  networking.hostName = "nixbook";
-  networking.networkmanager.enable = true;
-  # networking.proxy.default = "http://127.0.0.1:20170";
-  # networking.proxy.allProxy = "http://127.0.0.1:20170";
-  # networking.proxy.httpProxy = "http://127.0.0.1:20171";
-  # networking.proxy.httpsProxy = "http://127.0.0.1:20171";
-  networking.proxy.noProxy = "127.0.0.1,localhost,.localdomain";
+  networking = {
+    hostName = "nixbook";
+    networkmanager.enable = true;
+    proxy.noProxy = "127.0.0.1,localhost,.localdomain";
+  };
 
   systemd.services.wpa_supplicant.environment.OPENSSL_CONF = pkgs.writeText "openssl.cnf" ''
     openssl_conf = openssl_init
