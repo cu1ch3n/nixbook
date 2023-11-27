@@ -11,6 +11,7 @@
 
     nur.url = "github:nix-community/NUR";
     hardware.url = "github:nixos/nixos-hardware";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs =

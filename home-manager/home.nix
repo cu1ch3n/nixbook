@@ -18,8 +18,9 @@
       outputs.overlays.additions
       outputs.overlays.modifications
       inputs.nur.overlay
+      inputs.nix-vscode-extensions.overlays.default
 
-      # You can also add overlays exported from other flakes:
+      # You can also add oinputs.nix-vscode-extensions-overlayverlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default
 
       # Or define it inline, for example:
