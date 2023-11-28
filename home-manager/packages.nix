@@ -5,6 +5,7 @@
     axel
     discord
     element-desktop
+    etcher
     # evolution
     gh
     gimp-with-plugins
