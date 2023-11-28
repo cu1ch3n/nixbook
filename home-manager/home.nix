@@ -6,7 +6,6 @@
   imports = [
     ./development
     ./programs
-    ./gnome.nix
     ./packages.nix
   ];
 
