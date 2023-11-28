@@ -52,7 +52,7 @@
     CipherString = Default:@SECLEVEL=0
   '';
 
-  environment.systemPackages = with pkgs; [ git htop wget ];
+  environment.systemPackages = with pkgs; [ git htop wget v2raya ];
   services.ntp.enable = true;
 
   services.v2raya.enable = true;
