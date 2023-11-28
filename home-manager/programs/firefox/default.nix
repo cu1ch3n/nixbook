@@ -29,9 +29,9 @@
         "ui.systemUsesDarkTheme" = true; # Dark mode
       };
 
-      search = {
-        default = "Google";
-      };
+      # search = {
+      #   default = "Google";
+      # };
     };
   };
 }
