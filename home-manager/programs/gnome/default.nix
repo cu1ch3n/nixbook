@@ -197,6 +197,7 @@
       color-shading-type = "solid";
       picture-options = "zoom";
       picture-uri = "file://" + ./nix-wallpaper-nineish-dark-gray.png;
+      picture-uri-dark = "file://" + ./nix-wallpaper-nineish-dark-gray.png;
     };
   };
 
