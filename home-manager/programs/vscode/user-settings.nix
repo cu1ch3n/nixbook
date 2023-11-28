@@ -23,5 +23,8 @@
     titleBarStyle = "custom";
     zoomLevel = 1;
   };
-  workbench.iconTheme = "vscode-icons";
+  workbench = {
+    colorTheme = "Atom One Dark";
+    iconTheme = "vscode-icons";
+  };
 }
