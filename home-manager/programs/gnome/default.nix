@@ -192,6 +192,12 @@
       workspace-names = [ "🌐" "🗄️" "🐓" "💬" "🎵" "❄️" "😅" ];
       titlebar-font = "Inter 11";
     };
+
+    "org/gnome/desktop/background" = {
+      color-shading-type = "solid";
+      picture-options = "zoom";
+      picture-uri = "file://" + ./nix-wallpaper-nineish.png;
+    };
   };
 
   home.packages = with pkgs;
