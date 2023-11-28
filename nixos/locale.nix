@@ -8,14 +8,7 @@
 
     inputMethod = {
       enabled = "fcitx5";
-      fcitx5.addons = with pkgs; [
-        (fcitx5-rime.override {
-          rimeDataPkgs = with nur.repos.linyinfeng.rimePackages;
-            withRimeDeps [
-              rime-ice
-            ];
-        })
-      ];
+      fcitx5.addons = with pkgs; [ fcitx5-rime ];
     };
   };
 }
