@@ -1,5 +1,6 @@
 {
   imports = [
+    ./firefox
     ./rime
     ./vscode
     ./alacritty.nix
