@@ -6,6 +6,13 @@
     profiles.default = {
       id = 0;
       isDefault = true;
+
+      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        onepassword-password-manager
+        translate-web-pages
+        ublock-origin
+      ];
+
       settings = {
         "browser.tabs.loadBookmarksInTabs" = true; # Opening bookmarks in new tabs
         "browser.tabs.firefox-view" = false;
