@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     _1password-gui
     activitywatch
+    axel
     discord
     element-desktop
     # evolution
