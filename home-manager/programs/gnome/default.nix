@@ -196,7 +196,7 @@
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file://" + ./nix-wallpaper-nineish.png;
+      picture-uri = "file://" + ./nix-wallpaper-nineish-dark-gray.png;
     };
   };
 
