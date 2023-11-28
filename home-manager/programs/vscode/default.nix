@@ -9,6 +9,7 @@
       eamodio.gitlens
       haskell.haskell
       justusadam.language-haskell
+      yellpika.latex-input
       jnoortheen.nix-ide
       richie5um2.vscode-sort-json
       vscode-icons-team.vscode-icons

@@ -13,6 +13,9 @@
     confirmSync = false;
   };
   haskell.manageHLS = "PATH";
+  latex-input = {
+    mappings = import ./latex-input.nix;
+  };
   nix = {
     enableLanguageServer = true;
     serverPath = "nixd";
