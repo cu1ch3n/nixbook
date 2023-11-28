@@ -14,8 +14,8 @@
       # Add overlays your own flake exports (from overlays and pkgs dir):
       outputs.overlays.additions
       outputs.overlays.modifications
-      inputs.nur.overlay
       inputs.nix-vscode-extensions.overlays.default
+      inputs.nur.overlay
 
       # You can also add oinputs.nix-vscode-extensions-overlayverlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default
@@ -47,9 +47,6 @@
   };
 
   home.sessionVariables = {
-    # HTTP_PROXY = "http://127.0.0.1:7890";
-    # HTTPS_PROXY = "http://127.0.0.1:7890";
-    # ALL_PROXY = "socks5://127.0.0.1:7890";
     XDG_DATA_DIRS = "$HOME/.nix-profile/share:$XDG_DATA_DIRS";
   };
 
