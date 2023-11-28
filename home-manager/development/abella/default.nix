@@ -1,6 +1,4 @@
-{ pkgs
-, ...
-}:
+{ pkgs, ... }:
 let
   merge = attrs: builtins.foldl' (x: y: x // y) { } (builtins.attrValues attrs);
 in

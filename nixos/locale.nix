@@ -1,6 +1,4 @@
-{ pkgs
-, ...
-}: {
+{ pkgs, ... }: {
   time.timeZone = "Asia/Hong_Kong";
 
   i18n = {

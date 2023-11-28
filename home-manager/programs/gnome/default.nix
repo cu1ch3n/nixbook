@@ -1,6 +1,4 @@
-{ pkgs
-, ...
-}: {
+{ pkgs, ... }: {
   dconf.settings = {
     "org/gnome/shell" = {
       disabled-extensions = [
