@@ -10,7 +10,6 @@
     ./locale.nix
     ./nix.nix
     ./user.nix
-    ./virtualisation.nix
   ];
 
   nixpkgs = {
