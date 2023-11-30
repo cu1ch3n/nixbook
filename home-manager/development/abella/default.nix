@@ -12,7 +12,8 @@ in
       hash = "sha256-SnwTCjdI9jPvZLhraRUmLzt6zSf5wxxqxLXIVTSQWts=";
     };
     "sublime-text/Packages/User/Abella.sublime-settings".text = builtins.toJSON {
-      "abella.exec" = "${pkgs.abella}/bin/abella";
+      # "abella.exec" = "${pkgs.abella}/bin/abella";
+      "abella.exec" = "${pkgs.abella-modded}/bin/abella-modded";
       "proof_view_mode" = "panel";
     };
     # Sublime Text
