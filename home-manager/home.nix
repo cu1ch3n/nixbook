@@ -47,10 +47,6 @@
     sessionPath = [ "$HOME/bin" ];
   };
 
-  home.sessionVariables = {
-    XDG_DATA_DIRS = "$HOME/.nix-profile/share:$XDG_DATA_DIRS";
-  };
-
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
