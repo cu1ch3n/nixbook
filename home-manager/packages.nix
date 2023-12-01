@@ -6,7 +6,7 @@
     discord
     element-desktop
     etcher
-    # evolution
+    evolution
     gh
     gimp-with-plugins
     gnumake
