@@ -7,6 +7,7 @@
   imports = [
     ./desktop
     ./hardware.nix
+    ./impermanence.nix
     ./locale.nix
     ./nix.nix
     ./user.nix
