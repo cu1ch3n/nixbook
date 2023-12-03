@@ -14,20 +14,9 @@
 
   nixpkgs = {
     overlays = [
-      # Add overlays your own flake exports (from overlays and pkgs dir):
       outputs.overlays.additions
       outputs.overlays.modifications
       inputs.nur.overlay
-
-      # You can also add overlays exported from other flakes:
-      # neovim-nightly-overlay.overlays.default
-
-      # Or define it inline, for example:
-      # (final: prev: {
-      #   hi = final.hello.overrideAttrs (oldAttrs: {
-      #     patches = [ ./change-hello-to-hi.patch ];
-      #   });
-      # })
     ];
     config = {
       allowUnfree = true;
@@ -37,7 +26,6 @@
   networking = {
     hostName = "nixbook";
     networkmanager.enable = true;
-    proxy.noProxy = "127.0.0.1,localhost,.localdomain";
   };
 
   systemd.services.wpa_supplicant.environment.OPENSSL_CONF = pkgs.writeText "openssl.cnf" ''
@@ -59,8 +47,8 @@
     v2raya
     inputs.home-manager.packages.${pkgs.system}.default
   ];
-  services.ntp.enable = true;
 
+  services.ntp.enable = true;
   services.v2raya.enable = true;
 
   system.stateVersion = "24.05";
