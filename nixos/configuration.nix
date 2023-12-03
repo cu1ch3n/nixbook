@@ -10,6 +10,7 @@
     ./locale.nix
     ./nix.nix
     ./user.nix
+    inputs.home-manager.nixosModules.home-manager
   ];
 
   nixpkgs = {
@@ -21,6 +22,11 @@
     config = {
       allowUnfree = true;
     };
+  };
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    users.chen = import ../home-manager/home.nix;
   };
 
   networking = {
@@ -45,7 +51,6 @@
     htop
     wget
     v2raya
-    inputs.home-manager.packages.${pkgs.system}.default
   ];
 
   services.ntp.enable = true;

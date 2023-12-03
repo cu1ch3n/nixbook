@@ -17,7 +17,6 @@
   outputs =
     { self
     , nixpkgs
-    , home-manager
     , ...
     } @ inputs:
     let
@@ -41,15 +40,6 @@
         nixbook = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ ./nixos/configuration.nix ];
-        };
-      };
-
-      # home-manager --flake .#chen@nixbook
-      homeConfigurations = {
-        "chen@nixbook" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home-manager/home.nix ];
         };
       };
     };
