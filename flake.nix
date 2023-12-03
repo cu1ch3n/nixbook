@@ -23,12 +23,10 @@
       inherit (self) outputs;
       systems = [ "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
-      pkgsFor = forAllSystems (system: import nixpkgs { inherit system; });
     in
     {
-      packages = forAllSystems (system: import ./pkgs { pkgs = pkgsFor.${system}; });
-      devShells = forAllSystems (system: import ./shell.nix { pkgs = pkgsFor.${system}; });
-      formatter = forAllSystems (system: pkgsFor.${system}.nixpkgs-fmt);
+      packages = forAllSystems (system: import ./pkgs { pkgs = nixpkgs.legacyPackages.${system}; });
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixpkgs-fmt);
 
       overlays = import ./overlays { inherit inputs; };
 
