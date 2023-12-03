@@ -1,7 +1,12 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let
+  initialHashedPassword = "$6$ai4g3AoqwV/Dq3Jt$nrSP41V/xZY5K5oEbr2s1JxJ3chXaXQX1LVDsn6QGlDAIiikb0/K9pi0jPgYJyu0dTuGjDQre8mY7SO9sSLXT1";
+in
+{
+  users.users.root = { inherit initialHashedPassword; };
   users.users.chen = {
+    inherit initialHashedPassword;
     description = "Chen";
-    initialHashedPassword = "$6$ai4g3AoqwV/Dq3Jt$nrSP41V/xZY5K5oEbr2s1JxJ3chXaXQX1LVDsn6QGlDAIiikb0/K9pi0jPgYJyu0dTuGjDQre8mY7SO9sSLXT1";
     isNormalUser = true;
     shell = pkgs.zsh;
     extraGroups = [ "wheel" "audio" "docker" "networkmanager" ];
