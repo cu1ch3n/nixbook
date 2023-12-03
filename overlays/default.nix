@@ -6,5 +6,22 @@
   # This one contains whatever you want to overlay
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
-  modifications = final: prev: { };
+  modifications = final: prev: {
+    librime-lua = (prev.librime.override {
+      plugins = [
+        (prev.fetchFromGitHub {
+          owner = "hchunhui";
+          repo = "librime-lua";
+          rev = "7c297e4d2e08fcdd3e9b2dcae2a42317b9a217ff";
+          sha256 = "sha256-GVfr2fzaQYyfNnjN20YcNfBVB144gZKVEunbX10Mgeg=";
+        })
+      ];
+    }).overrideAttrs (old: {
+      buildInputs = (old.buildInputs or [ ]) ++ [ prev.luajit ];
+    });
+
+    fcitx5-rime = prev.fcitx5-rime.overrideAttrs (old: {
+      buildInputs = [ prev.fcitx5 final.librime-lua ];
+    });
+  };
 }
