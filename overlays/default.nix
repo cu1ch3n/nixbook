@@ -20,7 +20,7 @@
       buildInputs = (old.buildInputs or [ ]) ++ [ prev.luajit ];
     });
 
-    fcitx5-rime = prev.fcitx5-rime.overrideAttrs (old: {
+    fcitx5-rime-lua = prev.fcitx5-rime.overrideAttrs (old: {
       buildInputs = [ prev.fcitx5 final.librime-lua ];
     });
   };
