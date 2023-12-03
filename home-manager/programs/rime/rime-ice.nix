@@ -18,7 +18,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     mkdir -p $out/share/rime-data
     cp -r *  $out/share/rime-data
     cp ${./configs/default.yaml} $out/share/rime-data/default.yaml
-    cp ${./configs/weasel_style.yaml} $out/share/rime-data/weasel_style.yaml
   '';
 
   meta = {
