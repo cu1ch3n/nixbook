@@ -15,6 +15,8 @@
       "/var/lib/nixos"
       "/var/lib/systemd"
       "/var/log"
+
+      "/etc/v2raya"
     ];
 
     files = [
@@ -36,6 +38,9 @@
         # More directories
         "Configs"
         "Research"
+
+        { directory = ".config/1Password"; mode = "0700"; }
+        ".config/chromium"
 
         { directory = ".ssh"; mode = "0700"; }
         { directory = ".local/share/keyrings"; mode = "0700"; }
