@@ -3,7 +3,7 @@
     _1password-gui
     activitywatch
     axel
-    # discord
+    discord
     element-desktop
     etcher
     evolution
