@@ -3,8 +3,8 @@ let
   initialHashedPassword = "$6$ai4g3AoqwV/Dq3Jt$nrSP41V/xZY5K5oEbr2s1JxJ3chXaXQX1LVDsn6QGlDAIiikb0/K9pi0jPgYJyu0dTuGjDQre8mY7SO9sSLXT1";
 in
 {
-  # sudo mkdir -p /persist/passwordFiles/ 
-  # sudo nix-shell --run 'mkpasswd -m SHA-512 -s > /persist/passwordFiles/chen' -p mkpasswd
+  # sudo mkdir -p /nix/persist/passwordFiles/
+  # sudo nix-shell --run 'mkpasswd -m SHA-512 -s > /nix/persist/passwordFiles/chen' -p mkpasswd
   users.users = {
     root = {
       inherit initialHashedPassword;
