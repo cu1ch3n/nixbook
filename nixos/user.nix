@@ -8,12 +8,12 @@ in
   users.users = {
     root = {
       inherit initialHashedPassword;
-      hashedPasswordFile = "/persist/passwordFiles/root";
+      hashedPasswordFile = "/nix/persist/passwordFiles/root";
     };
 
     chen = {
       inherit initialHashedPassword;
-      hashedPasswordFile = "/persist/passwordFiles/chen";
+      hashedPasswordFile = "/nix/persist/passwordFiles/chen";
       description = "Chen";
       isNormalUser = true;
       shell = pkgs.zsh;
