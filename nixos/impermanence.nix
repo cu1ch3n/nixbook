@@ -16,6 +16,7 @@
       "/var/lib/systemd"
       "/var/log"
 
+      "/etc/NetworkManager/system-connections"
       "/etc/v2raya"
     ];
 
@@ -47,6 +48,8 @@
       ];
     };
   };
+
+  environment.etc.machine-id.text = "67803336e24344e9aa58ea47b51180d0";
 
   programs.fuse.userAllowOther = true;
 }
