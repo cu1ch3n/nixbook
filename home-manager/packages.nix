@@ -11,6 +11,7 @@
     gimp-with-plugins
     gnumake
     inkscape
+    inotify-tools
     marvin
     obsidian
     okular
