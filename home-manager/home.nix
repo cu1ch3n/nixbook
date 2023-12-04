@@ -6,7 +6,6 @@
   imports = [
     ./development
     ./programs
-    ./impermanence.nix
     ./packages.nix
   ];
 
