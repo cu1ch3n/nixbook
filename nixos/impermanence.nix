@@ -34,6 +34,7 @@
         "Videos"
 
         # More directories
+        "Configs"
         "Research"
 
         { directory = ".ssh"; mode = "0700"; }
