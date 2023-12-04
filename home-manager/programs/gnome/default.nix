@@ -222,8 +222,4 @@
       top-bar-organizer
       vitals
     ];
-
-    home.file = {
-      ".config/gnome-initial-setup-done".text = "yes";
-    };
 }
