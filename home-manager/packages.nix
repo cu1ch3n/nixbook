@@ -14,7 +14,7 @@
     marvin
     obsidian
     okular
-    qq
+    # qq
     screenfetch
     slack
     spotify
