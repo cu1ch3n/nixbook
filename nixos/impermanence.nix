@@ -44,6 +44,7 @@
         ".config/chromium"
         ".config/Code"
         { directory = ".config/Slack"; mode = "0700"; }
+        ".config/sublime-text/Local"
 
         { directory = ".local/share/keyrings"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
