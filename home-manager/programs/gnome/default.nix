@@ -216,7 +216,7 @@
       just-perfection
       kimpanel
       logo-menu
-      # pano
+      pano
       pop-shell
       space-bar
       top-bar-organizer
