@@ -43,6 +43,8 @@
         { directory = ".config/1Password"; mode = "0700"; }
         ".config/chromium"
         ".config/Code"
+        ".config/fcitx5"
+        ".config/QQ"
         { directory = ".config/Slack"; mode = "0700"; }
         ".config/sublime-text/Local"
 
