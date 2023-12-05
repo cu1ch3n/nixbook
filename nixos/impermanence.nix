@@ -47,6 +47,7 @@
         ".config/QQ"
         { directory = ".config/Slack"; mode = "0700"; }
         ".config/sublime-text/Local"
+        ".config/yesplaymusic"
 
         { directory = ".local/share/keyrings"; mode = "0700"; }
         { directory = ".ssh"; mode = "0700"; }
