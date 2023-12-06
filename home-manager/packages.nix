@@ -28,7 +28,12 @@
     # nur.repos.xddxdd.wine-wechat
   ];
 
-  xdg.mimeApps.defaultApplications = {
-    "application/pdf" = "okular.desktop";
+  xdg.mimeApps = {
+    associations.added = {
+      "application/pdf" = "okular.desktop";
+    };
+    defaultApplications = {
+      "application/pdf" = "okular.desktop";
+    };
   };
 }
