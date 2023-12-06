@@ -6,6 +6,7 @@
     ./vscode
     ./alacritty.nix
     ./chromium.nix
+    ./eyedropper.nix
     ./git.nix
     ./ssh.nix
     ./zsh.nix
