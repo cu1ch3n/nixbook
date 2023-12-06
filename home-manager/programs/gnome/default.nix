@@ -201,6 +201,11 @@
     };
   };
 
+  xdg.mimeApps.associations.added = {
+    "x-scheme-handler/sms" = "org.gnome.Shell.Extensions.GSConnect.desktop";
+    "x-scheme-handler/tel" = "org.gnome.Shell.Extensions.GSConnect.desktop";
+  };
+
   home.packages = with pkgs;
     with gnome;
     with gnomeExtensions; [

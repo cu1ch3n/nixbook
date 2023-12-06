@@ -34,6 +34,8 @@
     sessionPath = [ "$HOME/bin" ];
   };
 
+  xdg.mimeApps.enable = true;
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
