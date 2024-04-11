@@ -3,7 +3,7 @@
     ./abella
     ./coq.nix
     ./haskell.nix
-    ./latex.nix
+    # ./latex.nix
     ./nix.nix
     ./python.nix
   ];
