@@ -8,6 +8,7 @@
       { id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; } # Dark Reader
       { id = "anmbbeeiaollmpadookgoakpfjkbidaf"; } # Volume Booster
       { id = "padekgcemlokbadohgkifijomclgjgif"; } # Proxy SwitchyOmega
+      { id = "bpoadfkcbjbfhfodiogcnhhhpibjhbnh"; } # Immersive Translate
     ];
   };
 }
