@@ -7,12 +7,12 @@ in
   # sudo nix-shell --run 'mkpasswd -m SHA-512 -s > /nix/persist/passwordFiles/chen' -p mkpasswd
   users.users = {
     root = {
-      inherit initialHashedPassword;
+      # inherit initialHashedPassword;
       hashedPasswordFile = "/nix/persist/passwordFiles/root";
     };
 
     chen = {
-      inherit initialHashedPassword;
+      # inherit initialHashedPassword;
       hashedPasswordFile = "/nix/persist/passwordFiles/chen";
       description = "Chen";
       isNormalUser = true;
