@@ -39,6 +39,7 @@
         # More directories
         "Configs"
         "Research"
+        "Development"
 
         { directory = ".config/1Password"; mode = "0700"; }
         ".config/chromium"
