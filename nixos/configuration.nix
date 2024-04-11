@@ -26,6 +26,7 @@
   };
 
   home-manager = {
+    backupFileExtension = ".bak";
     extraSpecialArgs = { inherit inputs outputs; };
     users.chen = import ../home-manager/home.nix;
   };
