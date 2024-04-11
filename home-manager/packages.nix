@@ -2,7 +2,6 @@
   home.packages = with pkgs; [
     _1password-gui
     axel
-    element-desktop
     evolution
     gh
     gnumake
