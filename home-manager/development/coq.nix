@@ -1,10 +1,11 @@
 { pkgs, ... }: {
   home.packages = with pkgs;
-    with coqPackages_8_15; [
+    with coqPackages_8_15;
+    with nur.repos.chen; [
       coq
       lngen
       metalib
-      ott
+      ott-sweirich
     ];
 
   home.sessionVariables = {
