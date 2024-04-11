@@ -8,6 +8,7 @@
     inkscape
     inotify-tools
     okular
+    qbittorrent
     qq
     screenfetch
     slack
