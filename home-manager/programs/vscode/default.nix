@@ -18,15 +18,8 @@
       ]
       ++ (with pkgs.vscode-extensions; [
         github.vscode-pull-request-github
-      ])
-      ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        {
-          name = "copilot-chat";
-          publisher = "github";
-          version = "0.10.2";
-          sha256 = "NfVg0Mor6agPrPYuzsNiWgX5DAcSysWaP3GilyXv/S4=";
-        }
-      ];
+        github.copilot-chat
+      ]);
     userSettings = import ./user-settings.nix;
   };
 }
