@@ -7,7 +7,6 @@
     gnumake
     inkscape
     inotify-tools
-    obsidian
     okular
     qq
     screenfetch
