@@ -9,7 +9,8 @@
     enable = true;
     xkb.layout = "us";
 
-    displayManager.sddm.enable = true;
+    # displayManager.sddm.enable = true;
+    displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
 
     libinput.enable = true;
@@ -20,8 +21,8 @@
     keyMap = "us";
   };
 
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-  };
+  # programs.hyprland = {
+  #   enable = true;
+  #   package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+  # };
 }

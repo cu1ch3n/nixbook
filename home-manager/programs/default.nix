@@ -2,7 +2,7 @@
   imports = [
     # ./firefox
     ./gnome
-    ./hyprland
+    # ./hyprland
     ./rime
     ./vscode
     ./alacritty.nix
