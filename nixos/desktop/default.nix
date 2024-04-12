@@ -9,7 +9,7 @@
     enable = true;
     xkb.layout = "us";
 
-    displayManager.gdm.enable = true;
+    displayManager.sddm.enable = true;
     desktopManager.gnome.enable = true;
 
     libinput.enable = true;
@@ -18,5 +18,10 @@
   console = {
     font = "Lat2-Terminus16";
     keyMap = "us";
+  };
+
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
   };
 }
