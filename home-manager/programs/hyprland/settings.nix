@@ -2,15 +2,53 @@
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
 
-    bind = [
-      # show keybinds list
-      "$mainMod, F1, exec, show-keybinds"
+    monitor = "eDP-1,1920x1200@60,0x0,1";
 
-      # keybindings
+    input = {
+      kb_layout = "us";
+      follow_mouse = 2;
+      touchpad = {
+        natural_scroll = true;
+        scroll_factor = 0.5;
+      };
+    };
+
+    general = {
+      gaps_in = 5;
+      gaps_out = 10;
+      border_size = 2;
+      "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+      "col.inactive_border" = "rgba(595959aa)";
+      layout = "dwindle";
+    };
+
+    decoration = {
+      rounding = 5;
+      blur.size = 3;
+      "col.shadow" = "rgba(1a1a1aee)";
+    };
+
+    animations = {
+      bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+      animation = [
+        "windows, 1, 7, myBezier"
+        "windowsOut, 1, 7, default, popin 80%"
+        "border, 1, 10, default"
+        "fade, 1, 7, default"
+        "workspaces, 1, 6, default"
+      ];
+    };
+
+    dwindle = {
+      pseudotile = true;
+      preserve_split = true;
+    };
+
+    bind = [
       "$mainMod, return, exec, alacritty"
       "$mainMod SHIFT, C, killactive, "
       "$mainMod SHIFT, Q, exec, wlogout"
-      "$mainMod, E, exec, dolphin"
+      "$mainMod, E, exec, nautilus"
       "$mainMod, V, togglefloating, "
       "$mainMod SHIFT, return, exec, wofi --show drun"
       "$mainMod, P, pseudo, # dwindle"
@@ -44,9 +82,14 @@
       "$mainMod SHIFT, 8, movetoworkspace, 8"
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
-      
+
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"
+    ];
+
+    bindm = [
+      "$mainMod, mouse:272, movewindow"
+      "$mainMod, mouse:273, resizewindow"
     ];
   };
 }
