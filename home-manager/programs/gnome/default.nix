@@ -164,7 +164,7 @@
     };
 
     "org/gnome/desktop/interface" = {
-      color-scheme = "default";
+      color-scheme = "prefer-dark";
       document-font-name = "Inter 11";
       enable-animations = true;
       enable-hot-corners = false;
