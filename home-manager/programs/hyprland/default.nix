@@ -1,11 +1,22 @@
-{ inputs, ... }:
+{ pkgs
+, inputs
+, ...
+}:
 {
-  imports = [ inputs.hyprland.homeManagerModules.default ];
+  imports = [
+    inputs.hyprland.homeManagerModules.default
+    ./settings.nix
+  ];
 
   wayland.windowManager.hyprland = {
     enable = true;
-    settings = {
-      "$mod" = "SUPER";
-    };
+    plugins = with inputs.hyprland-plugins.packages.${pkgs.system}; [
+      # hyprbars
+    ];
   };
+
+  home.packages = with pkgs; [
+    wofi
+    wlogout
+  ];
 }
