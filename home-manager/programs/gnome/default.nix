@@ -24,7 +24,7 @@
         "just-perfection-desktop@just-perfection"
         "AlphabeticalAppGrid@stuarthayhurst"
         # "Vitals@CoreCoding.com"
-        "pop-shell@system76.com"
+        # "pop-shell@system76.com"
         "kimpanel@kde.org"
       ];
       favorite-apps = [
@@ -112,11 +112,11 @@
       workspace-wrap-around = true;
     };
 
-    "org/gnome/shell/extensions/pop-shell" = {
-      active-hint = true;
-      tile-by-default = false;
-      hint-color-rgba = "rgba(82, 119, 195, 0.8)";
-    };
+    # "org/gnome/shell/extensions/pop-shell" = {
+    #   active-hint = true;
+    #   tile-by-default = false;
+    #   hint-color-rgba = "rgba(82, 119, 195, 0.8)";
+    # };
 
     "org/gnome/shell/extensions/space-bar/shortcuts" = {
       enable-activate-workspace-shortcuts = true;
@@ -223,7 +223,7 @@
       kimpanel
       logo-menu
       pano
-      pop-shell
+      # pop-shell
       space-bar
       top-bar-organizer
       vitals
