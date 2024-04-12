@@ -15,11 +15,9 @@
         richie5um2.vscode-sort-json
         vscode-icons-team.vscode-icons
         coq-community.vscoq1
-      ]
-      ++ (with pkgs.vscode-extensions; [
         github.vscode-pull-request-github
         github.copilot-chat
-      ]);
+      ];
     userSettings = import ./user-settings.nix;
   };
 }
