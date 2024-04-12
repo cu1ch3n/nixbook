@@ -89,7 +89,7 @@
 
     bindm = [
       "$mainMod, mouse:272, movewindow"
-      "$mainMod, mouse:273, resizewindow"
+      "$mainMod SHIFT, mouse:272, resizewindow"
     ];
   };
 }
