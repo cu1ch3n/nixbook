@@ -6,5 +6,6 @@
     ./latex.nix
     ./nix.nix
     ./python.nix
+    ./typst.nix
   ];
 }
