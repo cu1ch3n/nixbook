@@ -6,6 +6,7 @@
   imports = [
     inputs.hyprland.homeManagerModules.default
     ./settings.nix
+    ./waybar
   ];
 
   wayland.windowManager.hyprland = {
