@@ -196,8 +196,8 @@
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file://" + ./nix-wallpaper-nineish-dark-gray.png;
-      picture-uri-dark = "file://" + ./nix-wallpaper-nineish-dark-gray.png;
+      picture-uri = "file://" + ./wallpapers/sun.png;
+      picture-uri-dark = "file://" + ./wallpapers/comet.png;
     };
   };
 
@@ -216,6 +216,7 @@
       caffeine
       dconf2nix
       dconf-editor
+      dynamic-wallpaper
       gnome-tweaks
       gsconnect
       just-perfection
