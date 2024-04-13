@@ -30,7 +30,7 @@
   workbench = {
     preferredLightColorTheme = "Atom One Light";
     preferredDarkColorTheme = "Atom One Dark";
-    colorTheme = "Atom One Dark";
+    colorTheme = "Atom One Light";
     iconTheme = "vscode-icons";
   };
 }
