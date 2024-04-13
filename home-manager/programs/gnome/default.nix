@@ -28,7 +28,9 @@
         "chromium-browser.desktop"
         "code.desktop"
         "slack.desktop"
+        "com.tencent.wechat.desktop"
         "yesplaymusic.desktop"
+        "v2raya.desktop"
       ];
     };
 
