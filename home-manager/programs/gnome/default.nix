@@ -2,30 +2,25 @@
   dconf.settings = {
     "org/gnome/shell" = {
       disabled-extensions = [
-        "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
         "apps-menu@gnome-shell-extensions.gcampax.github.com"
-        "places-menu@gnome-shell-extensions.gcampax.github.com"
+        "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
         "drive-menu@gnome-shell-extensions.gcampax.github.com"
-        "window-list@gnome-shell-extensions.gcampax.github.com"
-        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
+        "places-menu@gnome-shell-extensions.gcampax.github.com"
         "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com"
-        "Vitals@CoreCoding.com"
+        "window-list@gnome-shell-extensions.gcampax.github.com"
+        "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
+        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
       ];
       enabled-extensions = [
-        "appindicatorsupport@rgcjonas.gmail.com"
-        "logomenu@aryan_k"
-        "caffeine@patapon.info"
-        "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
-        "gsconnect@andyholmes.github.io"
-        "blur-my-shell@aunetx"
-        "space-bar@luchrioh"
-        "top-bar-organizer@julian.gse.jsts.xyz"
-        "pano@elhan.io"
-        "just-perfection-desktop@just-perfection"
         "AlphabeticalAppGrid@stuarthayhurst"
-        # "Vitals@CoreCoding.com"
-        # "pop-shell@system76.com"
+        "appindicatorsupport@rgcjonas.gmail.com"
+        "blur-my-shell@aunetx"
+        "caffeine@patapon.info"
+        "gsconnect@andyholmes.github.io"
         "kimpanel@kde.org"
+        "light-style@gnome-shell-extensions.gcampax.github.com"
+        "pano@elhan.io"
+        "top-bar-organizer@julian.gse.jsts.xyz"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
@@ -37,18 +32,9 @@
       ];
     };
 
-    "org/gnome/shell/extensions/auto-move-windows" = {
-      application-list = [
-        "chromium-browser.desktop:1"
-        "org.gnome.Nautilus.desktop:2"
-        "qq.desktop:4"
-        "discord.desktop:4"
-        "wine-wechat.desktop:4"
-        "spotify.desktop:5"
-        "yesplaymusic.desktop:5"
-        "org.gnome.Extensions.desktop:6"
-        "org.gnome.Settings.desktop:6"
-      ];
+    "org/gnome/shell/extensions/blur-my-shell" = {
+      sigma = 10;
+      brightness = 0.6;
     };
 
     "org/gnome/shell/extensions/caffeine" = {
@@ -61,73 +47,19 @@
       font = "Source Han Sans SC 11";
     };
 
-    "org/gnome/shell/extensions/Logo-menu" = {
-      hide-forcequit = false;
-      hide-softwarecentre = true;
-      menu-button-icon-click-type = 3;
-      menu-button-icon-image = 18;
-      menu-button-icon-size = 22;
-      menu-button-terminal = "alacritty";
-      show-lockscreen = true;
-      show-power-options = true;
-      symbolic-icon = false;
-    };
-
     "org/gnome/shell/extensions/pano" = {
       play-audio-on-copy = false;
       send-notification-on-copy = false;
     };
 
-    "org/gnome/shell/extensions/space-bar/appearance" = {
-      workspace-margin = 0;
-    };
-
-    "org/gnome/shell/extensions/space-bar/behavior" = {
-      always-show-numbers = true;
-      indicator-style = "workspaces-bar";
-      position = "left";
-      position-index = 2;
-      smart-workspace-names = false;
-      toggle-overview = false;
-    };
-
-    "org/gnome/shell/extensions/just-perfection" = {
-      accessibility-menu = true;
-      activities-button = false;
-      app-menu = false;
-      app-menu-icon = false;
-      app-menu-label = false;
-      dash-icon-size = 0;
-      panel = true;
-      panel-in-overview = true;
-      ripple-box = true;
-      search = true;
-      show-apps-button = true;
-      startup-status = 1;
-      theme = false;
-      window-demands-attention-focus = true;
-      window-picker-icon = true;
-      workspace = true;
-      workspaces-in-app-grid = true;
-      workspace-wrap-around = true;
-    };
-
-    # "org/gnome/shell/extensions/pop-shell" = {
-    #   active-hint = true;
-    #   tile-by-default = false;
-    #   hint-color-rgba = "rgba(82, 119, 195, 0.8)";
-    # };
-
-    "org/gnome/shell/extensions/space-bar/shortcuts" = {
-      enable-activate-workspace-shortcuts = true;
-      enable-move-to-workspace-shortcuts = true;
-    };
-
     "org/gnome/shell/extensions/top-bar-organizer" = {
       center-box-order = [ "dateMenu" ];
-      left-box-order = [ "activities" "LogoMenu" "menuButton" "appMenu" "Space Bar" ];
+      left-box-order = [
+        "activities"
+        "menuButton"
+        "appMenu"
+      ];
       right-box-order = [
-        # "vitalsMenu"
         "appindicator-kstatusnotifieritem-chrome_status_icon_1"
         "appindicator-kstatusnotifieritem-tao application"
         "appindicator-kstatusnotifieritem-Fcitx"
@@ -143,28 +75,13 @@
       ];
     };
 
-    "org/gnome/shell/extensions/vitals" = {
-      fixed-widths = true;
-      hide-icons = false;
-      hide-zeros = false;
-      hot-sensors = [
-        "__network-tx_max__"
-        "__network-rx_max__"
-        "_processor_usage_"
-        "__temperature_avg__"
-        "_memory_free_"
-      ];
-      memory-measurement = 1;
-      show-battery = false;
-    };
-
     "org/gnome/desktop/peripherals/touchpad" = {
       tap-to-click = true;
       two-finger-scrolling-enabled = true;
     };
 
     "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
+      color-scheme = "prefer-light";
       document-font-name = "Inter 11";
       enable-animations = true;
       enable-hot-corners = false;
@@ -188,8 +105,7 @@
     };
 
     "org/gnome/desktop/wm/preferences" = {
-      num-workspaces = 7;
-      workspace-names = [ "🌐" "🗄️" "🐓" "💬" "🎵" "❄️" "😅" ];
+      num-workspaces = 9;
       titlebar-font = "Inter 11";
     };
 
@@ -211,21 +127,14 @@
     with gnomeExtensions; [
       alphabetical-app-grid
       appindicator
-      auto-move-windows
       blur-my-shell
       caffeine
       dconf2nix
       dconf-editor
-      dynamic-wallpaper
       gnome-tweaks
       gsconnect
-      just-perfection
       kimpanel
-      logo-menu
       pano
-      # pop-shell
-      space-bar
       top-bar-organizer
-      vitals
     ];
 }
