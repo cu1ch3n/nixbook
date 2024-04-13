@@ -8,6 +8,7 @@
     gnumake
     inkscape
     inotify-tools
+    just
     okular
     qbittorrent
     qq

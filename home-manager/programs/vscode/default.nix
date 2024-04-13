@@ -5,17 +5,18 @@
     extensions = with pkgs.vscode-marketplace; [
       akamud.vscode-theme-onedark
       akamud.vscode-theme-onelight
-      github.copilot
-      eamodio.gitlens
-      haskell.haskell
-      justusadam.language-haskell
-      yellpika.latex-input
-      jnoortheen.nix-ide
-      richie5um2.vscode-sort-json
-      vscode-icons-team.vscode-icons
       coq-community.vscoq1
-      github.vscode-pull-request-github
+      eamodio.gitlens
+      github.copilot
       github.copilot-chat
+      github.vscode-pull-request-github
+      haskell.haskell
+      jnoortheen.nix-ide
+      justusadam.language-haskell
+      richie5um2.vscode-sort-json
+      skellock.just
+      vscode-icons-team.vscode-icons
+      yellpika.latex-input
     ];
     userSettings = import ./user-settings.nix;
   };
