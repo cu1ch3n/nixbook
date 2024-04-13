@@ -53,6 +53,8 @@
         { directory = ".local/share/keyrings"; mode = "0700"; }
         "./.local/share/pano@elhan.io"
         { directory = ".ssh"; mode = "0700"; }
+
+        ".xwechat"
       ];
 
       files = [
