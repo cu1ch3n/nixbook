@@ -15,6 +15,7 @@
     spotify
     tree
     vlc
+    wechat-uos
     wineWowPackages.waylandFull
     yesplaymusic
     zoom-us
