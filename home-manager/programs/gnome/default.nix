@@ -33,8 +33,8 @@
     };
 
     "org/gnome/shell/extensions/blur-my-shell" = {
-      sigma = 10;
-      brightness = 0.6;
+      sigma = 200;
+      brightness = 0.8;
     };
 
     "org/gnome/shell/extensions/caffeine" = {
