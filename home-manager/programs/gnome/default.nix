@@ -83,6 +83,7 @@
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-light";
       cursor-theme = "phinger-cursors";
+      cursor-size = 32;
       document-font-name = "Inter 11";
       enable-animations = true;
       enable-hot-corners = false;
