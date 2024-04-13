@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     _1password-gui
     axel
+    discord
     evolution
     gh
     gnumake
