@@ -82,8 +82,6 @@
 
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-light";
-      cursor-theme = "phinger-cursors";
-      cursor-size = 32;
       document-font-name = "Inter 11";
       enable-animations = true;
       enable-hot-corners = false;
@@ -136,14 +134,23 @@
       gnome-tweaks
       gsconnect
       kimpanel
+      neofetch
       pano
       top-bar-organizer
     ];
 
   home.pointerCursor = {
-    name = "phinger-cursors-light";
+    name = "phinger-cursors";
     package = pkgs.phinger-cursors;
-    size = 48;
+    size = 32;
     gtk.enable = true;
+  };
+
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Papirus";
+      package = pkgs.papirus-icon-theme;
+    };
   };
 }
