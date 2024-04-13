@@ -27,6 +27,6 @@ mount -o bind /mnt/nix/persist/var/log /mnt/var/log
 swapon /dev/nvme0n1p3
 
 # Installing
-nixos-install --flake https://github.com/cu1ch3n/nixbook#nixbook
+nixos-install --flake https://github.com/cu1ch3n/nixbook#nixbook --no-root-passwd
 nix-shell --run 'mkpasswd -m SHA-512 -s > /nix/persist/passwordFiles/root' -p mkpasswd
 nix-shell --run 'mkpasswd -m SHA-512 -s > /nix/persist/passwordFiles/chen' -p mkpasswd
