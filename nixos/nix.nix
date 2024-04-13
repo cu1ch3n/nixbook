@@ -5,6 +5,9 @@
 }: {
   nix = {
     settings = {
+      extra-substituters = [
+        "https://chen.cachix.org"
+      ];
       extra-trusted-public-keys = [
         "chen.cachix.org-1:QzFtWpjuwQylPYCuX7k6m6anRVi/e658FfWZRcTnRgs="
       ];
