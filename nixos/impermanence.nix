@@ -42,20 +42,23 @@
         "Development"
 
         { directory = ".config/1Password"; mode = "0700"; }
-        ".config/chromium"
-        ".config/Code"
-        ".config/fcitx5"
-        ".config/gh"
-        ".config/QQ"
+        { directory = ".config/chromium"; mode = "0700"; }
+        { directory = ".config/Code"; mode = "0700"; }
+        { directory = ".config/fcitx5"; mode = "0700"; }
+        { directory = ".config/gh"; mode = "0700"; }
+        { directory = ".config/QQ"; mode = "0700"; }
         { directory = ".config/Slack"; mode = "0700"; }
-        ".config/sublime-text/Local"
-        ".config/yesplaymusic"
+        { directory = ".config/sublime-text/Local"; mode = "0700"; }
+        { directory = ".config/yesplaymusic"; mode = "0700"; }
+        { directory = ".config/qBittorrent"; mode = "0700"; }
 
         { directory = ".local/share/keyrings"; mode = "0700"; }
-        "./.local/share/pano@elhan.io"
-        { directory = ".ssh"; mode = "0700"; }
+        { directory = "./.local/share/pano@elhan.io"; mode = "0700"; }
+        { directory = ".local/share/qBittorrent"; mode = "0700"; }
 
-        ".xwechat"
+        { directory = ".xwechat"; mode = "0700"; }
+
+        { directory = ".ssh"; mode = "0700"; }
       ];
 
       files = [
