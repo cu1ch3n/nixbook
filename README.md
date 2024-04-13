@@ -1,12 +1,25 @@
 # Chen's NixBook Configurations
 
-## NixOS
+## Components
+
+- Desktop: GNOME
+- Wallpaper: KDE 6 default wallpaper :)
+
+## Preview
+
+### Light
+![](assets/screenshot-light.png)
+
+### Dark
+![](assets/screenshot-dark.png)
+
+## Update NixOS configuration
 
 ```console
 sudo nixos-rebuild switch --flake .#nixbook
 ```
 
-## Update
+## Update flake lock file
 
 You may use
 ```console
