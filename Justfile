@@ -1,8 +1,8 @@
 deploy:
-  sudo nixos-rebuild switch --flake .#nixbook
+  sudo nixos-rebuild switch --flake .#nixbook |& nom
 
 debug:
-  sudo nixos-rebuild switch --flake .#nixbook --show-trace --verbose
+  sudo nixos-rebuild switch --flake .#nixbook --show-trace --verbose |& nom
 
 update:
-  nix flake update --commit-lock-file
+  nix flake update --commit-lock-file |& nom

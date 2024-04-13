@@ -14,6 +14,7 @@ in
     deadnix
     nixd
     nix-init
+    nix-output-monitor
     nixpkgs-fmt
     nixpkgs-review
     statix
