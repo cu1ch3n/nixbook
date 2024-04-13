@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     _1password-gui
     axel
+    bilibili
     discord
     evolution
     gh
