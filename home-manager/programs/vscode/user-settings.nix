@@ -18,6 +18,7 @@
   };
   nix = {
     enableLanguageServer = true;
+    formatterPath = "alejandra";
     serverPath = "nixd";
   };
   search.useParentIgnoreFiles = true;

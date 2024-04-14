@@ -7,6 +7,7 @@
   '';
 in {
   home.packages = with pkgs; [
+    alejandra
     json2nix
     comma
     deadnix
