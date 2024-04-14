@@ -52,6 +52,8 @@ let private-directories = map (directory: { inherit directory; mode = "0700"; })
         ".local/share/keyrings"
         "./.local/share/pano@elhan.io"
         ".local/share/qBittorrent"
+        ".local/share/Trash"
+
         ".xwechat"
         ".ssh"
       ];
