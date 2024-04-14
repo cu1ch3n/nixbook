@@ -1,8 +1,9 @@
-{ inputs
-, outputs
-, config
-, pkgs
-, ...
+{
+  inputs,
+  outputs,
+  config,
+  pkgs,
+  ...
 }: {
   imports = [
     ./desktop
@@ -27,7 +28,7 @@
 
   home-manager = {
     backupFileExtension = "bak";
-    extraSpecialArgs = { inherit inputs outputs; };
+    extraSpecialArgs = {inherit inputs outputs;};
     users.chen = import ../home-manager/home.nix;
   };
 

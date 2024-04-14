@@ -1,7 +1,8 @@
-{ inputs
-, outputs
-, config
-, ...
+{
+  inputs,
+  outputs,
+  config,
+  ...
 }: {
   imports = [
     ./development
@@ -32,7 +33,7 @@
   home = {
     username = "chen";
     homeDirectory = "/home/chen";
-    sessionPath = [ "$HOME/bin" ];
+    sessionPath = ["$HOME/bin"];
   };
 
   xdg.mimeApps.enable = true;

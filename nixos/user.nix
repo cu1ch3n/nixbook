@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   # sudo mkdir -p /nix/persist/passwordFiles/
   # sudo nix-shell --run 'mkpasswd -m SHA-512 -s > /nix/persist/passwordFiles/chen' -p mkpasswd
   users.users = {
@@ -14,7 +13,7 @@
       description = "Chen";
       isNormalUser = true;
       shell = pkgs.zsh;
-      extraGroups = [ "wheel" "audio" "docker" "networkmanager" ];
+      extraGroups = ["wheel" "audio" "docker" "networkmanager"];
       packages = with pkgs; [
         # protontricks
       ];

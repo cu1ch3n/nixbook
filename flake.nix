@@ -15,31 +15,29 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
-  outputs =
-    { self
-    , nixpkgs
-    , ...
-    } @ inputs:
-    let
-      inherit (self) outputs;
-      systems = [ "x86_64-linux" ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
-    in
-    {
-      packages = forAllSystems (system: import ./pkgs { pkgs = nixpkgs.legacyPackages.${system}; });
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixpkgs-fmt);
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+    systems = ["x86_64-linux"];
+    forAllSystems = nixpkgs.lib.genAttrs systems;
+  in {
+    packages = forAllSystems (system: import ./pkgs {pkgs = nixpkgs.legacyPackages.${system};});
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
-      overlays = import ./overlays { inherit inputs; };
+    overlays = import ./overlays {inherit inputs;};
 
-      nixosModules = import ./modules/nixos;
-      homeManagerModules = import ./modules/home-manager;
+    nixosModules = import ./modules/nixos;
+    homeManagerModules = import ./modules/home-manager;
 
-      # nixos-rebuild --flake .#nixbook
-      nixosConfigurations = {
-        nixbook = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
-          modules = [ ./nixos/configuration.nix ];
-        };
+    # nixos-rebuild --flake .#nixbook
+    nixosConfigurations = {
+      nixbook = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./nixos/configuration.nix];
       };
     };
+  };
 }

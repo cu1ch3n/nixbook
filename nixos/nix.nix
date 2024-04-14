@@ -1,7 +1,8 @@
-{ inputs
-, lib
-, config
-, ...
+{
+  inputs,
+  lib,
+  config,
+  ...
 }: {
   nix = {
     settings = {
@@ -20,7 +21,7 @@
       options = "--delete-older-than +3";
     };
 
-    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
+    registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
     nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
   };
 }

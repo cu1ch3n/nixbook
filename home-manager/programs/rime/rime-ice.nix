@@ -1,8 +1,8 @@
-{ lib
-, stdenvNoCC
-, fetchFromGitHub
+{
+  lib,
+  stdenvNoCC,
+  fetchFromGitHub,
 }:
-
 stdenvNoCC.mkDerivation (_: {
   pname = "rime-ice";
   version = "2023-12-02";
@@ -25,6 +25,6 @@ stdenvNoCC.mkDerivation (_: {
     homepage = "https://github.com/iDvel/rime-ice";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = with lib.maintainers; [ chen ];
+    maintainers = with lib.maintainers; [chen];
   };
 })

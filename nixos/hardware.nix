@@ -1,8 +1,9 @@
-{ inputs
-, config
-, lib
-, pkgs
-, ...
+{
+  inputs,
+  config,
+  lib,
+  pkgs,
+  ...
 }: {
   imports = [
     inputs.hardware.nixosModules.common-cpu-amd
@@ -18,11 +19,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   hardware.enableRedistributableFirmware = lib.mkDefault true;
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ "synaptics_usb" ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod"];
+  boot.initrd.kernelModules = ["synaptics_usb"];
+  boot.kernelModules = ["kvm-amd"];
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = [];
 
   # disable Scatter/Gather APU recently enabled by default,
   # which results in white screen after display reconfiguration
@@ -34,7 +35,7 @@
   fileSystems."/" = {
     device = "none";
     fsType = "tmpfs";
-    options = [ "defaults" "size=8G" "mode=755" ];
+    options = ["defaults" "size=8G" "mode=755"];
   };
 
   fileSystems."/boot" = {
@@ -48,7 +49,7 @@
   };
 
   swapDevices = [
-    { device = "/dev/disk/by-label/swap"; }
+    {device = "/dev/disk/by-label/swap";}
   ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -59,7 +60,7 @@
   # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
 
   services.xserver = {
-    videoDrivers = [ "amdgpu" ];
+    videoDrivers = ["amdgpu"];
   };
 
   # Power saving

@@ -1,4 +1,3 @@
-{ pkgs, ... }:
-{
-  home.packages = with pkgs; [ wpsoffice-cn ]; 
+{pkgs, ...}: {
+  home.packages = with pkgs; [wpsoffice-cn];
 }
