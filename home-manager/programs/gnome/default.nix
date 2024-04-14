@@ -21,6 +21,7 @@
         "light-style@gnome-shell-extensions.gcampax.github.com"
         "pano@elhan.io"
         "top-bar-organizer@julian.gse.jsts.xyz"
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
