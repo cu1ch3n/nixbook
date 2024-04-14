@@ -18,6 +18,7 @@
         "caffeine@patapon.info"
         "gsconnect@andyholmes.github.io"
         "kimpanel@kde.org"
+        "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
         "light-style@gnome-shell-extensions.gcampax.github.com"
         "pano@elhan.io"
         "top-bar-organizer@julian.gse.jsts.xyz"
