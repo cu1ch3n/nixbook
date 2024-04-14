@@ -173,4 +173,6 @@
       package = pkgs.papirus-icon-theme;
     };
   };
+
+  home.file.".face".source = ./face.jpg;
 }
