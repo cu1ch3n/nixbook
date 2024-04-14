@@ -1,4 +1,6 @@
-{inputs, ...}: {
+{ inputs, ... }:
+let private-directories = map (directory: { inherit directory; mode = "0700"; }); in
+{
   imports = [
     inputs.impermanence.nixosModules.impermanence
   ];
@@ -21,7 +23,7 @@
     ];
 
     users.chen = {
-      directories = [
+      directories = private-directories [
         # XDG user directories
         "Desktop"
         "Documents"
@@ -37,69 +39,21 @@
         "Research"
         "Development"
 
-        {
-          directory = ".config/1Password";
-          mode = "0700";
-        }
-        {
-          directory = ".config/chromium";
-          mode = "0700";
-        }
-        {
-          directory = ".config/Code";
-          mode = "0700";
-        }
-        {
-          directory = ".config/fcitx5";
-          mode = "0700";
-        }
-        {
-          directory = ".config/gh";
-          mode = "0700";
-        }
-        {
-          directory = ".config/QQ";
-          mode = "0700";
-        }
-        {
-          directory = ".config/Slack";
-          mode = "0700";
-        }
-        {
-          directory = ".config/sublime-text/Local";
-          mode = "0700";
-        }
-        {
-          directory = ".config/yesplaymusic";
-          mode = "0700";
-        }
-        {
-          directory = ".config/qBittorrent";
-          mode = "0700";
-        }
-
-        {
-          directory = ".local/share/keyrings";
-          mode = "0700";
-        }
-        {
-          directory = "./.local/share/pano@elhan.io";
-          mode = "0700";
-        }
-        {
-          directory = ".local/share/qBittorrent";
-          mode = "0700";
-        }
-
-        {
-          directory = ".xwechat";
-          mode = "0700";
-        }
-
-        {
-          directory = ".ssh";
-          mode = "0700";
-        }
+        ".config/1Password" 
+        ".config/chromium"
+        ".config/Code"
+        ".config/fcitx5"
+        ".config/gh"
+        ".config/QQ"
+        ".config/Slack"
+        ".config/sublime-text/Local"
+        ".config/yesplaymusic"
+        ".config/qBittorrent"
+        ".local/share/keyrings"
+        "./.local/share/pano@elhan.io"
+        ".local/share/qBittorrent"
+        ".xwechat"
+        ".ssh"
       ];
 
       files = [
