@@ -9,6 +9,7 @@
     ./eyedropper.nix
     ./git.nix
     ./ssh.nix
+    ./wps.nix
     ./zsh.nix
   ];
 

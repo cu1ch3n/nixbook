@@ -20,7 +20,6 @@
     vlc
     wechat-uos
     wineWowPackages.waylandFull
-    wpsoffice-cn
     yesplaymusic
     zoom-us
   ];
