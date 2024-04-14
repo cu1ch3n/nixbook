@@ -21,6 +21,7 @@
         "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
         "light-style@gnome-shell-extensions.gcampax.github.com"
         "pano@elhan.io"
+        "paperwm@paperwm.github.com"
         "top-bar-organizer@julian.gse.jsts.xyz"
         "user-theme@gnome-shell-extensions.gcampax.github.com"
       ];
@@ -54,6 +55,11 @@
     "org/gnome/shell/extensions/pano" = {
       play-audio-on-copy = false;
       send-notification-on-copy = false;
+    };
+
+    "org/gnome/shell/extensions/paperwm" = {
+      horizontal-margin = 10;
+      window-gap = 10;
     };
 
     "org/gnome/shell/extensions/top-bar-organizer" = {
@@ -164,6 +170,7 @@
     kimpanel
     neofetch
     pano
+    paperwm
     phinger-cursors
     top-bar-organizer
   ];
