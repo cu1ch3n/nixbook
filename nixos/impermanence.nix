@@ -1,6 +1,9 @@
-{ inputs, ... }:
-let private-directories = map (directory: { inherit directory; mode = "0700"; }); in
-{
+{inputs, ...}: let
+  private-directories = map (directory: {
+    inherit directory;
+    mode = "0700";
+  });
+in {
   imports = [
     inputs.impermanence.nixosModules.impermanence
   ];
@@ -39,7 +42,7 @@ let private-directories = map (directory: { inherit directory; mode = "0700"; })
         "Research"
         "Development"
 
-        ".config/1Password" 
+        ".config/1Password"
         ".config/chromium"
         ".config/Code"
         ".config/fcitx5"
