@@ -138,6 +138,8 @@ in {
         move-to-workspace-7 = ["<Super><Shift>7"];
         move-to-workspace-8 = ["<Super><Shift>8"];
         move-to-workspace-9 = ["<Super><Shift>9"];
+
+        close = ["<Super>q"];
       };
 
       "org/gnome/desktop/wm/preferences" = {
