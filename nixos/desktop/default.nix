@@ -14,6 +14,8 @@
   # For trash
   services.gvfs.enable = true;
 
+  virtualisation.waydroid.enable = true;
+
   console = {
     font = "Lat2-Terminus16";
     keyMap = "us";

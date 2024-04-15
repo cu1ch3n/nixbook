@@ -15,6 +15,7 @@ in {
       "/var/lib/bluetooth"
       "/var/lib/nixos"
       "/var/lib/systemd"
+      "/var/lib/waydroid"
       "/var/log"
 
       "/etc/NetworkManager/system-connections"
@@ -56,7 +57,8 @@ in {
         "./.local/share/pano@elhan.io"
         ".local/share/qBittorrent"
         ".local/share/Trash"
-
+        ".local/share/waydroid"
+        
         ".xwechat"
         ".ssh"
       ];
