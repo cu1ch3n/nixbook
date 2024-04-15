@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   editor = {
     detectIndentation = true;
     fontFamily = "'JetBrains Mono Light'";
@@ -34,4 +34,7 @@
     colorTheme = "Atom One Light";
     iconTheme = "vscode-icons";
   };
+  # typst-preview = {
+  #   executable = pkgs.typst-preview;
+  # };
 }
