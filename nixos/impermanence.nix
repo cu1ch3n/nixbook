@@ -58,7 +58,7 @@ in {
         ".local/share/qBittorrent"
         ".local/share/Trash"
         ".local/share/waydroid"
-        
+
         ".xwechat"
         ".ssh"
       ];
