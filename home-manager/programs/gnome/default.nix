@@ -62,6 +62,13 @@ in {
           "yesplaymusic.desktop"
           "v2raya.desktop"
         ];
+
+        last-selected-power-profile = "power-saver";
+      };
+
+      "org/gnome/desktop/search-providers" = {
+        enabled = ["org.gnome.Weather.desktop"];
+        disabled = ["org.gnome.Contacts.desktop"];
       };
 
       "org/gnome/shell/extensions/caffeine" = {
