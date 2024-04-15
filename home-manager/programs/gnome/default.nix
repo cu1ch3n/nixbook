@@ -31,7 +31,6 @@ in {
       "org/gnome/shell" = {
         disabled-extensions = [
           "apps-menu@gnome-shell-extensions.gcampax.github.com"
-          "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
           "drive-menu@gnome-shell-extensions.gcampax.github.com"
           "light-style@gnome-shell-extensions.gcampax.github.com"
           "places-menu@gnome-shell-extensions.gcampax.github.com"
@@ -44,6 +43,7 @@ in {
         enabled-extensions = [
           "AlphabeticalAppGrid@stuarthayhurst"
           "appindicatorsupport@rgcjonas.gmail.com"
+          "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
           "caffeine@patapon.info"
           "gsconnect@andyholmes.github.io"
           "kimpanel@kde.org"
@@ -159,6 +159,20 @@ in {
         picture-options = "zoom";
         picture-uri = "file://" + ./wallpapers/sun.png;
         picture-uri-dark = "file://" + ./wallpapers/comet.png;
+      };
+
+      "org/gnome/shell/extensions/auto-move-windows" = {
+        application-list = [
+          "chromium-browser.desktop:1"
+          "org.gnome.Nautilus.desktop:2"
+          "qq.desktop:5"
+          "discord.desktop:5"
+          "spotify.desktop:6"
+          "yesplaymusic.desktop:6"
+          "Waydroid.desktop:7"
+          "org.gnome.Extensions.desktop:8"
+          "org.gnome.Settings.desktop:8"
+        ];
       };
 
       "${paperwm-workspaces}" = {
