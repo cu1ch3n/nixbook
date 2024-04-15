@@ -182,12 +182,12 @@ in {
     "x-scheme-handler/tel" = "org.gnome.Shell.Extensions.GSConnect.desktop";
   };
 
-  xdg.configFile."paperwm/user.css".text = ''
-    .paperwm-selection {
-        border-radius: 12px 12px 0px 0px;
-        background-color: rgba(0, 0, 0, 0);
-    }
-  '';
+  # xdg.configFile."paperwm/user.css".text = ''
+  #   .paperwm-selection {
+  #       border-radius: 12px 12px 0px 0px;
+  #       background-color: rgba(0, 0, 0, 0);
+  #   }
+  # '';
 
   home.packages = with pkgs;
   with gnome;
