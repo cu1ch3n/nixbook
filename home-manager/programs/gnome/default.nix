@@ -33,13 +33,13 @@ in {
           "apps-menu@gnome-shell-extensions.gcampax.github.com"
           "auto-move-windows@gnome-shell-extensions.gcampax.github.com"
           "drive-menu@gnome-shell-extensions.gcampax.github.com"
+          "light-style@gnome-shell-extensions.gcampax.github.com"
           "places-menu@gnome-shell-extensions.gcampax.github.com"
           "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com"
+          "user-theme@gnome-shell-extensions.gcampax.github.com"
           "window-list@gnome-shell-extensions.gcampax.github.com"
           "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
           "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
-          "light-style@gnome-shell-extensions.gcampax.github.com"
-          "user-theme@gnome-shell-extensions.gcampax.github.com"
         ];
         enabled-extensions = [
           "AlphabeticalAppGrid@stuarthayhurst"
@@ -48,6 +48,7 @@ in {
           "gsconnect@andyholmes.github.io"
           "kimpanel@kde.org"
           "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
+          "switcher@landau.fi"
           "pano@elhan.io"
           "paperwm@paperwm.github.com"
         ];
@@ -86,6 +87,10 @@ in {
       "org/gnome/desktop/peripherals/touchpad" = {
         tap-to-click = true;
         two-finger-scrolling-enabled = true;
+      };
+
+      "org/gnome/shell/extensions/switcher" = {
+        workspace-indicator = true;
       };
 
       "org/gnome/desktop/interface" = {
@@ -183,6 +188,7 @@ in {
     pano
     paperwm
     phinger-cursors
+    switcher
   ];
 
   gtk = {
