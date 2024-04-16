@@ -1,15 +1,19 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   # sudo mkdir -p /nix/persist/passwordFiles/
   # sudo nix-shell --run 'mkpasswd -m SHA-512 -s > /nix/persist/passwordFiles/chen' -p mkpasswd
   users.users = {
     root = {
       # inherit initialHashedPassword;
-      hashedPasswordFile = "/nix/persist/passwordFiles/root";
+      hashedPasswordFile = config.age.secrets.rootHashedPasswordFile.path;
     };
 
     chen = {
       # inherit initialHashedPassword;
-      hashedPasswordFile = "/nix/persist/passwordFiles/chen";
+      hashedPasswordFile = config.age.secrets.chenHashedPasswordFile.path;
       description = "Chen";
       isNormalUser = true;
       shell = pkgs.zsh;
