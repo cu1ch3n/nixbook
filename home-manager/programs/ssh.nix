@@ -7,6 +7,9 @@
         port = 443;
         user = "git";
       };
+      "*" = {
+        extraOptions.IdentityAgent = "~/.1password/agent.sock";
+      };
     };
   };
 }
