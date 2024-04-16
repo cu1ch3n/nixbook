@@ -16,6 +16,7 @@
     screenfetch
     slack
     spotify
+    sublime-merge
     tree
     vlc
     wineWowPackages.waylandFull
