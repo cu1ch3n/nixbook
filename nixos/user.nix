@@ -8,12 +8,12 @@
   users.users = {
     root = {
       # inherit initialHashedPassword;
-      hashedPasswordFile = config.age.secrets.rootHashedPasswordFile.path;
+      hashedPasswordFile = "/nix/persist/passwordFiles/root";
     };
 
     chen = {
       # inherit initialHashedPassword;
-      hashedPasswordFile = config.age.secrets.chenHashedPasswordFile.path;
+      hashedPasswordFile = "/nix/persist/passwordFiles/chen";
       description = "Chen";
       isNormalUser = true;
       shell = pkgs.zsh;
