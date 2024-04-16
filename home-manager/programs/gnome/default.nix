@@ -55,11 +55,19 @@ in {
         favorite-apps = [
           "org.gnome.Nautilus.desktop"
           "Alacritty.desktop"
+          "htop.desktop"
+          "1password.desktop"
           "chromium-browser.desktop"
           "code.desktop"
+          "sublime_text.desktop"
+          "sublime_merge.desktop"
           "slack.desktop"
+          "discord.desktop"
           "com.tencent.wechat.desktop"
+          "Zoom.desktop"
           "yesplaymusic.desktop"
+          "io.github.msojocs.bilibili.desktop"
+          "Waydroid.desktop"
           "v2raya.desktop"
         ];
 
