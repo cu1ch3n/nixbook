@@ -1,10 +1,11 @@
 {pkgs, ...}: {
   editor = {
     detectIndentation = true;
-    fontFamily = "'JetBrains Mono Light'";
+    fontFamily = "Iosevka, 'JetBrains Mono Light'";
     fontLigatures = true;
     formatOnPaste = false;
     minimap.enabled = false;
+    stickyScroll.enabled = false;
   };
   explorer.excludeGitIgnore = true;
   extensions.ignoreRecommendations = true;
@@ -34,7 +35,7 @@
     colorTheme = "Atom One Light";
     iconTheme = "vscode-icons";
   };
-  # typst-preview = {
-  #   executable = pkgs.typst-preview;
-  # };
+  breadcrumbs = {
+    enabled = false;
+  };
 }
