@@ -8,7 +8,11 @@
     inputs.agenix.packages.x86_64-linux.default
   ];
 
-  programs._1password-gui.enable = true;
+  programs._1password-gui = {
+    enable = true;
+    polkitPolicyOwners = [ "chen" ];
+  };
+  
   programs._1password.enable = true;
 
   # age.identityPaths = ["/home/chen/.ssh/id_ed25519.pub"];
