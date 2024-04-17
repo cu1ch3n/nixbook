@@ -10,9 +10,9 @@
 
   programs._1password-gui = {
     enable = true;
-    polkitPolicyOwners = [ "chen" ];
+    polkitPolicyOwners = ["chen"];
   };
-  
+
   programs._1password.enable = true;
 
   # age.identityPaths = ["/home/chen/.ssh/id_ed25519.pub"];

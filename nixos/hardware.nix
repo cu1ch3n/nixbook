@@ -93,7 +93,13 @@
   };
 
   # Fingerprint
-  services.fprintd.enable = true;
+  services.fprintd = {
+    enable = true;
+  };
+  systemd.services.fprintd = {
+    wantedBy = ["multi-user.target"];
+    serviceConfig.Type = "simple";
+  };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
