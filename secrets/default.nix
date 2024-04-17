@@ -1,20 +1,16 @@
-{inputs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [inputs.agenix.nixosModules.default];
-  environment.systemPackages = [inputs.agenix.packages.x86_64-linux.default];
+  environment.systemPackages = with pkgs; [
+    inputs.agenix.packages.x86_64-linux.default
+  ];
 
-  age.identityPaths = ["/home/chen/.ssh/id_ed25519"];
+  programs._1password-gui.enable = true;
+  programs._1password.enable = true;
 
-  age.secrets.rootHashedPasswordFile = {
-    file = ./rootHashedPasswordFile.age;
-    mode = "400";
-    owner = "root";
-    group = "root";
-  };
-
-  age.secrets.chenHashedPasswordFile = {
-    file = ./chenHashedPasswordFile.age;
-    mode = "400";
-    owner = "root";
-    group = "root";
-  };
+  # age.identityPaths = ["/home/chen/.ssh/id_ed25519.pub"];
+  # Stop using age before it's ready to support SSH agent
 }
