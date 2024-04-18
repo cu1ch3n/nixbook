@@ -11,6 +11,7 @@
     ./impermanence.nix
     ./locale.nix
     ./nix.nix
+    ./secrets.nix
     ./user.nix
     inputs.home-manager.nixosModules.home-manager
   ];
