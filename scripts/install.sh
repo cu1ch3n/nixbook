@@ -16,11 +16,10 @@ mkswap -L swap /dev/nvme0n1p3
 # Mounting
 mount -t tmpfs none /mnt
 
-mkdir -p /mnt/{boot,nix,etc/nixos,var/log}
+mkdir -p /mnt/{boot,nix,etc/nixos,var/log,passwordFiles}
 mount /dev/nvme0n1p1 /mnt/boot
 mount /dev/nvme0n1p2 /mnt/nix
 
-mkdir -p /mnt/nix/persist/{etc/nixos,var/log,passwordFiles}
 mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
 mount -o bind /mnt/nix/persist/var/log /mnt/var/log
 

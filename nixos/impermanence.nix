@@ -7,11 +7,7 @@
     hideMounts = true;
 
     directories = [
-      "/var/lib/bluetooth"
-      "/var/lib/fprint"
-      "/var/lib/nixos"
-      "/var/lib/systemd"
-      "/var/lib/waydroid"
+      "/var/lib"
       "/var/log"
 
       "/etc/NetworkManager/system-connections"

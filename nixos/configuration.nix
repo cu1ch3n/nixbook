@@ -35,6 +35,7 @@
   networking = {
     hostName = "nixbook";
     networkmanager.enable = true;
+    firewall.enable = true;
   };
 
   systemd.services.wpa_supplicant.environment.OPENSSL_CONF = pkgs.writeText "openssl.cnf" ''
@@ -58,6 +59,7 @@
 
   services.ntp.enable = true;
   services.v2raya.enable = true;
+  security.sudo.execWheelOnly = true;
 
   system.stateVersion = "24.05";
 }
