@@ -183,6 +183,15 @@ in {
         ];
       };
 
+      "org/gnome/shell/extensions/paperwm" = {
+        winprops = map toJSON [
+          {
+            "wm_class" = "1Password";
+            "scratch_layer" = true;
+          }
+        ];
+      };
+
       "${paperwm-workspaces}" = {
         list = workspace-ids;
       };
