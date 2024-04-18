@@ -1,9 +1,4 @@
-{inputs, ...}: let
-  private-directories = map (directory: {
-    inherit directory;
-    mode = "0700";
-  });
-in {
+{inputs, ...}: {
   imports = [
     inputs.impermanence.nixosModules.impermanence
   ];
@@ -28,7 +23,7 @@ in {
     ];
 
     users.chen = {
-      directories = private-directories [
+      directories = [
         # XDG user directories
         "Desktop"
         "Documents"
