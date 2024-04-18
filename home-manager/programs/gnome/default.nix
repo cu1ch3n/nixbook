@@ -5,17 +5,6 @@
 
   dconf.settings = {
     "org/gnome/shell" = {
-      # disabled-extensions = [
-      #   "apps-menu@gnome-shell-extensions.gcampax.github.com"
-      #   "drive-menu@gnome-shell-extensions.gcampax.github.com"
-      #   "light-style@gnome-shell-extensions.gcampax.github.com"
-      #   "places-menu@gnome-shell-extensions.gcampax.github.com"
-      #   "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com"
-      #   "user-theme@gnome-shell-extensions.gcampax.github.com"
-      #   "window-list@gnome-shell-extensions.gcampax.github.com"
-      #   "windowsNavigator@gnome-shell-extensions.gcampax.github.com"
-      #   "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
-      # ];
       enabled-extensions = [
         "AlphabeticalAppGrid@stuarthayhurst"
         "appindicatorsupport@rgcjonas.gmail.com"
@@ -45,6 +34,31 @@
       ];
     };
 
+    "org/gnome/desktop/background" = {
+      color-shading-type = "solid";
+      picture-options = "zoom";
+      picture-uri = "file://" + ./wallpapers/sun.png;
+      picture-uri-dark = "file://" + ./wallpapers/comet.png;
+    };
+
+    "org/gnome/desktop/interface" = {
+      cursor-theme = "phinger-cursors-light";
+      cursor-size = 32;
+      document-font-name = "Inter 11";
+      enable-animations = true;
+      enable-hot-corners = false;
+      font-antialiasing = "rgba";
+      font-hinting = "full";
+      font-name = "Inter 11";
+      monospace-font-name = "JetBrains Mono 10";
+      show-battery-percentage = true;
+    };
+
+    "org/gnome/desktop/peripherals/touchpad" = {
+      tap-to-click = true;
+      two-finger-scrolling-enabled = true;
+    };
+
     "org/gnome/desktop/search-providers" = {
       enabled = ["org.gnome.Weather.desktop"];
       disabled = ["org.gnome.Contacts.desktop"];
@@ -63,31 +77,6 @@
     "org/gnome/shell/extensions/pano" = {
       play-audio-on-copy = false;
       send-notification-on-copy = false;
-    };
-
-    "org/gnome/desktop/peripherals/touchpad" = {
-      tap-to-click = true;
-      two-finger-scrolling-enabled = true;
-    };
-
-    "org/gnome/desktop/interface" = {
-      cursor-theme = "phinger-cursors-light";
-      cursor-size = 32;
-      document-font-name = "Inter 11";
-      enable-animations = true;
-      enable-hot-corners = false;
-      font-antialiasing = "rgba";
-      font-hinting = "full";
-      font-name = "Inter 11";
-      monospace-font-name = "JetBrains Mono 10";
-      show-battery-percentage = true;
-    };
-
-    "org/gnome/desktop/background" = {
-      color-shading-type = "solid";
-      picture-options = "zoom";
-      picture-uri = "file://" + ./wallpapers/sun.png;
-      picture-uri-dark = "file://" + ./wallpapers/comet.png;
     };
   };
 
