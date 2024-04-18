@@ -71,7 +71,7 @@ in {
           "v2raya.desktop"
         ];
 
-        last-selected-power-profile = "power-saver";
+        # last-selected-power-profile = "power-saver";
       };
 
       "org/gnome/desktop/search-providers" = {

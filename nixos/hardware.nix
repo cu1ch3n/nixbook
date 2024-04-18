@@ -64,7 +64,7 @@
   };
 
   # Power saving
-  powerManagement.cpuFreqGovernor = "powersave";
+  powerManagement.cpuFreqGovernor = "performance";
   powerManagement.powertop.enable = true;
   services.power-profiles-daemon.enable = true;
   services.thermald.enable = true;
@@ -72,8 +72,8 @@
     enable = true;
     settings = {
       battery = {
-        governor = "powersave";
-        turbo = "never";
+        governor = "performance";
+        turbo = "auto";
       };
       charger = {
         governor = "performance";
