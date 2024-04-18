@@ -28,6 +28,6 @@
           sha256 = "d5oohDNF44+3FRYOIAv32hSgFvvggugDP+kbOAcYfX0=";
         }
       ];
-    userSettings = import ./user-settings.nix {inherit pkgs;};
+    userSettings = import ./user-settings.nix;
   };
 }
