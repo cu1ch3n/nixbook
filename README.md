@@ -2,7 +2,7 @@
 
 ## Components
 
-- Desktop: GNOME
+- Desktop: GNOME w/ PaperWM
 - Wallpaper: KDE 6 default wallpaper :)
 
 ## Preview
@@ -13,16 +13,22 @@
 ### Dark
 ![](assets/screenshot-dark.png)
 
-## Update NixOS configuration
+## Post-installation
+
+- Set user password
+- Set user fingerprint
+- 1Password CLI integration
+
+## Rebuild NixOS configuration
 
 ```console
-sudo nixos-rebuild switch --flake .#nixbook
+just rebuild
 ```
 
 ## Update flake lock file
 
 You may use
 ```console
-nix flake update --commit-lock-file
+just update
 ```
 to update `flake.lock`.

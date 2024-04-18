@@ -1,4 +1,4 @@
-deploy:
+rebuild:
   sudo nixos-rebuild switch --flake .#nixbook |& nom
 
 debug:
