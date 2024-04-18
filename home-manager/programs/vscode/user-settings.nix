@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   editor = {
     detectIndentation = true;
     fontFamily = "Iosevka, 'JetBrains Mono Light'";
@@ -19,8 +19,15 @@
   };
   nix = {
     enableLanguageServer = true;
-    formatterPath = "alejandra";
-    serverPath = "nixd";
+    formatterPath = ["nix" "fmt" "--" "-"]; # using flakes with `formatter = pkgs.alejandra;`
+    serverPath = "nil";
+    serverSettings = {
+      nil = {
+        formatting = {
+          command = ["alejandra"];
+        };
+      };
+    };
   };
   search.useParentIgnoreFiles = true;
   vsicons.dontShowNewVersionMessage = true;

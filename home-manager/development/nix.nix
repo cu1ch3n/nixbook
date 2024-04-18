@@ -11,7 +11,7 @@ in {
     json2nix
     comma
     deadnix
-    nixd
+    nil
     nix-init
     nix-output-monitor
     nixpkgs-fmt
