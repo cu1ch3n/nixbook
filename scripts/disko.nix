@@ -27,8 +27,8 @@
               mountOptions = [
                 "defaults"
               ];
+              extraArgs = ["-n boot"];
             };
-            extraArgs = ["-n boot"];
           };
 
           luks = {
