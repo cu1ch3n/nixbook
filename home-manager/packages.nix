@@ -4,6 +4,7 @@
     bilibili
     discord
     evolution
+    firefox
     gh
     gnumake
     inkscape
