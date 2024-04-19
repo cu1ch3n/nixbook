@@ -51,6 +51,7 @@
         ".local/share/keyrings"
         "./.local/share/pano@elhan.io"
         ".local/share/qBittorrent"
+        ".local/share/Steam"
         ".local/share/Trash"
         ".local/share/waydroid"
 
