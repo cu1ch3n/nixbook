@@ -3,12 +3,15 @@
     inputs.impermanence.nixosModules.impermanence
   ];
 
-  environment.persistence."/nix/persist" = {
+  environment.persistence."/persist" = {
     hideMounts = true;
 
     directories = [
-      "/var/lib"
-      "/var/log"
+      "/var/lib/bluetooth"
+      "/var/lib/fprint"
+      "/var/lib/nixos"
+      "/var/lib/systemd"
+      "/var/lib/waydroid"
 
       "/etc/NetworkManager/system-connections"
       "/etc/v2raya"
