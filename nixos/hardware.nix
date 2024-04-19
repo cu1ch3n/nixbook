@@ -46,7 +46,7 @@
   boot.initrd.luks.devices."crypted".device = "/dev/disk/by-partlabel/disk-main-luks";
 
   fileSystems."/nix" = {
-    device = "/dev/disk/by-partlabel/disk-main-luks";
+    device = "/dev/mapper/crypted";
     fsType = "btrfs";
     options = ["subvol=nix" "compress=zstd" "noatime"];
   };
