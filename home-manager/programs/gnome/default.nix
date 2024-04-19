@@ -9,6 +9,7 @@
         "AlphabeticalAppGrid@stuarthayhurst"
         "appindicatorsupport@rgcjonas.gmail.com"
         "caffeine@patapon.info"
+        "dash-to-dock@micxgx.gmail.com"
         "gsconnect@andyholmes.github.io"
         "kimpanel@kde.org"
         "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
@@ -71,6 +72,12 @@
       show-indicator = "only-active";
     };
 
+    "org/gnome/shell/extensions/dash-to-dock" = {
+      hot-keys = false;
+      transparency-mode = "FIXED";
+      background-opacity = 0.5;
+    };
+
     "org/gnome/shell/extensions/kimpanel" = {
       font = "Source Han Sans SC 11";
     };
@@ -92,6 +99,7 @@
     alphabetical-app-grid
     appindicator
     caffeine
+    dash-to-dock
     dconf2nix
     dconf-editor
     gnome-tweaks
