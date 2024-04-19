@@ -27,7 +27,6 @@
               mountOptions = [
                 "defaults"
               ];
-              extraArgs = ["-n boot"];
             };
           };
 
