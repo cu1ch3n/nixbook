@@ -122,12 +122,18 @@ in {
       {name = "Et Cetera";}
     ];
 
-  # xdg.configFile."paperwm/user.css".text = ''
-  #   .paperwm-selection {
-  #       border-radius: 12px 12px 0px 0px;
-  #       background-color: rgba(0, 0, 0, 0);
-  #   }
-  # '';
+  xdg.configFile."paperwm/user.css".text = ''
+    .paperwm-selection {
+      border-radius: 0px 0px 0px 0px;
+      border-width: 0px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .paperwm-window-position-bar {
+      border: 0;
+      border-radius: 1px;
+      background-color: rgba(0, 0, 0, 0.35);
+    }
+  '';
 
   home.packages = with pkgs;
   with gnome;
