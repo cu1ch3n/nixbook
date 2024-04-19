@@ -39,12 +39,43 @@
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-label/boot";
+    device = "/dev/disk/by-partlabel/disk-main-ESP";
     fsType = "vfat";
   };
 
-  fileSystems."/persist".neededForBoot = true;
-  fileSystems."/var/log".neededForBoot = true;
+  boot.initrd.luks.devices."crypted".device = "/dev/disk/by-partlabel/disk-main-luks";
+
+  fileSystems."/nix" = {
+    device = "/dev/disk/by-partlabel/disk-main-luks";
+    fsType = "btrfs";
+    options = [ "subvol=nix" "compress=zstd" "noatime" ];
+  };
+
+  fileSystems."/persist" = {
+    device = "/dev/mapper/crypted";
+    fsType = "btrfs";
+    options = [ "subvol=persist" "compress=zstd" "noatime" ];
+    neededForBoot = true;
+  };
+
+  fileSystems."/swap" = {
+    device = "/dev/mapper/crypted";
+    fsType = "btrfs";
+    options = [ "subvol=swap" "noatime" ];
+  };
+
+  fileSystems."/tmp" = {
+    device = "/dev/mapper/crypted";
+    fsType = "btrfs";
+    options = [ "subvol=tmp" "noatime" ];
+  };
+
+  fileSystems."/var/log" = {
+   device = "/dev/mapper/crypted";
+   fsType = "btrfs";
+   options = [ "subvol=log" "compress=zstd" "noatime" ];
+   neededForBoot = true;
+  };
 
   boot.tmp.cleanOnBoot = true;
 
