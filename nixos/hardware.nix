@@ -48,33 +48,33 @@
   fileSystems."/nix" = {
     device = "/dev/disk/by-partlabel/disk-main-luks";
     fsType = "btrfs";
-    options = [ "subvol=nix" "compress=zstd" "noatime" ];
+    options = ["subvol=nix" "compress=zstd" "noatime"];
   };
 
   fileSystems."/persist" = {
     device = "/dev/mapper/crypted";
     fsType = "btrfs";
-    options = [ "subvol=persist" "compress=zstd" "noatime" ];
+    options = ["subvol=persist" "compress=zstd" "noatime"];
     neededForBoot = true;
   };
 
   fileSystems."/swap" = {
     device = "/dev/mapper/crypted";
     fsType = "btrfs";
-    options = [ "subvol=swap" "noatime" ];
+    options = ["subvol=swap" "noatime"];
   };
 
   fileSystems."/tmp" = {
     device = "/dev/mapper/crypted";
     fsType = "btrfs";
-    options = [ "subvol=tmp" "noatime" ];
+    options = ["subvol=tmp" "noatime"];
   };
 
   fileSystems."/var/log" = {
-   device = "/dev/mapper/crypted";
-   fsType = "btrfs";
-   options = [ "subvol=log" "compress=zstd" "noatime" ];
-   neededForBoot = true;
+    device = "/dev/mapper/crypted";
+    fsType = "btrfs";
+    options = ["subvol=log" "compress=zstd" "noatime"];
+    neededForBoot = true;
   };
 
   boot.tmp.cleanOnBoot = true;
