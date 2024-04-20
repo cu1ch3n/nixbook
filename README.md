@@ -47,10 +47,12 @@ just update
 ## Preview
 
 ### Light
-![](assets/screenshot-light.png)
+![](assets/screenshot-light-0.png)
+![](assets/screenshot-light-1.png)
 
 ### Dark
-![](assets/screenshot-dark.png)
+![](assets/screenshot-dark-0.png)
+![](assets/screenshot-dark-1.png)
 
 [`abella-modded`]: https://github.com/nix-community/nur-combined/tree/master/repos/chen/pkgs/abella-modded/default.nix
 [`ott-sweirich`]: https://github.com/nix-community/nur-combined/tree/master/repos/chen/pkgs/ott-sweirich/default.nix
