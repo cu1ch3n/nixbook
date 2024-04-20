@@ -8,7 +8,7 @@ Welcome to NixBook, a repository where I share my NixOS and home-manager configu
 ## Highlights
 
 - **Tmpfs as root & home**: Automatically erases the root (`/`) and home (`/home`) on each boot, ensuring a clean state. Persistent data is managed by the [Impermanence] module (See [tmpfs as root] and [tmpfs as home] for more details).
-- **Encrypted single Btrfs partition**: add password protection for the disk, enable easy snapshot backups
+- **Encrypted single Btrfs partition**: LUKS enhances security by adding password protection to the disk. Btrfs also supports easy snapshot backups.
 - **Declarative disk partitioning**: eliminates the need for manual partitioning, mounting, and unmounting required during the installation phase
 - **Efficient Desktop Environment**: Optimized for productivity with minimal distractions, featuring only essential visual elements. It supports an automatic switch between light and dark themes.
 - **Theorem proving toolchains in PL research**: `abella`, `coq`, `lngen` and `ott` toolchain stuff. Packages maintained by me:
@@ -19,7 +19,7 @@ Welcome to NixBook, a repository where I share my NixOS and home-manager configu
 
 To install the Nixbook configurations on your system, start by booting your computer with a LiveCD. Once you have successfully booted into the LiveCD environment, open a terminal and enter:
 
-```
+```console
 git clone https://github.com/cu1ch3n/nixbook
 cd nixbook/script
 chmod +x ./install.sh
