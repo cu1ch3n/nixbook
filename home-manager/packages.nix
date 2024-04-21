@@ -16,6 +16,7 @@
     screenfetch
     slack
     spotify
+    strawberry
     sublime-merge
     tree
     vlc
