@@ -47,10 +47,12 @@ just update
 ## Preview
 
 ### Light
+![](assets/screenshot-light.png)
 ![](assets/screenshot-light-0.png)
 ![](assets/screenshot-light-1.png)
 
 ### Dark
+![](assets/screenshot-dark.png)
 ![](assets/screenshot-dark-0.png)
 ![](assets/screenshot-dark-1.png)
 
