@@ -1,0 +1,12 @@
+---
+- Developer:
+    - Github:
+        - abbr: GH
+          icon: github.png
+          href: https://github.com/
+
+- Entertainment:
+    - YouTube:
+        - abbr: YT
+          icon: youtube.png
+          href: https://youtube.com/

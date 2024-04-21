@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./desktop
+    ./services
     ./hardware.nix
     ./impermanence.nix
     ./locale.nix
