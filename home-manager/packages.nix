@@ -3,7 +3,7 @@
     axel
     bilibili
     discord
-    evolution
+    # evolution
     firefox
     gh
     gnumake
