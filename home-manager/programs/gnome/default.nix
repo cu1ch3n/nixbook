@@ -76,6 +76,7 @@
       hot-keys = false;
       transparency-mode = "FIXED";
       background-opacity = 0.5;
+      multi-monitor = true;
     };
 
     "org/gnome/shell/extensions/kimpanel" = {
