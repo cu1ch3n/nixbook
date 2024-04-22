@@ -15,6 +15,7 @@
     qq
     screenfetch
     slack
+    snipaste
     spotify
     strawberry
     sublime-merge

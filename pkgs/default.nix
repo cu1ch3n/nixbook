@@ -2,4 +2,5 @@
 # You can build them using 'nix build .#example'
 {pkgs, ...}: {
   marvin = pkgs.callPackage ./marvin.nix {};
+  snipaste = pkgs.callPackage ./snipaste.nix {};
 }
