@@ -79,15 +79,12 @@ in {
 
       "org/gnome/shell/extensions/auto-move-windows" = {
         application-list = [
-          "chromium-browser.desktop:1"
-          "org.gnome.Nautilus.desktop:2"
           "qq.desktop:5"
           "discord.desktop:5"
           "spotify.desktop:6"
           "yesplaymusic.desktop:6"
+          "org.straberrymusicplayer.strawberry.desktop:6"
           "Waydroid.desktop:7"
-          "org.gnome.Extensions.desktop:8"
-          "org.gnome.Settings.desktop:8"
         ];
       };
 
