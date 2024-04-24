@@ -107,6 +107,7 @@
     gnome-tweaks
     gsconnect
     kimpanel
+    libnotify
     neofetch
     pano
     phinger-cursors
