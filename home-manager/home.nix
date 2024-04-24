@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./development
+    ./dotfiles
     ./programs
     ./packages.nix
   ];
