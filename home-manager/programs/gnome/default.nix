@@ -85,6 +85,7 @@
     };
 
     "org/gnome/shell/extensions/pano" = {
+      paste-on-select = false;
       play-audio-on-copy = false;
       send-notification-on-copy = false;
     };
