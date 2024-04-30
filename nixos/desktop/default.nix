@@ -7,9 +7,9 @@
 
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
-
-    libinput.enable = true;
   };
+
+  services.libinput.enable = true;
 
   # For trash
   services.gvfs.enable = true;
