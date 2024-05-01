@@ -91,25 +91,6 @@
     videoDrivers = ["amdgpu"];
   };
 
-  # Power saving
-  powerManagement.cpuFreqGovernor = "performance";
-  powerManagement.powertop.enable = true;
-  services.power-profiles-daemon.enable = true;
-  services.thermald.enable = true;
-  services.auto-cpufreq = {
-    enable = true;
-    settings = {
-      battery = {
-        governor = "performance";
-        turbo = "auto";
-      };
-      charger = {
-        governor = "performance";
-        turbo = "auto";
-      };
-    };
-  };
-
   sound = {
     enable = true;
     mediaKeys.enable = true;
