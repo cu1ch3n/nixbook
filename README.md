@@ -1,15 +1,21 @@
 [![built with nix](https://img.shields.io/static/v1?logo=nixos&logoColor=white&label=&message=Built%20with%20Nix&color=41439a)](https://builtwithnix.org)
 [![Cachix Cache](https://img.shields.io/badge/cachix-chen-blue.svg)](https://chen.cachix.org)
 
-# NixBook: Chen's NixOS Configurations
+<p align="center">
+    <img src="./assets/nixos-logo.png" width=30% />
+</p>
 
-Welcome to NixBook, a repository where I share my NixOS and home-manager configuration files for my EliteBook.
+<h2 align="center">
+    NixBook: Chen's NixOS Configurations
+</h2>
+
+> Welcome to NixBook, a repository where I share my NixOS and home-manager configuration files for my EliteBook 865 G10.
 
 ## Highlights
 
 - **Tmpfs as root & home**: Automatically erases the root (`/`) and home (`/home`) on each boot, ensuring a clean state. Persistent data is managed by the [Impermanence] module (See [tmpfs as root] and [tmpfs as home] for more details).
 - **Encrypted single Btrfs partition**: LUKS enhances security by adding password protection to the disk. Btrfs also supports easy snapshot backups.
-- **Declarative disk partitioning**: eliminates the need for manual partitioning, mounting, and unmounting required during the installation phase
+- **Declarative disk partitioning**: eliminates the need for manual partitioning, mounting, and unmounting during the installation phase
 - **Efficient Desktop Environment**: Optimized for productivity with minimal distractions, featuring only essential visual elements. It supports an automatic switch between light and dark themes.
 - **Theorem proving toolchains in PL research**: `abella`, `coq`, `lngen` and `ott` toolchain stuff. Packages maintained by me:
     - `nixpkgs`: [`lngen`]
