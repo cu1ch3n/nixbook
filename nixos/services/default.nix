@@ -1,6 +1,5 @@
 {
   imports = [
     ./homepage
-    ./adguard.nix
   ];
 }
