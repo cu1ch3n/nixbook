@@ -3,13 +3,14 @@
     axel
     bilibili
     discord
-    # evolution
+    evolution
     firefox
     gh
     gnumake
     inkscape
     inotify-tools
     just
+    oh-my-git
     okular
     qbittorrent
     qq
