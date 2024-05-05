@@ -105,11 +105,11 @@
     dash-to-dock
     dconf2nix
     dconf-editor
+    fastfetch
     gnome-tweaks
     gsconnect
     kimpanel
     libnotify
-    neofetch
     pano
     phinger-cursors
   ];
