@@ -41,6 +41,7 @@
         ".config/1Password"
         ".config/chromium"
         ".config/Code"
+        ".config/discord"
         ".config/fcitx5"
         ".config/gh"
         ".config/QQ"
