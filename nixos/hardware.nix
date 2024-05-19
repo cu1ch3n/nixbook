@@ -22,7 +22,7 @@
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = ["synaptics_usb"];
   boot.kernelModules = ["kvm-amd"];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_6_8;
   boot.extraModulePackages = [];
 
   # disable Scatter/Gather APU recently enabled by default,
@@ -108,6 +108,12 @@
   systemd.services.fprintd = {
     wantedBy = ["multi-user.target"];
     serviceConfig.Type = "simple";
+  };
+
+  # Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
   };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
