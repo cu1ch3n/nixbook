@@ -89,6 +89,12 @@
       play-audio-on-copy = false;
       send-notification-on-copy = false;
     };
+
+    "org/gnome/settings-daemon/plugins/power" = {
+      power-saver-profile-on-low-battery = false;
+      sleep-inactive-battery-type = "nothing";
+      sleep-inactive-ac-type = "nothing";
+    };
   };
 
   xdg.mimeApps.associations.added = {
