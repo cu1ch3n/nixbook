@@ -118,7 +118,7 @@
 
   services.printing = {
     enable = true;
-    drivers = lib.mkDefault ["hplip"];
+    drivers = [ pkgs.hplip ];
   };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
