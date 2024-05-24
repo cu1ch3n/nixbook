@@ -10,6 +10,7 @@
     inkscape
     inotify-tools
     just
+    kdenlive
     oh-my-git
     okular
     qbittorrent
