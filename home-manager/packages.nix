@@ -11,6 +11,7 @@
     inotify-tools
     just
     kdenlive
+    logseq
     oh-my-git
     okular
     qbittorrent
