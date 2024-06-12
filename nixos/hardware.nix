@@ -92,14 +92,14 @@
   };
 
   sound = {
-    enable = lib.mkDefault false;
-    mediaKeys.enable = true;
+    enable = lib.mkForce false;
+    # mediaKeys.enable = true;
   };
 
-  hardware.pulseaudio = {
-    enable = true;
-    support32Bit = true;
-  };
+  # hardware.pulseaudio = {
+  #   enable = true;
+  #   support32Bit = true;
+  # };
 
   # Fingerprint
   services.fprintd = {
