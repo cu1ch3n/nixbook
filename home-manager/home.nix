@@ -15,6 +15,7 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
+      outputs.overlays.master-packages
       inputs.nix-vscode-extensions.overlays.default
       inputs.nur.overlay
     ];

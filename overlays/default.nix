@@ -1,5 +1,5 @@
 # This file defines overlays
-{...}: {
+{inputs, ...}: {
   # This one brings our custom packages from the 'pkgs' directory
   additions = final: _prev: import ../pkgs {pkgs = final;};
 
@@ -24,5 +24,12 @@
     fcitx5-rime-lua = prev.fcitx5-rime.overrideAttrs (_: {
       buildInputs = [prev.fcitx5 final.librime-lua];
     });
+  };
+
+  master-packages = final: _prev: {
+    master = import inputs.nixpkgs-master {
+      system = final.system;
+      config.allowUnfree = true;
+    };
   };
 }
