@@ -22,7 +22,7 @@
   boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod"];
   boot.initrd.kernelModules = ["synaptics_usb"];
   boot.kernelModules = ["kvm-amd"];
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = lib.mkIf (lib.versionOlder pkgs.linux.version "6.3") (lib.mkDefault pkgs.linuxPackages_latest);
   boot.extraModulePackages = [];
 
   # disable Scatter/Gather APU recently enabled by default,
@@ -92,7 +92,7 @@
   };
 
   sound = {
-    enable = true;
+    enable = lib.mkDefault false;
     mediaKeys.enable = true;
   };
 
