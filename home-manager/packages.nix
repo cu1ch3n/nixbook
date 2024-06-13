@@ -12,10 +12,12 @@
     just
     kdenlive
     logseq
+    master.obsidian
     oh-my-git
     okular
     qbittorrent
     qq
+    quartz
     screenfetch
     slack
     snipaste
