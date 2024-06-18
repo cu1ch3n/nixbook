@@ -26,6 +26,7 @@
 
       permittedInsecurePackages = [
         "openssl-1.1.1w"
+        "electron-27.3.11"
       ];
     };
   };
