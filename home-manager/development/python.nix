@@ -4,6 +4,6 @@
       with ps; [
         requests
       ]))
-    jetbrains.pycharm-community
+    # master.jetbrains.pycharm-community
   ];
 }
