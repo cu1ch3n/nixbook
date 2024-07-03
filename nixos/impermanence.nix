@@ -44,6 +44,7 @@
         ".config/discord"
         ".config/fcitx5"
         ".config/gh"
+        ".config/Mullvad VPN"
         ".config/QQ"
         ".config/Slack"
         ".config/sublime-text/Local"

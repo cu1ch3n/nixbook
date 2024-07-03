@@ -61,6 +61,10 @@
 
   services.ntp.enable = true;
   services.v2raya.enable = true;
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
   security.sudo.execWheelOnly = true;
 
   system.stateVersion = "24.05";
