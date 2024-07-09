@@ -11,6 +11,7 @@
         github.copilot
         github.vscode-pull-request-github
         haskell.haskell
+        james-yu.latex-workshop
         jnoortheen.nix-ide
         justusadam.language-haskell
         mgt19937.typst-preview
