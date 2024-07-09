@@ -187,6 +187,7 @@
         };
       }
     ];
+    latex.autoBuild.run = "never";
     latexindent.args = [
       "-c"
       "%DIR%/"
@@ -195,6 +196,5 @@
       "-l"
       "%WORKSPACE_FOLDER%/latexindent.yaml"
     ];
-    autoBuild.run = "never";
   };
 }
