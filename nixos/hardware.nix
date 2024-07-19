@@ -39,11 +39,12 @@
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-partlabel/disk-main-ESP";
+    device = "/dev/disk/by-uuid/7C15-C06C";
     fsType = "vfat";
+    options = ["fmask=0022" "dmask=0022"];
   };
 
-  boot.initrd.luks.devices."crypted".device = "/dev/disk/by-partlabel/disk-main-luks";
+  boot.initrd.luks.devices."crypted".device = "/dev/disk/by-partlabel/NixOS";
 
   fileSystems."/nix" = {
     device = "/dev/mapper/crypted";
