@@ -11,9 +11,9 @@
           (prev.fetchFromGitHub {
             owner = "hchunhui";
             repo = "librime-lua";
-            rev = "20ddea907e0b0c9c60d1dcb6b102bee38697cb5c";
+            rev = "7c1b93965962b7c480d4d7f1a947e4712a9f0c5f";
             fetchSubmodules = false;
-            sha256 = "sha256-kU3pceqQoIM4pypPg2nLLnnyrgQSUEWZW9VLmmPJltU=";
+            sha256 = "sha256-H/ufyHIfYjAjF/Dt3CilL4x9uAXGcF1BkdAgzIbSGA8==";
           })
         ];
       })
