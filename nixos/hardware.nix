@@ -92,10 +92,10 @@
     videoDrivers = ["amdgpu"];
   };
 
-  sound = {
-    enable = lib.mkForce false;
-    mediaKeys.enable = true;
-  };
+  # sound = {
+  #   enable = lib.mkForce false;
+  #   mediaKeys.enable = true;
+  # };
 
   # hardware.pulseaudio = {
   #   enable = true;
