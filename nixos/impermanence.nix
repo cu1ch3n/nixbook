@@ -59,6 +59,7 @@
 
         ".xwechat"
         ".ssh"
+        ".stack"
       ];
 
       files = [
