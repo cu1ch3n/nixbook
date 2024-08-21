@@ -29,7 +29,6 @@
         "com.tencent.wechat.desktop"
         "Zoom.desktop"
         "yesplaymusic.desktop"
-        "io.github.msojocs.bilibili.desktop"
         "steam.desktop"
         "Waydroid.desktop"
         "v2raya.desktop"
