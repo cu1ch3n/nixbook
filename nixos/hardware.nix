@@ -35,16 +35,16 @@
   fileSystems."/" = {
     device = "none";
     fsType = "tmpfs";
-    options = ["defaults" "size=32G" "mode=755"];
+    options = ["defaults" "size=8G" "mode=755"];
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/7C15-C06C";
+    device = "/dev/disk/by-partlabel/disk-main-ESP";
     fsType = "vfat";
     options = ["fmask=0022" "dmask=0022"];
   };
 
-  boot.initrd.luks.devices."crypted".device = "/dev/disk/by-partlabel/NixOS";
+  boot.initrd.luks.devices."crypted".device = "/dev/disk/by-partlabel/disk-main-luks";
 
   fileSystems."/nix" = {
     device = "/dev/mapper/crypted";

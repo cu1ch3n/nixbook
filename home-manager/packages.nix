@@ -12,7 +12,7 @@
     just
     kdenlive
     logseq
-    master.obsidian
+    obsidian
     oh-my-git
     okular
     qbittorrent
