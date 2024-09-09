@@ -32,14 +32,15 @@ chmod +x ./install.sh
 ./install.sh
 ```
 
-**Note**: If you are not me and your hardware is not `EliteBook 865 G10`, please don't run use `./install.sh` and use the configuration directly. You may want to create your settings based on mine and have to replace some of the configurations. There are several very personal places and you may need to look at:
-- `scripts/disko.nix`: you may want to change the disk device and partitions, and the path of the passwordFiles
-- `nixos/hardware.nix`: you can generate an initial hardware setting by `nixos-generate-config` and replace the settings accrodingly and **carefully**
-- `nixos/user.nix`: I guess your name is not Chen
-- `nixos/secrets.nix`: please change the username
-- `home-manager/home.nix`: please change the username
-- `home-manager/dotfiles/default.nix`: you may commnet out the configuration, unless you use the same monitor as mine
-- `home-manager/programs/git.nix`: Your git settings
+**IMPORTANT NOTE**: If you are not me and your hardware is not EliteBook 865 G10, please avoid using `./install.sh` directly. Instead, consider adapting the configurations to suit your own hardware and needs. You'll likely need to make adjustments in several very personal places:
+
+- `scripts/disko.nix`: Update the disk device, partitions, and the path to password files.
+- `nixos/hardware.nix`: Generate an initial hardware configuration with `nixos-generate-config` and **carefully** replace the settings accordingly.
+- `nixos/user.nix`: Replace the username if it's not "Chen."
+- `nixos/secrets.nix`: Replace the username.
+- `home-manager/home.nix`: Replace the username.
+- `home-manager/dotfiles/default.nix`: Comment out the configuration unless you're using the same monitor setup.
+- `home-manager/programs/git.nix`: Update your Git settings as needed.
 
 ## Post-installation
 
