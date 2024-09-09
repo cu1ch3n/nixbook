@@ -32,6 +32,15 @@ chmod +x ./install.sh
 ./install.sh
 ```
 
+**Note**: If you are not me and your hardware is not `EliteBook 865 G10`, please don't run use `./install.sh` and use the configuration directly. You may want to create your settings based on mine and have to replace some of the configurations. There are several very personal places and you may need to look at:
+- `scripts/disko.nix`: you may want to change the disk device and partitions, and the path of the passwordFiles
+- `nixos/hardware.nix`: you can generate an initial hardware setting by `nixos-generate-config` and replace the settings accrodingly and **carefully**
+- `nixos/user.nix`: I guess your name is not Chen
+- `nixos/secrets.nix`: please change the username
+- `home-manager/home.nix`: please change the username
+- `home-manager/dotfiles/default.nix`: you may commnet out the configuration, unless you use the same monitor as mine
+- `home-manager/programs/git.nix`: Your git settings
+
 ## Post-installation
 
 After the installation, there are a few settings that need to be configured manually. These settings are not managed declaratively through NixOS:
