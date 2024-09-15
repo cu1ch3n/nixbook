@@ -48,8 +48,6 @@
       document-font-name = "Inter 11";
       enable-animations = true;
       enable-hot-corners = false;
-      font-antialiasing = "rgba";
-      font-hinting = "full";
       font-name = "Inter 11";
       gtk-enable-primary-paste = false;
       monospace-font-name = "JetBrains Mono 10";
