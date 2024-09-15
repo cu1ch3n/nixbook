@@ -45,12 +45,9 @@
     "org/gnome/desktop/interface" = {
       cursor-theme = "phinger-cursors-light";
       cursor-size = 32;
-      document-font-name = "Inter 11";
       enable-animations = true;
       enable-hot-corners = false;
-      font-name = "Inter 11";
       gtk-enable-primary-paste = false;
-      monospace-font-name = "JetBrains Mono 10";
       show-battery-percentage = true;
     };
 
