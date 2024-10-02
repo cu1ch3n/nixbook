@@ -39,6 +39,7 @@
         "Development"
 
         ".config/1Password"
+        ".config/cabal"
         ".config/chromium"
         ".config/Code"
         ".config/discord"
