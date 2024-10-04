@@ -47,6 +47,7 @@ chmod +x ./install.sh
 After the installation, there are a few settings that need to be configured manually. These settings are not managed declaratively through NixOS:
 - Set user fingerprint
 - 1Password SSH & CLI integration
+- Doom Emacs (git clone and install)
 
 ## Rebuild NixOS configuration
 

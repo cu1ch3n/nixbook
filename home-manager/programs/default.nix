@@ -1,5 +1,6 @@
 {
   imports = [
+    ./emacs
     # ./firefox
     ./gnome
     ./rime
