@@ -16,7 +16,7 @@
   };
 
   services.emacs.enable = true;
-  xdg.configFile."emacs/doom".source = ./doom;
+  xdg.configFile."doom".source = ./doom;
 
   home.sessionPath = ["${config.xdg.configHome}/emacs/bin"];
 }
