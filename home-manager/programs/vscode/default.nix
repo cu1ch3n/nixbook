@@ -14,7 +14,7 @@
         james-yu.latex-workshop
         jnoortheen.nix-ide
         justusadam.language-haskell
-        mgt19937.typst-preview
+        myriad-dreamin.tinymist
         nvarner.typst-lsp
         richie5um2.vscode-sort-json
         skellock.just
