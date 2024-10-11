@@ -46,6 +46,17 @@
     enabled = false;
   };
   latex-workshop = {
+    formatting = {
+      latex = "latexindent";
+      latexindent.args = [
+        "-c"
+        "%DIR%/"
+        "%TMPFILE%"
+        "-m"
+        "-l"
+        "%WORKSPACE_FOLDER%/latexindent.yaml"
+      ];
+    };
     latex.tools = [
       {
         name = "latexmk";
@@ -188,13 +199,5 @@
       }
     ];
     latex.autoBuild.run = "never";
-    latexindent.args = [
-      "-c"
-      "%DIR%/"
-      "%TMPFILE%"
-      "-m"
-      "-l"
-      "%WORKSPACE_FOLDER%/latexindent.yaml"
-    ];
   };
 }
