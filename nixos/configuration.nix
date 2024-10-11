@@ -66,6 +66,7 @@
     package = pkgs.mullvad-vpn;
   };
   security.sudo.execWheelOnly = true;
+  virtualisation.docker.enable = true;
 
   system.stateVersion = "24.11";
 }
