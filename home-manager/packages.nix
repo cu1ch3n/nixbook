@@ -25,6 +25,7 @@
     sublime-merge
     tree
     vlc
+    via
     wineWowPackages.waylandFull
     yesplaymusic
     zoom-us
