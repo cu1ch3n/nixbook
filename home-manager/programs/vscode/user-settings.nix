@@ -200,4 +200,5 @@
     ];
     latex.autoBuild.run = "never";
   };
+  agdaMode.connection.agdaLanguageServer = true;
 }
