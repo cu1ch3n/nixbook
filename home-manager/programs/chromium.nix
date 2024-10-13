@@ -10,7 +10,6 @@
       {id = "padekgcemlokbadohgkifijomclgjgif";} # Proxy SwitchyOmega
       {id = "bpoadfkcbjbfhfodiogcnhhhpibjhbnh";} # Immersive Translate
       {id = "fihnjjcciajhdojfnbdddfaoknhalnja";} # I don't care about cookies
-      {id = "icpgjfneehieebagbmdbhnlpiopdcmna";} # New Tab Redirect
     ];
   };
 }
