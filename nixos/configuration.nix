@@ -68,7 +68,7 @@
   virtualisation.docker.enable = true;
 
   virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "chen" ];
+  users.extraGroups.vboxusers.members = ["chen"];
 
   system.stateVersion = "24.11";
 }
