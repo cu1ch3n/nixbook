@@ -23,6 +23,7 @@
     spotify
     strawberry
     sublime-merge
+    telegram-desktop
     tree
     vlc
     via

@@ -3,6 +3,8 @@
   lib,
   haskellPackages,
   fetchFromGitHub,
+  lsp,
+  Agda
 }:
 haskellPackages.mkDerivation rec {
   pname = "agda-language-server";
@@ -52,6 +54,25 @@ haskellPackages.mkDerivation rec {
     text
     process
     prettyprinter
+  ];
+  testHaskellDepends = with haskellPackages; [
+    aeson
+    Agda
+    base
+    bytestring
+    containers
+    lsp
+    mtl
+    network
+    network-simple
+    process
+    stm
+    strict
+    tasty
+    tasty-golden
+    tasty-hunit
+    tasty-quickcheck
+    text
   ];
   homepage = "https://github.com/agda/agda-language-server";
   description = "Language Server for Agda";
