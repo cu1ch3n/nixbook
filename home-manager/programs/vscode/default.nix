@@ -4,8 +4,8 @@
     mutableExtensionsDir = true;
     extensions = with pkgs.vscode-marketplace;
       [
-        akamud.vscode-theme-onedark
-        akamud.vscode-theme-onelight
+        # akamud.vscode-theme-onedark
+        # akamud.vscode-theme-onelight
         banacorn.agda-mode
         coq-community.vscoq1
         eamodio.gitlens
@@ -21,6 +21,7 @@
         skellock.just
         vscode-icons-team.vscode-icons
         yellpika.latex-input
+        dracula-theme.theme-dracula
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {

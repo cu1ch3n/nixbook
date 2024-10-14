@@ -32,14 +32,14 @@
   search.useParentIgnoreFiles = true;
   vsicons.dontShowNewVersionMessage = true;
   window = {
-    autoDetectColorScheme = true;
+    # autoDetectColorScheme = true;
     titleBarStyle = "custom";
     zoomLevel = 1;
   };
   workbench = {
-    preferredLightColorTheme = "Atom One Light";
-    preferredDarkColorTheme = "Atom One Dark";
-    colorTheme = "Atom One Light";
+    # preferredLightColorTheme = "Atom One Light";
+    # preferredDarkColorTheme = "Atom One Dark";
+    colorTheme = "Dracula Theme";
     iconTheme = "vscode-icons";
   };
   breadcrumbs = {
@@ -200,5 +200,4 @@
     ];
     latex.autoBuild.run = "never";
   };
-  agdaMode.connection.agdaLanguageServer = true;
 }
