@@ -1,6 +1,7 @@
 {
   inputs,
   outputs,
+  lib,
   pkgs,
   ...
 }: {
@@ -69,6 +70,8 @@
 
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = ["chen"];
+
+  programs.nix-ld.enable = true;
 
   system.stateVersion = "24.11";
 }
