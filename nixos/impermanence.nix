@@ -37,6 +37,7 @@
         "Configs"
         "Research"
         "Development"
+        "VirtualMachines"
 
         ".config/1Password"
         ".config/cabal"
@@ -52,6 +53,7 @@
         ".config/sublime-text/Local"
         ".config/yesplaymusic"
         ".config/qBittorrent"
+        ".config/VirtualBox"
         ".local/share/keyrings"
         ".local/share/qBittorrent"
         ".local/share/Steam"

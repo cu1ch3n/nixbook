@@ -68,7 +68,10 @@
   security.sudo.execWheelOnly = true;
   virtualisation.docker.enable = true;
 
-  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host = {
+    enable = true;
+    enableExtensionPack = true;
+  };
   users.extraGroups.vboxusers.members = ["chen"];
 
   programs.nix-ld.enable = true;
