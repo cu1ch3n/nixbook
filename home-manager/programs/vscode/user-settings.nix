@@ -32,14 +32,11 @@
   search.useParentIgnoreFiles = true;
   vsicons.dontShowNewVersionMessage = true;
   window = {
-    # autoDetectColorScheme = true;
     titleBarStyle = "custom";
     zoomLevel = 1;
   };
   workbench = {
-    # preferredLightColorTheme = "Atom One Light";
-    # preferredDarkColorTheme = "Atom One Dark";
-    colorTheme = "Dracula Theme";
+    colorTheme = "Ayu Light";
     iconTheme = "vscode-icons";
   };
   breadcrumbs = {

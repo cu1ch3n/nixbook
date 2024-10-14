@@ -19,9 +19,9 @@
         nvarner.typst-lsp
         richie5um2.vscode-sort-json
         skellock.just
+        teabyii.ayu
         vscode-icons-team.vscode-icons
         yellpika.latex-input
-        dracula-theme.theme-dracula
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
