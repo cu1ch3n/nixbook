@@ -8,11 +8,11 @@
     settings = {
       extra-substituters = [
         "https://chen.cachix.org"
-        "https://cache.iog.io"
+        # "https://cache.iog.io"
       ];
       extra-trusted-public-keys = [
         "chen.cachix.org-1:QzFtWpjuwQylPYCuX7k6m6anRVi/e658FfWZRcTnRgs="
-        "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+        # "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
       ];
       experimental-features = "nix-command flakes";
       auto-optimise-store = true;

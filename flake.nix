@@ -14,7 +14,6 @@
     nur.url = "github:nix-community/NUR";
     hardware.url = "github:nixos/nixos-hardware";
     impermanence.url = "github:nix-community/impermanence";
-    agda-language-server.url = "github:cu1ch3n/agda-language-server.nix"; 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
