@@ -28,7 +28,7 @@
         size = 12;
       };
       cursor.style = "Block";
-      live_config_reload = true;
+      general.live_config_reload = true;
     };
   };
 }
