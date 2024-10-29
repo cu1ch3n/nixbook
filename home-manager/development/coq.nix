@@ -2,6 +2,7 @@
   home.packages = with pkgs;
   with coqPackages_8_15;
   with nur.repos.chen; [
+    autosubst
     coq
     lngen
     metalib
