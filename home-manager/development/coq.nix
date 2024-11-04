@@ -4,6 +4,7 @@
   with nur.repos.chen; [
     autosubst
     coq
+    vscoq-language-server
     # lngen
     # metalib
     # ott-sweirich
