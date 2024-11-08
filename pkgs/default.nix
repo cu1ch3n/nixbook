@@ -9,7 +9,7 @@
     buildInputs = oldAttrs.buildInputs or [] ++ [ pkgs.agdaPackages.standard-library ];
   });
 
-  autosubst2 = pkgs.callPackage ./autosubst2 {};
+  autosubst2 = pkgs.callPackage ./autosubst2.nix {};
 
   marvin = pkgs.callPackage ./marvin.nix {};
   quartz = pkgs.callPackage ./quartz.nix {};
