@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs;
-  with coqPackages_8_20;
+  with coqPackages_8_19;
   with nur.repos.chen; [
     autosubst
     coq
@@ -8,6 +8,7 @@
     # lngen
     # metalib
     # ott-sweirich
+    autosubst-ocaml
   ];
 
   home.sessionVariables = {
