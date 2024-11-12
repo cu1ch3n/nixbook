@@ -12,6 +12,6 @@
   ];
 
   home.sessionVariables = {
-    COQPATH = "$HOME/.nix-profile/lib/coq/8.20/user-contrib";
+    COQPATH = "$HOME/.nix-profile/lib/coq/8.19/user-contrib";
   };
 }
