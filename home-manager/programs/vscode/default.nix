@@ -7,7 +7,8 @@
         # akamud.vscode-theme-onedark
         # akamud.vscode-theme-onelight
         banacorn.agda-mode
-        maximedenes.vscoq
+        # maximedenes.vscoq
+        coq-community.vscoq1
         eamodio.gitlens
         github.copilot
         github.vscode-pull-request-github

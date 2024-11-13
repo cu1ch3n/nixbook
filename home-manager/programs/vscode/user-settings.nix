@@ -6,6 +6,7 @@
     formatOnPaste = false;
     minimap.enabled = false;
     stickyScroll.enabled = false;
+    unicodeHighlight.ambiguousCharacters = false;
   };
   explorer.excludeGitIgnore = true;
   extensions.ignoreRecommendations = true;

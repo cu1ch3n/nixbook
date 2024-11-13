@@ -3,12 +3,18 @@
   with coqPackages_8_19;
   with nur.repos.chen; [
     autosubst
+    autosubst-ocaml
     coq
-    vscoq-language-server_2_2_1
+    # vscoq-language-server_2_2_1
     # lngen
     # metalib
     # ott-sweirich
-    autosubst-ocaml
+    # vampire
+    # cvc4
+    # eprover
+    # z3-tptp
+    coq-hammer
+    coq-hammer-tactics
   ];
 
   home.sessionVariables = {
