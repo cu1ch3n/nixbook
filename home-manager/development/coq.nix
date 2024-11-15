@@ -3,7 +3,7 @@
   with coqPackages_8_19;
   with nur.repos.chen; [
     autosubst
-    autosubst-ocaml
+    master.coqPackages_8_19.autosubst-ocaml
     coq
     # vscoq-language-server_2_2_1
     # lngen

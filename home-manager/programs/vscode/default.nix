@@ -17,7 +17,6 @@
         jnoortheen.nix-ide
         justusadam.language-haskell
         myriad-dreamin.tinymist
-        nvarner.typst-lsp
         richie5um2.vscode-sort-json
         skellock.just
         teabyii.ayu
