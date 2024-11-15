@@ -6,6 +6,7 @@
       [
         # akamud.vscode-theme-onedark
         # akamud.vscode-theme-onelight
+        arrterian.nix-env-selector
         banacorn.agda-mode
         # maximedenes.vscoq
         coq-community.vscoq1
