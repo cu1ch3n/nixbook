@@ -1,9 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs.coqPackages_8_19; [coq];
-
-  home.sessionVariables = {
-    COQPATH = "$HOME/.nix-profile/lib/coq/8.19/user-contrib";
-  };
+  home.packages = with pkgs.coqPackages_8_19; [coq] ++ (with pkgs; [vscoq-language-server_2_2_1]);
 
   # A Note from Chen:
   #

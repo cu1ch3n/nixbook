@@ -8,8 +8,8 @@
         # akamud.vscode-theme-onelight
         arrterian.nix-env-selector
         banacorn.agda-mode
-        # maximedenes.vscoq
-        coq-community.vscoq1
+        maximedenes.vscoq
+        # coq-community.vscoq1
         eamodio.gitlens
         github.copilot
         github.vscode-pull-request-github
