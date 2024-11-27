@@ -104,9 +104,9 @@
     caffeine
     dash-to-dock
     dconf2nix
-    dconf-editor
+    pkgs.dconf-editor
     fastfetch
-    gnome-tweaks
+    pkgs.gnome-tweaks
     gsconnect
     kimpanel
     libnotify
