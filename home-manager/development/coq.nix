@@ -1,5 +1,6 @@
-{pkgs, ...}: {
-  home.packages = with pkgs.coqPackages_8_19; [coq] ++ (with pkgs; [vscoq-language-server_2_2_1]);
+{ pkgs, ... }:
+{
+  home.packages = with pkgs.coqPackages_8_19; [ coq ] ++ (with pkgs; [ vscoq-language-server_2_2_1 ]);
 
   # A Note from Chen:
   #

@@ -3,7 +3,8 @@
   outputs,
   config,
   ...
-}: {
+}:
+{
   imports = [
     ./development
     ./dotfiles
@@ -34,7 +35,7 @@
   home = {
     username = "chen";
     homeDirectory = "/home/chen";
-    sessionPath = ["$HOME/bin"];
+    sessionPath = [ "$HOME/bin" ];
   };
 
   xdg.mimeApps.enable = true;

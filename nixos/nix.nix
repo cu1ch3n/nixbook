@@ -3,7 +3,8 @@
   lib,
   config,
   ...
-}: {
+}:
+{
   nix = {
     settings = {
       extra-substituters = [
@@ -22,7 +23,7 @@
       ];
       experimental-features = "nix-command flakes";
       auto-optimise-store = true;
-      allowed-users = ["@wheel"];
+      allowed-users = [ "@wheel" ];
     };
     gc = {
       automatic = true;
@@ -30,7 +31,7 @@
       options = "--delete-older-than +3";
     };
 
-    registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
+    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
     nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
   };
 }

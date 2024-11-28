@@ -5,7 +5,8 @@
 }:
 with builtins;
 with lib.attrsets;
-with lib.lists; let
+with lib.lists;
+let
   paperwm-workspaces = "org/gnome/shell/extensions/paperwm/workspaces";
   workspace-ids = [
     "19f297b6-e5c3-40f8-b2e8-4bcf2909417f"
@@ -18,14 +19,18 @@ with lib.lists; let
     "a2822780-814e-490a-9d93-e63d37af7033"
     "a3809c53-0695-4d0d-a312-be51057d0f5b"
   ];
-  workspaces-to-configs = ws-configs:
+  workspaces-to-configs =
+    ws-configs:
     listToAttrs (
-      zipListsWith (id-pair: ws-config:
-        nameValuePair "${paperwm-workspaces}/${toString id-pair.fst}" (ws-config // {index = id-pair.snd;}))
-      (zipLists workspace-ids (range 0 9))
-      ws-configs
+      zipListsWith (
+        id-pair: ws-config:
+        nameValuePair "${paperwm-workspaces}/${toString id-pair.fst}" (
+          ws-config // { index = id-pair.snd; }
+        )
+      ) (zipLists workspace-ids (range 0 9)) ws-configs
     );
-in {
+in
+{
   dconf.settings =
     {
       "org/gnome/shell" = {
@@ -37,39 +42,39 @@ in {
       };
 
       "org/gnome/shell/keybindings" = {
-        switch-to-application-1 = [];
-        switch-to-application-2 = [];
-        switch-to-application-3 = [];
-        switch-to-application-4 = [];
-        switch-to-application-5 = [];
-        switch-to-application-6 = [];
-        switch-to-application-7 = [];
-        switch-to-application-8 = [];
-        switch-to-application-9 = [];
+        switch-to-application-1 = [ ];
+        switch-to-application-2 = [ ];
+        switch-to-application-3 = [ ];
+        switch-to-application-4 = [ ];
+        switch-to-application-5 = [ ];
+        switch-to-application-6 = [ ];
+        switch-to-application-7 = [ ];
+        switch-to-application-8 = [ ];
+        switch-to-application-9 = [ ];
       };
 
       "org/gnome/desktop/wm/keybindings" = {
-        switch-to-workspace-1 = ["<Super>1"];
-        switch-to-workspace-2 = ["<Super>2"];
-        switch-to-workspace-3 = ["<Super>3"];
-        switch-to-workspace-4 = ["<Super>4"];
-        switch-to-workspace-5 = ["<Super>5"];
-        switch-to-workspace-6 = ["<Super>6"];
-        switch-to-workspace-7 = ["<Super>7"];
-        switch-to-workspace-8 = ["<Super>8"];
-        switch-to-workspace-9 = ["<Super>9"];
+        switch-to-workspace-1 = [ "<Super>1" ];
+        switch-to-workspace-2 = [ "<Super>2" ];
+        switch-to-workspace-3 = [ "<Super>3" ];
+        switch-to-workspace-4 = [ "<Super>4" ];
+        switch-to-workspace-5 = [ "<Super>5" ];
+        switch-to-workspace-6 = [ "<Super>6" ];
+        switch-to-workspace-7 = [ "<Super>7" ];
+        switch-to-workspace-8 = [ "<Super>8" ];
+        switch-to-workspace-9 = [ "<Super>9" ];
 
-        move-to-workspace-1 = ["<Super><Shift>1"];
-        move-to-workspace-2 = ["<Super><Shift>2"];
-        move-to-workspace-3 = ["<Super><Shift>3"];
-        move-to-workspace-4 = ["<Super><Shift>4"];
-        move-to-workspace-5 = ["<Super><Shift>5"];
-        move-to-workspace-6 = ["<Super><Shift>6"];
-        move-to-workspace-7 = ["<Super><Shift>7"];
-        move-to-workspace-8 = ["<Super><Shift>8"];
-        move-to-workspace-9 = ["<Super><Shift>9"];
+        move-to-workspace-1 = [ "<Super><Shift>1" ];
+        move-to-workspace-2 = [ "<Super><Shift>2" ];
+        move-to-workspace-3 = [ "<Super><Shift>3" ];
+        move-to-workspace-4 = [ "<Super><Shift>4" ];
+        move-to-workspace-5 = [ "<Super><Shift>5" ];
+        move-to-workspace-6 = [ "<Super><Shift>6" ];
+        move-to-workspace-7 = [ "<Super><Shift>7" ];
+        move-to-workspace-8 = [ "<Super><Shift>8" ];
+        move-to-workspace-9 = [ "<Super><Shift>9" ];
 
-        close = ["<Super>q"];
+        close = [ "<Super>q" ];
       };
 
       "org/gnome/desktop/wm/preferences" = {
@@ -108,15 +113,15 @@ in {
       };
     }
     // workspaces-to-configs [
-      {name = "Web Browsing";}
-      {name = "File Management";}
-      {name = "Research";}
-      {name = "Coding";}
-      {name = "Communication";}
-      {name = "Music";}
-      {name = "Android";}
-      {name = "Configurations";}
-      {name = "Et Cetera";}
+      { name = "Web Browsing"; }
+      { name = "File Management"; }
+      { name = "Research"; }
+      { name = "Coding"; }
+      { name = "Communication"; }
+      { name = "Music"; }
+      { name = "Android"; }
+      { name = "Configurations"; }
+      { name = "Et Cetera"; }
     ];
 
   xdg.configFile."paperwm/user.css".text = ''
@@ -132,10 +137,12 @@ in {
     }
   '';
 
-  home.packages = with pkgs;
-  with gnome;
-  with gnomeExtensions; [
-    paperwm
-    switcher
-  ];
+  home.packages =
+    with pkgs;
+    with gnome;
+    with gnomeExtensions;
+    [
+      paperwm
+      switcher
+    ];
 }

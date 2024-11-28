@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   users.users = {
     root = {
       # inherit initialHashedPassword;
@@ -11,7 +12,12 @@
       description = "Chen";
       isNormalUser = true;
       shell = pkgs.zsh;
-      extraGroups = ["wheel" "audio" "docker" "networkmanager"];
+      extraGroups = [
+        "wheel"
+        "audio"
+        "docker"
+        "networkmanager"
+      ];
     };
   };
 

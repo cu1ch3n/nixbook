@@ -1,6 +1,7 @@
-{ lib
-, haskellPackages
-, fetchFromGitHub
+{
+  lib,
+  haskellPackages,
+  fetchFromGitHub,
 }:
 
 haskellPackages.mkDerivation {
@@ -14,9 +15,27 @@ haskellPackages.mkDerivation {
   };
   isLibrary = true;
   isExecutable = true;
-  libraryHaskellDepends = with haskellPackages; [ base parsec containers mtl array wl-pprint graphviz text ];
-  executableHaskellDepends = with haskellPackages; [ base optparse-applicative wl-pprint directory ];
-  testHaskellDepends = with haskellPackages; [ base QuickCheck containers ];
+  libraryHaskellDepends = with haskellPackages; [
+    base
+    parsec
+    containers
+    mtl
+    array
+    wl-pprint
+    graphviz
+    text
+  ];
+  executableHaskellDepends = with haskellPackages; [
+    base
+    optparse-applicative
+    wl-pprint
+    directory
+  ];
+  testHaskellDepends = with haskellPackages; [
+    base
+    QuickCheck
+    containers
+  ];
   homepage = "https://github.com/uds-psl/autosubst2";
   description = "Tool for generating de Bruijn boilerplate Coq code to handle substitutions in languages with binders";
   maintainers = with lib.maintainers; [ chen ];

@@ -2,7 +2,8 @@
   pkgs,
   config,
   ...
-}: {
+}:
+{
   home.packages = with pkgs; [
     fd
     ripgrep
@@ -18,5 +19,5 @@
   services.emacs.enable = true;
   xdg.configFile."doom".source = ./doom;
 
-  home.sessionPath = ["${config.xdg.configHome}/emacs/bin"];
+  home.sessionPath = [ "${config.xdg.configHome}/emacs/bin" ];
 }

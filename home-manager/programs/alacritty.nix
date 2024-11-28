@@ -10,7 +10,7 @@
           x = 12;
           y = 12;
         };
-        opacity = 0.90;
+        opacity = 0.9;
       };
       font = {
         normal = {

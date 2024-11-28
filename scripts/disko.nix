@@ -40,27 +40,36 @@
               };
               content = {
                 type = "btrfs";
-                extraArgs = ["-f"];
+                extraArgs = [ "-f" ];
                 subvolumes = {
                   nix = {
                     mountpoint = "/nix";
-                    mountOptions = ["compress=zstd" "noatime"];
+                    mountOptions = [
+                      "compress=zstd"
+                      "noatime"
+                    ];
                   };
                   persist = {
                     mountpoint = "/persist";
-                    mountOptions = ["compress=zstd" "noatime"];
+                    mountOptions = [
+                      "compress=zstd"
+                      "noatime"
+                    ];
                   };
                   log = {
                     mountpoint = "/var/log";
-                    mountOptions = ["compress=zstd" "noatime"];
+                    mountOptions = [
+                      "compress=zstd"
+                      "noatime"
+                    ];
                   };
                   tmp = {
                     mountpoint = "/tmp";
-                    mountOptions = ["noatime"];
+                    mountOptions = [ "noatime" ];
                   };
                   swap = {
                     mountpoint = "/swap";
-                    mountOptions = ["noatime"];
+                    mountOptions = [ "noatime" ];
                     swap.swapfile.size = "32G";
                   };
                 };

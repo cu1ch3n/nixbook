@@ -1,4 +1,10 @@
-{ lib, stdenv, fetchFromGitHub, rsync, ocamlPackages }:
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  rsync,
+  ocamlPackages,
+}:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "abella-master";
@@ -13,8 +19,21 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  nativeBuildInputs = [ rsync ] ++ (with ocamlPackages; [ ocaml dune_3 menhir findlib ]);
-  buildInputs = with ocamlPackages; [ cmdliner yojson re base64 ocurl ];
+  nativeBuildInputs =
+    [ rsync ]
+    ++ (with ocamlPackages; [
+      ocaml
+      dune_3
+      menhir
+      findlib
+    ]);
+  buildInputs = with ocamlPackages; [
+    cmdliner
+    yojson
+    re
+    base64
+    ocurl
+  ];
 
   patches = [ ./no-npm.patch ];
 
@@ -40,7 +59,10 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://abella-prover.org";
     license = lib.licenses.gpl3;
-    maintainers = with lib.maintainers; [ bcdarwin ciil ];
+    maintainers = with lib.maintainers; [
+      bcdarwin
+      ciil
+    ];
     platforms = lib.platforms.unix;
   };
 })

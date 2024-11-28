@@ -25,6 +25,6 @@ stdenvNoCC.mkDerivation (_: {
     homepage = "https://github.com/iDvel/rime-ice";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = with lib.maintainers; [chen];
+    maintainers = with lib.maintainers; [ chen ];
   };
 })

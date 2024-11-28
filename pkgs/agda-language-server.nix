@@ -4,7 +4,7 @@
   haskellPackages,
   fetchFromGitHub,
   lsp,
-  Agda
+  Agda,
 }:
 haskellPackages.mkDerivation rec {
   pname = "agda-language-server";
@@ -76,7 +76,7 @@ haskellPackages.mkDerivation rec {
   ];
   homepage = "https://github.com/agda/agda-language-server";
   description = "Language Server for Agda";
-  maintainers = with lib.maintainers; [chen];
+  maintainers = with lib.maintainers; [ chen ];
   license = lib.licenses.mit;
   mainProgram = "als";
 }

@@ -1,5 +1,5 @@
 {
-  imports = [./fonts.nix];
+  imports = [ ./fonts.nix ];
 
   services.xserver = {
     enable = true;

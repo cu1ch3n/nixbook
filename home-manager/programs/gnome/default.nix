@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./paperwm.nix
   ];
@@ -57,8 +58,8 @@
     };
 
     "org/gnome/desktop/search-providers" = {
-      enabled = ["org.gnome.Weather.desktop"];
-      disabled = ["org.gnome.Contacts.desktop"];
+      enabled = [ "org.gnome.Weather.desktop" ];
+      disabled = [ "org.gnome.Contacts.desktop" ];
     };
 
     "org/gnome/shell/extensions/caffeine" = {
@@ -96,23 +97,25 @@
     "x-scheme-handler/tel" = "org.gnome.Shell.Extensions.GSConnect.desktop";
   };
 
-  home.packages = with pkgs;
-  with gnome;
-  with gnomeExtensions; [
-    alphabetical-app-grid
-    appindicator
-    caffeine
-    dash-to-dock
-    dconf2nix
-    pkgs.dconf-editor
-    fastfetch
-    pkgs.gnome-tweaks
-    gsconnect
-    kimpanel
-    libnotify
-    pano
-    phinger-cursors
-  ];
+  home.packages =
+    with pkgs;
+    with gnome;
+    with gnomeExtensions;
+    [
+      alphabetical-app-grid
+      appindicator
+      caffeine
+      dash-to-dock
+      dconf2nix
+      pkgs.dconf-editor
+      fastfetch
+      pkgs.gnome-tweaks
+      gsconnect
+      kimpanel
+      libnotify
+      pano
+      phinger-cursors
+    ];
 
   gtk = {
     enable = true;

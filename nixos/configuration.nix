@@ -4,7 +4,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./desktop
     ./hardware.nix
@@ -30,7 +31,9 @@
 
   home-manager = {
     backupFileExtension = "bak";
-    extraSpecialArgs = {inherit inputs outputs;};
+    extraSpecialArgs = {
+      inherit inputs outputs;
+    };
     users.chen = import ../home-manager/home.nix;
   };
 
@@ -72,7 +75,7 @@
     enable = true;
     enableExtensionPack = true;
   };
-  users.extraGroups.vboxusers.members = ["chen"];
+  users.extraGroups.vboxusers.members = [ "chen" ];
 
   programs.nix-ld.enable = true;
 
