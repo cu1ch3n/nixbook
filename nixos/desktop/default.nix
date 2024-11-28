@@ -4,17 +4,14 @@
   services.xserver = {
     enable = true;
     xkb.layout = "us";
-
-    # displayManager.gdm.enable = true;
-    # desktopManager.gnome.enable = true;
-    displayManager.sddm.enable = true;
-    desktopManager.plasma6.enable = true;
   };
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   services.libinput.enable = true;
 
   # For trash
-  services.gvfs.enable = true;
+  # services.gvfs.enable = true;
 
   virtualisation.waydroid.enable = true;
 
