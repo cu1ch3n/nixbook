@@ -10,6 +10,7 @@
     ./chromium.nix
     ./eyedropper.nix
     ./git.nix
+    ./plasma
     ./ssh.nix
     ./wps.nix
     ./zsh.nix
