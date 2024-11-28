@@ -202,6 +202,7 @@
       },
       "original": {
         "owner": "nix-community",
+        "ref": "trunk",
         "repo": "plasma-manager",
         "type": "github"
       }
