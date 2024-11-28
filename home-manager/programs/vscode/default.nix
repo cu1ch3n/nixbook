@@ -16,6 +16,7 @@
         haskell.haskell
         james-yu.latex-workshop
         jnoortheen.nix-ide
+        joeyeremondi.ott
         justusadam.language-haskell
         myriad-dreamin.tinymist
         richie5um2.vscode-sort-json
