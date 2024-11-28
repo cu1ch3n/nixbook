@@ -8,7 +8,7 @@
   Agda_2_6_4 = (pkgs.haskellPackages.callHackage "Agda" "2.6.4" {}).overrideAttrs (oldAttrs: {
     buildInputs = oldAttrs.buildInputs or [] ++ [ pkgs.agdaPackages.standard-library ];
   });
-
+  abella-master = pkgs.callPackage ./abella-master {};
   autosubst2 = pkgs.callPackage ./autosubst2.nix {};
 
   marvin = pkgs.callPackage ./marvin.nix {};

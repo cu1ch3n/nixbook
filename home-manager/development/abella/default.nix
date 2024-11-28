@@ -10,7 +10,7 @@ in {
       hash = "sha256-SnwTCjdI9jPvZLhraRUmLzt6zSf5wxxqxLXIVTSQWts=";
     };
     "sublime-text/Packages/User/Abella.sublime-settings".text = builtins.toJSON {
-      "abella.exec" = "${pkgs.abella}/bin/abella";
+      "abella.exec" = "${pkgs.abella-master}/bin/abella";
       # "abella.exec" = "${pkgs.nur.repos.chen.abella-modded}/bin/abella-modded";
       "proof_view_mode" = "panel";
     };
@@ -51,7 +51,7 @@ in {
   };
   home.packages = with pkgs;
   with nur.repos.chen; [
-    abella
+    abella-master
     abella-modded
     sublime4
   ];
