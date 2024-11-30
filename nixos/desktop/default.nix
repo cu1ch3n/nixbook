@@ -4,17 +4,17 @@
   services.xserver = {
     enable = true;
     xkb.layout = "us";
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
   };
-  services.displayManager = {
-    # sddm = {
-    #   enable = true;
-    #   wayland.enable = true;
-    # };
-    # defaultSession = "plasma";
-    gdm.enable = true;
-  };
+  # services.displayManager = {
+  #   sddm = {
+  #     enable = true;
+  #     wayland.enable = true;
+  #   };
+  #   defaultSession = "plasma";
+  # };
   # services.desktopManager.plasma6.enable = true;
-  services.desktopManager.gnome.enable = true;
   services.libinput.enable = true;
 
   # For trash
