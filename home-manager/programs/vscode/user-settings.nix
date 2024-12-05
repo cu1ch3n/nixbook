@@ -215,4 +215,11 @@
     ];
     latex.autoBuild.run = "never";
   };
+  vscoq = {
+    goals = {
+      # diff.mode = "on";
+      display = "Tabs";
+    };
+    # completion.enable = true;
+  };
 }
