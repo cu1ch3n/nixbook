@@ -18,7 +18,7 @@
       outputs.overlays.modifications
       outputs.overlays.master-packages
       inputs.nix-vscode-extensions.overlays.default
-      inputs.nur.overlay
+      inputs.nur.overlays.default
     ];
     config = {
       allowUnfree = true;
