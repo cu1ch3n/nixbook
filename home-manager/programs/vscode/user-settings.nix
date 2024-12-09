@@ -73,9 +73,8 @@
           "-outdir=%OUTDIR%"
           "%DOC%"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
       {
         name = "lualatexmk";
@@ -89,9 +88,8 @@
           "-outdir=%OUTDIR%"
           "%DOC%"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
       {
         name = "xelatexmk";
@@ -105,9 +103,8 @@
           "-outdir=%OUTDIR%"
           "%DOC%"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
       {
         name = "latexmk_rconly";
@@ -115,9 +112,8 @@
         args = [
           "%DOC%"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
       {
         name = "pdflatex";
@@ -129,9 +125,8 @@
           "-file-line-error"
           "%DOC%"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
       {
         name = "bibtex";
@@ -139,9 +134,8 @@
         args = [
           "%DOCFILE%"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
       {
         name = "rnw2tex";
@@ -150,9 +144,8 @@
           "-e"
           "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
       {
         name = "jnw2tex";
@@ -161,9 +154,8 @@
           "-e"
           "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
       {
         name = "jnw2texminted";
@@ -172,9 +164,8 @@
           "-e"
           "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
       {
         name = "pnw2tex";
@@ -184,9 +175,8 @@
           "tex"
           "%DOC_EXT%"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
       {
         name = "pnw2texminted";
@@ -196,9 +186,8 @@
           "texminted"
           "%DOC_EXT%"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
       {
         name = "tectonic";
@@ -208,9 +197,8 @@
           "--keep-logs"
           "%DOC%.tex"
         ];
-        env =
-          {
-          };
+        env = {
+        };
       }
     ];
     latex.autoBuild.run = "never";

@@ -3,6 +3,7 @@
     ./emacs
     # ./firefox
     ./gnome
+    ./hyprland
     ./rime
     ./vscode
     ./wechat

@@ -1,12 +1,16 @@
+{ pkgs, inputs, ... }:
 {
-  imports = [ ./fonts.nix ];
+  imports = [
+    ./fonts.nix
+  ];
 
-  services.xserver = {
-    enable = true;
-    xkb.layout = "us";
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
-  };
+  # services.xserver = {
+  #   enable = true;
+  #   xkb.layout = "us";
+  #   displayManager.gdm.enable = true;
+  #   desktopManager.gnome.enable = true;
+  # };
+
   # services.displayManager = {
   #   sddm = {
   #     enable = true;
@@ -15,6 +19,27 @@
   #   defaultSession = "plasma";
   # };
   # services.desktopManager.plasma6.enable = true;
+
+  services.xserver = {
+    enable = true;
+    xkb.layout = "us";
+    desktopManager.gnome.enable = true;
+  };
+
+  services.displayManager = {
+    sddm = {
+      enable = true;
+      wayland.enable = true;
+    };
+  };
+
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
+
   services.libinput.enable = true;
 
   # For trash
