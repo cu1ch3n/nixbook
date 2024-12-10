@@ -6,7 +6,6 @@
     ./hyprland
     ./rime
     ./vscode
-    ./wechat
     ./alacritty.nix
     ./chromium.nix
     ./eyedropper.nix
