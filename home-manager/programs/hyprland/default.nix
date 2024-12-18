@@ -14,7 +14,7 @@
     settings = {
       "$mod" = "SUPER";
       "$terminal" = "kitty";
-      "$menu" = "wofi --show drun";
+      "$menu" = "fuzzel";
 
       exec-once = [
         "waybar"

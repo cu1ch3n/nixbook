@@ -1,3 +1,4 @@
+# DEPRECATED !!!
 {
   programs.wofi = {
     enable = true;

@@ -8,10 +8,11 @@
     ./rime
     ./vscode
     ./waybar
-    ./wofi
+    # ./wofi
     ./alacritty.nix
     ./chromium.nix
     ./eyedropper.nix
+    ./fuzzel.nix
     ./git.nix
     ./plasma
     ./ssh.nix
