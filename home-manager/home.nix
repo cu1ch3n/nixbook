@@ -1,7 +1,6 @@
 {
   inputs,
   outputs,
-  config,
   ...
 }:
 {
@@ -10,6 +9,7 @@
     ./dotfiles
     ./programs
     ./packages.nix
+    inputs.nix-colors.homeManagerModules.default
   ];
 
   nixpkgs = {
@@ -39,6 +39,8 @@
   };
 
   xdg.mimeApps.enable = true;
+  fonts.fontconfig.enable = true;
+  colorScheme = inputs.nix-colors.colorSchemes.dracula;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

@@ -6,6 +6,8 @@
     ./hyprland
     ./rime
     ./vscode
+    ./waybar
+    ./wofi
     ./alacritty.nix
     ./chromium.nix
     ./eyedropper.nix

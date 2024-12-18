@@ -1,16 +1,11 @@
 { pkgs, inputs, ... }:
 {
-  imports = [
-    ./waybar.nix
-  ];
-
   home.packages = with pkgs; [
     wlogout
     grimblast
   ];
 
   programs.kitty.enable = true;
-  programs.wofi.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -77,15 +72,15 @@
         gaps_in = 5;
         gaps_out = 20;
 
+        "col.active_border" = "rgb(44475a) rgb(bd93f9) 90deg";
+        "col.inactive_border" = "rgba(44475aaa)";
+        "col.nogroup_border" = "rgba(282a36dd)";
+        "col.nogroup_border_active" = "rgb(bd93f9) rgb(44475a) 90deg";
+        no_border_on_floating = false;
         border_size = 2;
 
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
-
         resize_on_border = false;
-
         allow_tearing = false;
-
         layout = "dwindle";
       };
 
@@ -97,9 +92,11 @@
 
         shadow = {
           enabled = true;
-          range = 4;
+          range = 60;
+          offset = "1 2";
           render_power = 3;
-          color = "rgba(1a1a1aee)";
+          scale = 0.97;
+          color = "rgba(1E202966)";
         };
 
         blur = {
@@ -110,6 +107,15 @@
           vibrancy = 0.1696;
         };
       };
+
+      group = {
+        groupbar = {
+          "col.active" = "rgb(bd93f9) rgb(44475a) 90deg";
+          "col.inactive" = "rgba(282a36dd)";
+        };
+      };
+
+      windowrulev2 = "bordercolor rgb(ff5555),xwayland:1";
 
       animations = {
         enabled = true;
