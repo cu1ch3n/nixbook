@@ -51,6 +51,8 @@
           "$mod, right, movefocus, r"
           "$mod, up, movefocus, u"
           "$mod, down, movefocus, d"
+
+          "$mod, SPACE, fullscreen, 1"
         ]
         ++ (
           # workspaces
