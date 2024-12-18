@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     axel
+    brightnessctl
     discord
     evolution
     firefox
@@ -11,6 +12,7 @@
     inotify-tools
     just
     kdenlive
+    lm_sensors
     logseq
     obsidian
     oh-my-git
