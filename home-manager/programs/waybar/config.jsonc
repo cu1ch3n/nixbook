@@ -51,6 +51,7 @@
 
   "modules-right": [
     "mpris",                // media info
+    "tray",
 
     "custom/left6",
     "pulseaudio",           // output device
