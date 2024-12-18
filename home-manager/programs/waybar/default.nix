@@ -1,6 +1,9 @@
 {
   programs.waybar = {
     enable = true;
+    systemd.enable = true;
+
+    style = builtins.readFile ./style.css;
 
     settings = {
       primary = {
@@ -22,22 +25,22 @@
         ];
 
         clock = {
-          "interval" = 1;
-          "format" = "{:%I:%M %p  %A %b %d}";
+          interval = 1;
+          format = "{:%I:%M %p  %A %b %d}";
         };
 
         pulseaudio = {
-          "format" = "{volume}% {icon}";
-          "format-bluetooth" = "{volume}% {icon}";
-          "format-muted" = "";
-          "format-icons" = {
-            "headphone" = "";
-            "hands-free" = "";
-            "headset" = "";
-            "phone" = "";
-            "portable" = "";
-            "car" = "";
-            "default" = [
+          format = "{volume}% {icon}";
+          format-bluetooth = "{volume}% {icon}";
+          format-muted = "";
+          format-icons = {
+            headphone = "";
+            hands-free = "";
+            headset = "";
+            phone = "";
+            portable = "";
+            car = "";
+            default = [
               ""
               ""
             ];
@@ -47,7 +50,7 @@
           ignored-sinks = [ "Easy Effects Sink" ];
         };
 
-        "wlr/workspaces" = {
+        "hyprland/workspaces" = {
           on-click = "activate";
           on-scroll-up = "hyprctl dispatch workspace e+1";
           on-scroll-down = "hyprctl dispatch workspace e-1";

@@ -17,7 +17,6 @@
       "$menu" = "fuzzel";
 
       exec-once = [
-        "waybar"
         "fcitx5"
         "1password"
       ];
