@@ -19,6 +19,7 @@
       exec-once = [
         "waybar"
         "fcitx5"
+        "1password"
       ];
 
       monitor = [

@@ -27,11 +27,15 @@
   };
 
   services.displayManager = {
+    defaultSession = "hyprland";
     sddm = {
       enable = true;
       wayland.enable = true;
     };
   };
+
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
 
   programs.hyprland = {
     enable = true;
