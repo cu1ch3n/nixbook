@@ -78,6 +78,7 @@
   users.extraGroups.vboxusers.members = [ "chen" ];
 
   programs.nix-ld.enable = true;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   system.stateVersion = "24.11";
 }

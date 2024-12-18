@@ -18,6 +18,7 @@
 
       exec-once = [
         "waybar"
+        "fcitx5"
       ];
 
       monitor = [
