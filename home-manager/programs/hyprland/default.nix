@@ -68,8 +68,8 @@
           )
         );
       general = {
-        gaps_in = 5;
-        gaps_out = 20;
+        gaps_in = 3;
+        gaps_out = 3;
 
         "col.active_border" = "rgb(44475a) rgb(bd93f9) 90deg";
         "col.inactive_border" = "rgba(44475aaa)";
