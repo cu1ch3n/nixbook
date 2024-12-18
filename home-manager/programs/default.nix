@@ -4,6 +4,7 @@
     # ./firefox
     ./gnome
     ./hyprland
+    ./kitty
     ./rime
     ./vscode
     ./waybar
