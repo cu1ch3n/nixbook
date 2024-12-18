@@ -36,6 +36,7 @@
 
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.sddm.enableGnomeKeyring = true;
+  security.polkit.enable = true;
 
   programs.hyprland = {
     enable = true;
