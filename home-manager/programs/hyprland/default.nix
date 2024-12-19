@@ -156,4 +156,24 @@
       };
     };
   };
+
+  programs.swaylock = {
+    enable = true;
+  };
+
+  services.swayidle = {
+    enable = true;
+    systemdTarget = "graphical-session.target";
+    timeouts = [
+      {
+        timeout = 10 * 60;
+        command = "swaylock -f";
+      }
+      {
+        timeout = 11 * 60;
+        command = "hyprctl dispatch dpms off";
+        resumeCommand = "hyprctl dispatch dpms on";
+      }
+    ];
+  };
 }
