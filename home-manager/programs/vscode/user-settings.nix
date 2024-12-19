@@ -11,7 +11,7 @@
   explorer.excludeGitIgnore = true;
   extensions.ignoreRecommendations = true;
   git = {
-    autofetch = true;
+    autofetch = false;
     confirmSync = false;
   };
   haskell.manageHLS = "PATH";
@@ -30,7 +30,7 @@
     serverSettings = {
       nil = {
         formatting = {
-          command = [ "alejandra" ];
+          command = [ "nixfmt-rfc-style" ];
         };
       };
     };
@@ -42,7 +42,7 @@
     zoomLevel = 1;
   };
   workbench = {
-    colorTheme = "Ayu Light";
+    colorTheme = "Dracula Theme";
     iconTheme = "vscode-icons";
   };
   breadcrumbs = {

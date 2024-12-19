@@ -10,6 +10,7 @@
         # akamud.vscode-theme-onelight
         arrterian.nix-env-selector
         banacorn.agda-mode
+        dracula-theme.theme-dracula
         maximedenes.vscoq
         # coq-community.vscoq1
         eamodio.gitlens
