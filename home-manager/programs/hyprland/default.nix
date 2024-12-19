@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     wlogout
-    grimblast
+    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
 
   wayland.windowManager.hyprland = {
