@@ -5,8 +5,9 @@
   ];
 
   home.packages = with pkgs; [
-    dracula-hyprcursor
     wlogout
+    dracula-hyprcursor
+    swaynotificationcenter
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];
 
@@ -22,6 +23,7 @@
       "$menu" = "fuzzel";
 
       exec-once = [
+        "swaync &"
         "fcitx5"
         "1password"
       ];
