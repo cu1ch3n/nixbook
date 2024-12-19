@@ -32,7 +32,6 @@
     via
     wechat-uos
     wineWowPackages.waylandFull
-    yesplaymusic
     zoom-us
   ];
 
