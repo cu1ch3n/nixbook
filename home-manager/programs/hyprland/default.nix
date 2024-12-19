@@ -1,6 +1,11 @@
 { pkgs, inputs, ... }:
 {
+  imports = [
+    ./cursors.nix
+  ];
+
   home.packages = with pkgs; [
+    dracula-hyprcursor
     wlogout
     inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
   ];

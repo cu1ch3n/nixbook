@@ -17,6 +17,7 @@ rec {
   });
   abella-master = pkgs.callPackage ./abella-master { };
   autosubst2 = pkgs.callPackage ./autosubst2.nix { };
+  dracula-hyprcursor = pkgs.callPackage ./dracula-hyprcursor.nix { };
 
   marvin = pkgs.callPackage ./marvin.nix { };
   quartz = pkgs.callPackage ./quartz.nix { };
