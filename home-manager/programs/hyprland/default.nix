@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    ./cursors.nix
+    ./cursor.nix
   ];
 
   home.packages = with pkgs; [
@@ -51,8 +51,8 @@
       bind =
         [
           ", Print, exec, grimblast copy area"
-          "$mod, return, exec, $terminal"
-          "$mod SHIFT, return, exec, $menu"
+          "$mod SHIFT, return, exec, $terminal"
+          "$mod, P, exec, $menu"
           "$mod SHIFT, C, killactive, "
           "$mod SHIFT, Q, exec, wlogout"
 
