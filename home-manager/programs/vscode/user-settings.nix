@@ -30,7 +30,7 @@
     serverSettings = {
       nil = {
         formatting = {
-          command = [ "nixfmt-rfc-style" ];
+          command = [ "nixfmt" ];
         };
       };
     };
