@@ -50,7 +50,7 @@
   ],
 
   "modules-right": [
-    "mpris",                // media info
+    // "mpris",                // media info
     "tray",
 
     "custom/left6",
@@ -316,6 +316,11 @@
     "signal": 20, // I'm not sure what this does
     "min-length": 1,
     "max-length": 1
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 8
   },
 
   "mpris": {
