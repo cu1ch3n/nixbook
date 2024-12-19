@@ -38,6 +38,11 @@
         "$mod, mouse:273, resizewindow"
       ];
 
+      bindel = [
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ];
+
       bind =
         [
           ", Print, exec, grimblast copy area"
@@ -52,6 +57,7 @@
           "$mod, down, movefocus, d"
 
           "$mod, SPACE, fullscreen, 1"
+          ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ]
         ++ (
           # workspaces
