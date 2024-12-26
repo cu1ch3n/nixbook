@@ -57,4 +57,13 @@
     font = "Lat2-Terminus16";
     keyMap = "us";
   };
+
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
 }
