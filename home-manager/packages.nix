@@ -33,6 +33,7 @@
     wechat-uos
     wineWowPackages.waylandFull
     zoom-us
+    zotero
   ];
 
   xdg.mimeApps = {
