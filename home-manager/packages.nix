@@ -4,7 +4,7 @@
     axel
     brightnessctl
     discord
-    evolution
+    # evolution
     firefox
     gh
     gnumake
