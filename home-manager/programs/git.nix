@@ -2,9 +2,9 @@
 {
   programs.git = {
     enable = true;
-    userName = "Chen";
-    userEmail = "i@cuichen.cc";
-    extraConfig = {
+    settings = {
+      user.name = "Chen";
+      user.email = "i@cuichen.cc";
       user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAikGltB46LIhsjvVIa2X8iP2do5CnpVXJojvfGiYsmW";
       gpg = {
         format = "ssh";

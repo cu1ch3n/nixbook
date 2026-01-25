@@ -7,7 +7,7 @@
     nil
     nix-init
     nix-output-monitor
-    nixfmt-rfc-style
+    nixfmt
     nixpkgs-fmt
     nixpkgs-review
     statix

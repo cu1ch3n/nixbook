@@ -11,12 +11,12 @@
     inkscape
     inotify-tools
     just
-    kdenlive
+    # kdePackages.kdenlive
     lm_sensors
     logseq
     obsidian
     oh-my-git
-    okular
+    kdePackages.okular
     qbittorrent
     qq
     quartz

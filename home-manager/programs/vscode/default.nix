@@ -3,7 +3,7 @@
   programs.vscode = {
     enable = true;
     mutableExtensionsDir = true;
-    extensions =
+    profiles.default.extensions =
       with pkgs.vscode-marketplace;
       [
         # akamud.vscode-theme-onedark
@@ -36,6 +36,6 @@
           sha256 = "d5oohDNF44+3FRYOIAv32hSgFvvggugDP+kbOAcYfX0=";
         }
       ];
-    userSettings = import ./user-settings.nix;
+    profiles.default.userSettings = import ./user-settings.nix;
   };
 }

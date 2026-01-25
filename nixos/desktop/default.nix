@@ -23,8 +23,9 @@
   services.xserver = {
     enable = true;
     xkb.layout = "us";
-    desktopManager.gnome.enable = true;
   };
+
+  services.desktopManager.gnome.enable = true;
 
   services.displayManager = {
     defaultSession = "hyprland";

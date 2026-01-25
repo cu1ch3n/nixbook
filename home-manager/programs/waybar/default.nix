@@ -16,7 +16,7 @@
   };
 
   home.packages = with pkgs; [
-    rofi-wayland
+    rofi
     waybar-mpris
   ];
 }

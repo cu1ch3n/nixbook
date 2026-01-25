@@ -71,11 +71,11 @@
   security.sudo.execWheelOnly = true;
   virtualisation.docker.enable = true;
 
-  virtualisation.virtualbox.host = {
-    enable = true;
-    enableExtensionPack = true;
-  };
-  users.extraGroups.vboxusers.members = [ "chen" ];
+  # virtualisation.virtualbox.host = {
+  #   enable = true;
+  #   enableExtensionPack = true;
+  # };
+  # users.extraGroups.vboxusers.members = [ "chen" ];
 
   programs.nix-ld.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
