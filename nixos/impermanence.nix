@@ -44,6 +44,7 @@
         ".config/cabal"
         ".config/chromium"
         ".config/Code"
+        ".config/Cursor"
         ".config/discord"
         ".config/emacs"
         ".config/fcitx5"

@@ -24,7 +24,7 @@
         "htop.desktop"
         "1password.desktop"
         "chromium-browser.desktop"
-        "code.desktop"
+        "cursor.desktop"
         "sublime_text.desktop"
         "sublime_merge.desktop"
         "slack.desktop"
