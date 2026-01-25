@@ -2,7 +2,7 @@
   imports = [
     ./emacs
     # ./firefox
-    # ./gnome
+    ./gnome
     ./hyprland
     ./kitty
     ./rime

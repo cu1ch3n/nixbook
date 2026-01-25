@@ -4,6 +4,8 @@
     ./paperwm.nix
   ];
 
+  dconf.enable = true;
+
   dconf.settings = {
     "org/gnome/shell" = {
       enabled-extensions = [

@@ -28,15 +28,15 @@
   services.desktopManager.gnome.enable = true;
 
   services.displayManager = {
-    defaultSession = "hyprland";
-    sddm = {
+    defaultSession = "gnome";
+    gdm = {
       enable = true;
-      wayland.enable = true;
+      wayland = true;
     };
   };
 
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.sddm.enableGnomeKeyring = true;
+  security.pam.services.gdm.enableGnomeKeyring = true;
   security.polkit.enable = true;
   security.pam.services.swaylock = { };
 
