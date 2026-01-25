@@ -37,6 +37,7 @@
 
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.gdm.enableGnomeKeyring = true;
+  security.pam.services.gdm.fprintAuth = true;
   security.polkit.enable = true;
   security.pam.services.swaylock = { };
 
