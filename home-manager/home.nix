@@ -10,6 +10,7 @@
     ./programs
     ./packages.nix
     inputs.nix-colors.homeManagerModules.default
+    inputs.nix-clawdbot.homeManagerModules.clawdbot
   ];
 
   nixpkgs = {
@@ -19,6 +20,7 @@
       outputs.overlays.master-packages
       inputs.nix-vscode-extensions.overlays.default
       inputs.nur.overlays.default
+      inputs.nix-clawdbot.overlays.default
     ];
     config = {
       allowUnfree = true;

@@ -65,6 +65,9 @@
         ".xwechat"
         ".ssh"
         ".stack"
+        ".codex"
+        ".secrets"
+        ".clawdbot"
       ];
 
       files = [

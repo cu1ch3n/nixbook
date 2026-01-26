@@ -28,6 +28,7 @@
     nix-colors.url = "github:misterio77/nix-colors";
     impermanence.url = "github:nix-community/impermanence";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    nix-clawdbot.url = "github:cu1ch3n/nix-clawdbot";
   };
 
   outputs =

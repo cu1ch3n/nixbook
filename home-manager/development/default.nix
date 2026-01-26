@@ -3,11 +3,11 @@
     ./abella
     ./agda.nix
     ./coq.nix
-    ./frontend.nix
+    # ./frontend.nix
     ./haskell.nix
     ./latex.nix
     ./nix.nix
-    ./python.nix
+    # ./python.nix
     ./typst.nix
   ];
 }

@@ -1,5 +1,7 @@
 {
   imports = [
+    ./clawdbot
+    ./codex
     ./emacs
     # ./firefox
     ./gnome
