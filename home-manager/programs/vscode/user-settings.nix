@@ -203,7 +203,7 @@
     ];
     latex.autoBuild.run = "never";
   };
-  vscoq = {
+  vsrocq = {
     goals = {
       # diff.mode = "on";
       display = "Tabs";

@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs.coqPackages_8_19; [ coq ] ++ (with pkgs; [ vscoq-language-server_2_2_1 ]);
+  home.packages = [ pkgs.rocq-core_9_1 ] ++ (with pkgs; [ vsrocq-language-server-mcp ]);
 
   # A Note from Chen:
   #

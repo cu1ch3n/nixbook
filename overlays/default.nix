@@ -6,16 +6,18 @@
 
   # This one contains whatever you want to overlay
   modifications = final: prev: {
-    vscoq-language-server_2_2_1 =
-      prev.coqPackages_8_20.vscoq-language-server.overrideAttrs
-        (oldAttrs: rec {
-          version = "2.2.1";
+    # vsrocq-mcp: fork of vsrocq with MCP support
+    # Note: When building, nix will error with the correct sha256 hash if this is wrong
+    vsrocq-language-server-mcp =
+      prev.rocqPackages_9_1.vsrocq-language-server.overrideAttrs
+        (oldAttrs: {
+          version = "mcp";
           src = "${
             prev.fetchFromGitHub {
-              owner = "coq-community";
-              repo = "vscoq";
-              rev = "v${version}";
-              sha256 = "sha256-miIVAv/8jlP1pXnoK1MWz4O6nlmb309a8UjcCivbiB4=";
+              owner = "cu1ch3n";
+              repo = "vsrocq-mcp";
+              rev = "main";
+              sha256 = "sha256-ygalIDaJcp9jBoPeFtSFIMKMmZyCUj/XueyVhEIdUec=";
             }
           }/language-server";
         });
