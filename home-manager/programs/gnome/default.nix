@@ -59,6 +59,10 @@
       two-finger-scrolling-enabled = true;
     };
 
+    "org/gnome/desktop/lockdown" = {
+      disable-lock-screen = true;
+    };
+
     "org/gnome/desktop/search-providers" = {
       enabled = [ "org.gnome.Weather.desktop" ];
       disabled = [ "org.gnome.Contacts.desktop" ];
