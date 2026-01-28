@@ -8,6 +8,7 @@
     ./hyprland
     ./kitty
     ./rime
+    ./tmux.nix
     ./vscode
     ./waybar
     # ./wofi
@@ -24,7 +25,6 @@
 
   programs = {
     home-manager.enable = true;
-    tmux.enable = true;
     vim.enable = true;
   };
 }
