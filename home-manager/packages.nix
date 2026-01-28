@@ -8,6 +8,7 @@
     firefox
     gh
     gnumake
+    happy-coder
     inkscape
     inotify-tools
     just
