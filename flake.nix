@@ -29,6 +29,10 @@
     impermanence.url = "github:nix-community/impermanence";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     nix-clawdbot.url = "github:cu1ch3n/nix-clawdbot";
+    ngrok-nix = {
+      url = "github:ngrok/ngrok-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

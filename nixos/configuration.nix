@@ -12,9 +12,11 @@
     ./impermanence.nix
     ./locale.nix
     ./nix.nix
+    ./ngrok.nix
     ./secrets.nix
     ./user.nix
     inputs.home-manager.nixosModules.home-manager
+    inputs.ngrok-nix.nixosModules.ngrok
   ];
 
   nixpkgs = {
@@ -61,6 +63,16 @@
     wget
     v2raya
   ];
+
+  services.openssh = {
+    enable = true;
+    # Allow password authentication (disable if you only use keys)
+    settings.PasswordAuthentication = false;
+    # Allow root login (set to false for better security)
+    settings.PermitRootLogin = "no";
+    # Open firewall port (not strictly needed for ngrok, but useful for local network access)
+    openFirewall = false; # Set to true if you want local network SSH access
+  };
 
   services.ntp.enable = true;
   services.v2raya.enable = true;
