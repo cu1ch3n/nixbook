@@ -1,6 +1,18 @@
 { pkgs, ... }:
 {
-  home.packages = [ pkgs.rocq-core_9_1 ] ++ (with pkgs; [ vsrocq-language-server-mcp ]);
+  home.packages = with pkgs; [
+    opam
+    # Build tools needed for opam to compile OCaml packages
+    gcc
+    gnumake
+    pkg-config
+    # Additional tools that opam packages often need
+    binutils
+    coreutils
+    which
+  ];
+
+  # home.packages = [ pkgs.rocq-core_9_1 ] ++ (with pkgs; [ vsrocq-language-server-mcp ]);
 
   # A Note from Chen:
   #

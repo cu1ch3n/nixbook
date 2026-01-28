@@ -68,6 +68,7 @@
         ".codex"
         ".secrets"
         ".clawdbot"
+        ".opam"
       ];
 
       files = [

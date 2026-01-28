@@ -12,7 +12,8 @@
         arrterian.nix-env-selector
         banacorn.agda-mode
         dracula-theme.theme-dracula
-        maximedenes.vscoq
+        rocq-prover.vsrocq
+        # maximedenes.vscoq
         # coq-community.vscoq1
         eamodio.gitlens
         github.copilot

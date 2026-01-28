@@ -204,6 +204,7 @@
     latex.autoBuild.run = "never";
   };
   vsrocq = {
+    path = "/home/chen/.opam/rocq-9.1.0/bin/vsrocqtop";
     goals = {
       # diff.mode = "on";
       display = "Tabs";
