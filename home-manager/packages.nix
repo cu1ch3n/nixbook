@@ -21,6 +21,7 @@
     qbittorrent
     qq
     quartz
+    claudecodeui
     screenfetch
     slack
     snipaste

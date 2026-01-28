@@ -21,4 +21,5 @@ rec {
 
   marvin = pkgs.callPackage ./marvin.nix { };
   quartz = pkgs.callPackage ./quartz.nix { };
+  claudecodeui = pkgs.callPackage ./claudecodeui.nix { };
 }
