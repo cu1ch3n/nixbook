@@ -8,7 +8,6 @@
     ./hyprland
     ./kitty
     ./rime
-    ./tmux.nix
     ./vscode
     ./waybar
     # ./wofi
@@ -20,6 +19,7 @@
     ./plasma
     ./ssh.nix
     ./wps.nix
+    ./zellij.nix
     ./zsh.nix
   ];
 
