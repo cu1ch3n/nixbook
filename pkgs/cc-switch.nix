@@ -6,28 +6,22 @@
 let
   pname = "cc-switch";
   version = "3.10.3";
-  name = "CC-Switch-${version}";
   src = fetchurl {
     url = "https://github.com/farion1231/cc-switch/releases/download/v${version}/CC-Switch-v${version}-Linux-x86_64.AppImage";
     name = "CC-Switch-${version}.AppImage";
-    sha256 = "sha256-+NjzRMHzhUGppT9pYz+vJYBGdLVxlxzFQ1DEdPKlY2U=";
+    sha256 = "sha256-jxLumycq+PhdaKJv6HiwvwfumE13+6/gkTjbUPVWLAw=";
   };
-  appimageContents = appimageTools.extractType2 { inherit name src; };
+  appimageContents = appimageTools.extractType2 { inherit pname src version; };
 in
 appimageTools.wrapType2 {
-  inherit pname version name src;
-
-  extraPkgs = pkgs: (appimageTools.defaultFhsEnvArgs.multiPkgs pkgs) ++ [ pkgs.libsecret ];
+  inherit pname src version;
 
   extraInstallCommands = ''
-    mv $out/bin/${name} $out/bin/${pname}
-    install -m 444 -D ${appimageContents}/cc-switch.desktop -t $out/share/applications
-    substituteInPlace $out/share/applications/cc-switch.desktop \
-      --replace 'Exec=AppRun --no-sandbox' 'Exec=${pname}'
-    for size in $(ls ${appimageContents}/usr/share/icons/hicolor); do
-      install -m 444 -D ${appimageContents}/usr/share/icons/hicolor/''${size}/apps/cc-switch.png \
-        $out/share/icons/hicolor/''${size}/apps/cc-switch.png
-    done
+    install -m 444 -D "${appimageContents}/CC Switch.desktop" "$out/share/applications/CC Switch.desktop"
+    install -m 444 -D ${appimageContents}/usr/share/icons/hicolor/256x256@2/apps/cc-switch.png \
+      $out/share/icons/hicolor/256x256@2/apps/cc-switch.png
+    substituteInPlace "$out/share/applications/CC Switch.desktop" \
+      --replace 'Exec=AppRun' 'Exec=${pname}'
   '';
 
   meta = with lib; {
@@ -38,3 +32,4 @@ appimageTools.wrapType2 {
     platforms = [ "x86_64-linux" ];
   };
 }
+
