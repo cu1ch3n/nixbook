@@ -60,6 +60,7 @@
     htop
     wget
     v2raya
+    hapi
   ];
 
   services.openssh = {
