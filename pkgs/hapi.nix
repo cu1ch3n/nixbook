@@ -10,19 +10,21 @@ stdenv.mkDerivation rec {
   version = "0.15.1";
 
   src = fetchurl {
-    url = "https://github.com/tiann/hapi/releases/download/v${version}/hapi-linux-x64.tar.gz";
-    sha256 = "sha256-Q8tnvZwJ+9nqpjl79j1k7OKRYmpq2yRXyEd5jX6rm1A="; # Will be replaced by nix
+    url = "https://registry.npmjs.org/@twsxtd/hapi-linux-x64/-/hapi-linux-x64-${version}.tgz";
+    hash = "sha512-FCsISQ5ucoV7Oi16J48OJxsVYmwmJ8MSHDrH0JXU4nEzXwGzryfHcEBdExnaT/WWERFtLZhxoIUxK2EetDjLYA==";
   };
+
+  sourceRoot = "package";
 
   nativeBuildInputs = [
     autoPatchelfHook
   ];
 
-  sourceRoot = ".";
+  dontStrip = true;
 
   installPhase = ''
     runHook preInstall
-    install -m755 -D hapi $out/bin/hapi
+    install -m755 -D bin/hapi $out/bin/hapi
     runHook postInstall
   '';
 

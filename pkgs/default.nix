@@ -24,4 +24,5 @@ rec {
   claudecodeui = pkgs.callPackage ./claudecodeui.nix { };
   hapi = pkgs.callPackage ./hapi.nix { };
   cc-switch = pkgs.callPackage ./cc-switch.nix { };
+  codex = pkgs.callPackage ./codex { };
 }
