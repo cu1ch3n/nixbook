@@ -16,7 +16,6 @@
 
       "/etc/NetworkManager/system-connections"
       "/etc/v2raya"
-      "/etc/ngrok"
     ];
 
     files = [

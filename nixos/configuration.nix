@@ -12,11 +12,9 @@
     ./impermanence.nix
     ./locale.nix
     ./nix.nix
-    ./ngrok.nix
     ./secrets.nix
     ./user.nix
     inputs.home-manager.nixosModules.home-manager
-    inputs.ngrok-nix.nixosModules.ngrok
   ];
 
   nixpkgs = {
@@ -70,7 +68,6 @@
     settings.PasswordAuthentication = false;
     # Allow root login (set to false for better security)
     settings.PermitRootLogin = "no";
-    # Open firewall port (not strictly needed for ngrok, but useful for local network access)
     openFirewall = false; # Set to true if you want local network SSH access
   };
 
