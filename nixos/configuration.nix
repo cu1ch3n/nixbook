@@ -61,6 +61,7 @@
     wget
     v2raya
     hapi
+    cc-switch
   ];
 
   services.openssh = {

@@ -23,4 +23,5 @@ rec {
   quartz = pkgs.callPackage ./quartz.nix { };
   claudecodeui = pkgs.callPackage ./claudecodeui.nix { };
   hapi = pkgs.callPackage ./hapi.nix { };
+  cc-switch = pkgs.callPackage ./cc-switch.nix { };
 }

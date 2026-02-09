@@ -31,6 +31,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/tiann/hapi";
     license = licenses.mit;
     platforms = [ "x86_64-linux" ];
-    maintainers = [ chen ];
+    maintainers = with maintainers; [ chen ];
   };
 }
