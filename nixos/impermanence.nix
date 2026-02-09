@@ -69,6 +69,7 @@
         ".secrets"
         ".clawdbot"
         ".opam"
+        ".hapi"
       ];
 
       files = [

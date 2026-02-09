@@ -22,6 +22,7 @@
     qq
     quartz
     claudecodeui
+    hapi
     screenfetch
     slack
     snipaste
