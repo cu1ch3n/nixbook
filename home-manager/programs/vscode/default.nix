@@ -15,11 +15,11 @@
       eamodio.gitlens
       github.copilot
       github.vscode-pull-request-github
-      haskell.haskell
+      pkgs.vscode-marketplace-release.haskell.haskell
       james-yu.latex-workshop
       jnoortheen.nix-ide
       joeyeremondi.ott
-      justusadam.language-haskell
+      pkgs.vscode-marketplace-release.haskell.language-haskell
       myriad-dreamin.tinymist
       richie5um2.vscode-sort-json
       skellock.just
