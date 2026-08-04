@@ -19,6 +19,7 @@
 
   programs = {
     home-manager.enable = true;
+    opencode.enable = true;
     vim.enable = true;
   };
 }
