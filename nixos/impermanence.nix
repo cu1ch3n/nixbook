@@ -41,6 +41,7 @@
         "Research"
         "Development"
         "VirtualMachines"
+        "Workspace"
 
         ".config/1Password"
         ".config/ai.opencode.desktop"
@@ -81,6 +82,7 @@
 
         ".cabal"
         ".cursor"
+        ".elan"
         ".mozilla"
         ".wine"
         ".xwechat"

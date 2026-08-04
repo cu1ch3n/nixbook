@@ -22,6 +22,7 @@
     ghostty.enable = true;
     home-manager.enable = true;
     opencode.enable = true;
+    tmux.enable = true;
     vim.enable = true;
   };
 

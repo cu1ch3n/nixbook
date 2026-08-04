@@ -6,6 +6,7 @@
     # ./frontend.nix
     ./haskell.nix
     ./latex.nix
+    ./lean.nix
     ./nix.nix
     # ./python.nix
     ./typst.nix
