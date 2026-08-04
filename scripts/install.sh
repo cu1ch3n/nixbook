@@ -748,7 +748,7 @@ disko_path="$(
 )"
 disko_bin="${disko_path}/bin/disko"
 mkpasswd_path="$(
-  nix "${nix_flags[@]}" build "${flake_ref}#mkpasswd" \
+  nix "${nix_flags[@]}" build "${flake_ref}#mkpasswd^out" \
     --out-link "${install_data_dir}/mkpasswd" \
     --print-out-paths
 )"
