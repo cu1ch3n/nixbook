@@ -43,6 +43,7 @@
         "VirtualMachines"
 
         ".config/1Password"
+        ".config/ai.opencode.desktop"
         ".config/chromium"
         ".config/Code"
         ".config/Cursor"
@@ -50,6 +51,7 @@
         ".config/emacs"
         ".config/fcitx5"
         ".config/gh"
+        ".config/ghostty"
         ".config/inkscape"
         ".config/Kingsoft"
         ".config/Mullvad VPN"

@@ -16,6 +16,7 @@
     lm_sensors
     obsidian
     oh-my-git
+    opencode-desktop
     kdePackages.okular
     qbittorrent
     qq
