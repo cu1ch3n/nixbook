@@ -3,25 +3,25 @@
     enable = true;
     enableDefaultConfig = false;
 
-    matchBlocks = {
+    settings = {
       # Default GitHub (routes via ssh.github.com:443)
       "github.com" = {
-        hostname = "ssh.github.com";
-        port = 443;
-        user = "git";
+        HostName = "ssh.github.com";
+        Port = 443;
+        User = "git";
       };
 
       # Bot identity for pushing as cu1ch3n-bot
       "github.com-bot" = {
-        hostname = "ssh.github.com";
-        port = 443;
-        user = "git";
-        identityFile = "~/.ssh/id_ed25519_cu1ch3n_bot";
-        extraOptions.IdentitiesOnly = "yes";
+        HostName = "ssh.github.com";
+        Port = 443;
+        User = "git";
+        IdentityFile = "~/.ssh/id_ed25519_cu1ch3n_bot";
+        IdentitiesOnly = true;
       };
 
       "*" = {
-        extraOptions.IdentityAgent = "~/.1password/agent.sock";
+        IdentityAgent = "~/.1password/agent.sock";
       };
     };
   };

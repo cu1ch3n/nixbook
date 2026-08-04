@@ -8,18 +8,20 @@
     hideMounts = true;
 
     directories = [
+      "/etc/mullvad-vpn"
+      "/etc/NetworkManager/system-connections"
+      "/etc/v2raya"
+
       "/var/lib/bluetooth"
+      "/var/lib/docker"
       "/var/lib/fprint"
       "/var/lib/nixos"
       "/var/lib/systemd"
       "/var/lib/waydroid"
-
-      "/etc/NetworkManager/system-connections"
-      "/etc/v2raya"
     ];
 
     files = [
-      # "/etc/machine-id"
+      "/etc/machine-id"
     ];
 
     users.chen = {
@@ -41,7 +43,6 @@
         "VirtualMachines"
 
         ".config/1Password"
-        ".config/cabal"
         ".config/chromium"
         ".config/Code"
         ".config/Cursor"
@@ -49,36 +50,53 @@
         ".config/emacs"
         ".config/fcitx5"
         ".config/gh"
+        ".config/inkscape"
+        ".config/Kingsoft"
         ".config/Mullvad VPN"
+        ".config/obsidian"
         ".config/QQ"
         ".config/Slack"
-        ".config/sublime-text/Local"
-        ".config/yesplaymusic"
+        ".config/Snipaste"
+        ".config/spotify"
+        ".config/strawberry"
+        ".config/sublime-merge"
+        ".config/vlc"
         ".config/qBittorrent"
         ".config/VirtualBox"
+        ".local/share/fcitx5"
+        ".local/share/Kingsoft"
         ".local/share/keyrings"
+        ".local/share/okular"
         ".local/share/qBittorrent"
         ".local/share/Steam"
+        ".local/share/strawberry"
+        ".local/share/TelegramDesktop"
         ".local/share/Trash"
         ".local/share/waydroid"
 
+        ".cabal"
+        ".cursor"
+        ".mozilla"
+        ".wine"
         ".xwechat"
+        ".zoom"
+        ".zotero"
         ".ssh"
         ".stack"
         ".codex"
         ".secrets"
-        ".clawdbot"
         ".opam"
         ".hapi"
+        "Zotero"
       ];
 
       files = [
+        ".config/okularrc"
+        ".config/zoomus.conf"
         ".zsh_history"
       ];
     };
   };
-
-  environment.etc.machine-id.text = "67803336e24344e9aa58ea47b51180d0";
 
   programs.fuse.userAllowOther = true;
 }

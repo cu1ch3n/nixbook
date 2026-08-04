@@ -3,21 +3,32 @@
   stdenvNoCC,
   fetchFromGitHub,
 }:
+let
+  defaultCustom = builtins.toFile "default.custom.yaml" ''
+    patch:
+      schema_list:
+        - schema: rime_ice
+      "menu/page_size": 9
+  '';
+in
 stdenvNoCC.mkDerivation (_: {
   pname = "rime-ice";
-  version = "2023-12-02";
+  version = "2026.06.30";
 
   src = fetchFromGitHub {
     owner = "iDvel";
     repo = "rime-ice";
-    rev = "bfe1fef6470e01e212b9ba0e0b072ecf5872df77";
-    hash = "sha256-YbCAwht4skTGLhpQes0ZyXVgZ8kRwdMLUmUmU7YjMY8=";
+    rev = "6810e8916d160498620a16fef2135956fecbd485";
+    hash = "sha256-HReBFYih39ohqZ2UAX6wPjjh0KuIauJPSOjk6ZXidss=";
   };
 
   installPhase = ''
+    runHook preInstall
     mkdir -p $out/share/rime-data
-    cp -r *  $out/share/rime-data
-    cp ${./configs/default.yaml} $out/share/rime-data/default.yaml
+    cp -r * $out/share/rime-data
+    install -m 0644 ${defaultCustom} \
+      $out/share/rime-data/default.custom.yaml
+    runHook postInstall
   '';
 
   meta = {

@@ -1,12 +1,12 @@
 {
   inputs,
   outputs,
-  lib,
   pkgs,
   ...
 }:
 {
   imports = [
+    ../scripts/disko.nix
     ./desktop
     ./hardware.nix
     ./impermanence.nix
@@ -14,6 +14,7 @@
     ./nix.nix
     ./secrets.nix
     ./user.nix
+    inputs.disko.nixosModules.disko
     inputs.home-manager.nixosModules.home-manager
   ];
 
@@ -21,7 +22,6 @@
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
-      outputs.overlays.master-packages
       inputs.nur.overlays.default
     ];
     config = {
@@ -43,42 +43,51 @@
     firewall.enable = true;
   };
 
-  systemd.services.wpa_supplicant.environment.OPENSSL_CONF = pkgs.writeText "openssl.cnf" ''
-    openssl_conf = openssl_init
-    [openssl_init]
-    ssl_conf = ssl_sect
-    [ssl_sect]
-    system_default = system_default_sect
-    [system_default_sect]
-    Options = UnsafeLegacyRenegotiation
-    [system_default_sect]
-    CipherString = Default:@SECLEVEL=0
-  '';
-
-  environment.systemPackages = with pkgs; [
-    git
-    htop
-    wget
-    v2raya
-    hapi
-    cc-switch
-  ];
-
-  services.openssh = {
-    enable = true;
-    # Allow password authentication (disable if you only use keys)
-    settings.PasswordAuthentication = false;
-    # Allow root login (set to false for better security)
-    settings.PermitRootLogin = "no";
-    openFirewall = false; # Set to true if you want local network SSH access
+  environment = {
+    systemPackages = with pkgs; [
+      git
+      htop
+      wget
+      v2raya
+      hapi
+      cc-switch
+    ];
+    sessionVariables.NIXOS_OZONE_WL = "1";
   };
 
-  services.ntp.enable = true;
-  services.v2raya.enable = true;
-  services.mullvad-vpn = {
-    enable = true;
-    package = pkgs.mullvad-vpn;
+  services = {
+    # VIA ships the hidraw access rule in its package; Home Manager alone cannot
+    # install that system-level rule.
+    udev.packages = [ pkgs.via ];
+
+    openssh = {
+      enable = true;
+      hostKeys = [
+        {
+          path = "/persist/etc/ssh/ssh_host_ed25519_key";
+          type = "ed25519";
+        }
+        {
+          path = "/persist/etc/ssh/ssh_host_rsa_key";
+          type = "rsa";
+          bits = 4096;
+        }
+      ];
+      settings = {
+        PasswordAuthentication = false;
+        PermitRootLogin = "no";
+      };
+      openFirewall = false;
+    };
+
+    ntp.enable = true;
+    v2raya.enable = true;
+    mullvad-vpn = {
+      enable = true;
+      gui.enable = true;
+    };
   };
+
   security.sudo.execWheelOnly = true;
   virtualisation.docker.enable = true;
 
@@ -89,7 +98,6 @@
   # users.extraGroups.vboxusers.members = [ "chen" ];
 
   programs.nix-ld.enable = true;
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "26.05";
 }
