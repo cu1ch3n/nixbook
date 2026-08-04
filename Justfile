@@ -17,7 +17,7 @@ clean:
   nix-collect-garbage -d
 
 update:
-  nix flake update
+  nix flake update --commit-lock-file
 
 update-codex:
   nix flake update nixpkgs-master
