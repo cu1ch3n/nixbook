@@ -19,7 +19,7 @@
 
     initContent = ''
       [[ ! -r '/home/chen/.opam/opam-init/init.zsh' ]] || source '/home/chen/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
-      
+
       # Configure opam for NixOS: disable sandboxing to allow access to Nix-provided build tools
       if command -v opam > /dev/null 2>&1; then
         # Disable opam sandboxing for NixOS compatibility

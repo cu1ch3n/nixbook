@@ -2,33 +2,33 @@
   description = "Chen's NixBook configurations";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-master.url = "github:nixos/nixpkgs/master";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
+    disko = {
+      url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager/trunk";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hardware = {
+      url = "github:nixos/nixos-hardware";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    impermanence = {
+      url = "github:nix-community/impermanence";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-
-    nur.url = "github:nix-community/NUR";
-    hyprland.url = "github:hyprwm/Hyprland";
-    hardware.url = "github:nixos/nixos-hardware";
-    nix-colors.url = "github:misterio77/nix-colors";
-    impermanence.url = "github:nix-community/impermanence";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-    nix-clawdbot.url = "github:cu1ch3n/nix-clawdbot";
   };
 
   outputs =
@@ -41,15 +41,24 @@
       inherit (self) outputs;
       systems = [ "x86_64-linux" ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
+      formatterSystems = systems ++ [
+        "aarch64-darwin"
+      ];
     in
     {
-      packages = forAllSystems (system: import ./pkgs { pkgs = nixpkgs.legacyPackages.${system}; });
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt);
+      packages = forAllSystems (
+        system:
+        import ./pkgs { pkgs = nixpkgs.legacyPackages.${system}; }
+        // {
+          disko-install = inputs.disko.packages.${system}.disko-install;
+          mkpasswd = nixpkgs.legacyPackages.${system}.mkpasswd;
+        }
+      );
+      formatter = nixpkgs.lib.genAttrs formatterSystems (
+        system: nixpkgs.legacyPackages.${system}.nixfmt-tree
+      );
 
       overlays = import ./overlays { inherit inputs; };
-
-      nixosModules = import ./modules/nixos;
-      homeManagerModules = import ./modules/home-manager;
 
       # nixos-rebuild --flake .#nixbook
       nixosConfigurations = {

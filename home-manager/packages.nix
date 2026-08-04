@@ -14,16 +14,12 @@
     just
     # kdePackages.kdenlive
     lm_sensors
-    logseq
     obsidian
     oh-my-git
     kdePackages.okular
     qbittorrent
     qq
     quartz
-    claudecodeui
-    hapi
-    screenfetch
     slack
     snipaste
     spotify
@@ -34,7 +30,7 @@
     vlc
     via
     wechat-uos
-    wineWowPackages.waylandFull
+    wineWow64Packages.waylandFull
     zoom-us
     zotero
   ];

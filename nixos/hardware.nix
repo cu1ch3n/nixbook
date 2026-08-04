@@ -1,6 +1,5 @@
 {
   inputs,
-  config,
   lib,
   pkgs,
   ...
@@ -14,113 +13,58 @@
     inputs.hardware.nixosModules.common-pc-laptop-ssd
   ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    # Use the systemd-boot EFI boot loader.
+    loader = {
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 5;
+      };
+      efi.canTouchEfiVariables = true;
+    };
 
-  hardware.enableRedistributableFirmware = lib.mkDefault true;
-  boot.initrd.availableKernelModules = [
-    "nvme"
-    "xhci_pci"
-    "thunderbolt"
-    "usb_storage"
-    "sd_mod"
-  ];
-  boot.initrd.kernelModules = [ "synaptics_usb" ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.extraModulePackages = [ ];
+    initrd = {
+      availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+        "thunderbolt"
+        "usb_storage"
+        "sd_mod"
+      ];
+      kernelModules = [ "synaptics_usb" ];
+    };
+    kernelModules = [ "kvm-amd" ];
+    kernelPackages = pkgs.linuxPackages_latest;
+    extraModulePackages = [ ];
 
-  # disable Scatter/Gather APU recently enabled by default,
-  # which results in white screen after display reconfiguration
-  boot.kernelParams = [
-    "amdgpu.sg_display=0"
-    "amd_pstate=active"
-  ];
-
-  fileSystems."/" = {
-    device = "none";
-    fsType = "tmpfs";
-    options = [
-      "defaults"
-      "size=16G"
-      "mode=755"
-    ];
+    # Disable Scatter/Gather APU, which causes a white screen after display
+    # reconfiguration on this machine.
+    kernelParams = [ "amdgpu.sg_display=0" ];
+    tmp.cleanOnBoot = true;
   };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-partlabel/disk-main-ESP";
-    fsType = "vfat";
-    options = [
-      "fmask=0022"
-      "dmask=0022"
-    ];
+  hardware = {
+    enableRedistributableFirmware = lib.mkDefault true;
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
   };
 
-  boot.initrd.luks.devices."crypted".device = "/dev/disk/by-partlabel/disk-main-luks";
-
-  fileSystems."/nix" = {
-    device = "/dev/mapper/crypted";
-    fsType = "btrfs";
-    options = [
-      "subvol=nix"
-      "compress=zstd"
-      "noatime"
-    ];
-  };
-
-  fileSystems."/persist" = {
-    device = "/dev/mapper/crypted";
-    fsType = "btrfs";
-    options = [
-      "subvol=persist"
-      "compress=zstd"
-      "noatime"
-    ];
-    neededForBoot = true;
-  };
-
-  fileSystems."/swap" = {
-    device = "/dev/mapper/crypted";
-    fsType = "btrfs";
-    options = [
-      "subvol=swap"
-      "noatime"
-    ];
-  };
-
-  fileSystems."/tmp" = {
-    device = "/dev/mapper/crypted";
-    fsType = "btrfs";
-    options = [
-      "subvol=tmp"
-      "noatime"
-    ];
-  };
-
-  fileSystems."/var/log" = {
-    device = "/dev/mapper/crypted";
-    fsType = "btrfs";
-    options = [
-      "subvol=log"
-      "compress=zstd"
-      "noatime"
-    ];
-    neededForBoot = true;
-  };
-
-  boot.tmp.cleanOnBoot = true;
-  swapDevices = [ { device = "/swap/swapfile"; } ];
-
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
-
-  services.xserver = {
-    videoDrivers = [ "amdgpu" ];
+  # Disko owns the filesystem, bind-mount, and LUKS declarations. These mounts
+  # must be available before the Nix store, impermanence, and journald start.
+  fileSystems = {
+    "/persist".neededForBoot = true;
+    "/nix" = {
+      neededForBoot = true;
+      depends = [ "/persist" ];
+    };
+    "/var/log" = {
+      neededForBoot = true;
+      depends = [ "/persist" ];
+    };
+    "/tmp".depends = [ "/persist" ];
+    "/swap".depends = [ "/persist" ];
   };
 
   # sound = {
@@ -133,26 +77,10 @@
   #   support32Bit = true;
   # };
 
-  # Fingerprint
-  services.fprintd = {
-    enable = true;
-  };
-  systemd.services.fprintd = {
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig.Type = "simple";
-  };
-
-  # Bluetooth
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-
-  services.printing = {
-    enable = true;
-    drivers = [ ];
+  services = {
+    fprintd.enable = true;
+    printing.enable = true;
   };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

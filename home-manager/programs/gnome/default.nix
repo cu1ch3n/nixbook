@@ -16,7 +16,6 @@
         "gsconnect@andyholmes.github.io"
         "kimpanel@kde.org"
         "launch-new-instance@gnome-shell-extensions.gcampax.github.com"
-        "pano@elhan.io"
       ];
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
@@ -25,13 +24,12 @@
         "1password.desktop"
         "chromium-browser.desktop"
         "cursor.desktop"
-        "sublime_text.desktop"
         "sublime_merge.desktop"
         "slack.desktop"
         "discord.desktop"
         "com.tencent.wechat.desktop"
         "Zoom.desktop"
-        "yesplaymusic.desktop"
+        "org.strawberrymusicplayer.strawberry.desktop"
         "steam.desktop"
         "Waydroid.desktop"
         "v2raya.desktop"
@@ -60,7 +58,7 @@
     };
 
     "org/gnome/desktop/lockdown" = {
-      disable-lock-screen = true;
+      disable-lock-screen = false;
     };
 
     "org/gnome/desktop/search-providers" = {
@@ -83,12 +81,6 @@
 
     "org/gnome/shell/extensions/kimpanel" = {
       font = "Source Han Sans SC 11";
-    };
-
-    "org/gnome/shell/extensions/pano" = {
-      paste-on-select = false;
-      play-audio-on-copy = false;
-      send-notification-on-copy = false;
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
@@ -119,7 +111,6 @@
       gsconnect
       kimpanel
       libnotify
-      pano
       phinger-cursors
     ];
 

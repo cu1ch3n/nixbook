@@ -12,6 +12,5 @@
     nixpkgs-review
     statix
     yarn
-    yarn2nix
   ];
 }
