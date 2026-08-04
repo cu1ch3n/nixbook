@@ -48,10 +48,20 @@
     {
       packages = forAllSystems (
         system:
-        import ./pkgs { pkgs = nixpkgs.legacyPackages.${system}; }
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+          vscodePkgs = import nixpkgs {
+            inherit system;
+            overlays = [ inputs.nix-vscode-extensions.overlays.default ];
+            config.allowUnfree = true;
+          };
+        in
+        import ./pkgs { inherit pkgs; }
         // {
-          disko-install = inputs.disko.packages.${system}.disko-install;
-          mkpasswd = nixpkgs.legacyPackages.${system}.mkpasswd;
+          disko = inputs.disko.packages.${system}.disko;
+          inherit (pkgs) mkpasswd nixos-install-tools psmisc;
+          vscode-haskell = vscodePkgs.vscode-marketplace-release.haskell.haskell;
+          vscode-language-haskell = vscodePkgs.vscode-marketplace-release.haskell.language-haskell;
         }
       );
       formatter = nixpkgs.lib.genAttrs formatterSystems (
@@ -59,6 +69,21 @@
       );
 
       overlays = import ./overlays { inherit inputs; };
+
+      diskoConfigurations.nixbook =
+        {
+          device,
+          lib,
+          ...
+        }:
+        let
+          module = import ./scripts/disko.nix { inherit lib; };
+        in
+        {
+          disko.devices = lib.recursiveUpdate module.disko.devices {
+            disk.main.device = device;
+          };
+        };
 
       # nixos-rebuild --flake .#nixbook
       nixosConfigurations = {

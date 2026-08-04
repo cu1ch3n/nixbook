@@ -45,12 +45,15 @@ The installer makes sure that UEFI is active and Secure Boot is disabled before 
 
 ## Installation
 
-The configuration includes `texliveFull`, Haskell, Wine, and many desktop applications.
-With the current lock file, the dry run downloads approximately 11 GiB.
-It uses approximately 35 GiB in the Nix store.
-Make sure that the installer has sufficient space in `/nix/store`.
-The installer builds the exact system before it erases the disk.
-A build or space failure occurs before disk erasure.
+The full configuration includes `texliveFull`, Haskell, Wine, and many desktop applications.
+The current lock file requires approximately 11 GiB of downloads and 35 GiB in the Nix store.
+The installer writes this complete Nix store directly to the encrypted target disk.
+The live Nix store does not contain the complete system closure.
+It contains the installation tools, flake inputs, and selected preflight outputs.
+
+The target disk must have a capacity of at least 128 GiB.
+A device sold as 128 GB is smaller than 128 GiB and does not meet this limit.
+If an old attempt filled the live Nix store, restart the installation media before you run this installer.
 
 Replace the example path with the stable path for the complete target disk:
 
@@ -62,21 +65,49 @@ The installer does these operations:
 
 1. It accepts only a direct whole-disk link under `/dev/disk/by-id/`.
 2. It records the path, size, serial number, WWN, and device number.
-3. It rejects small, mounted, mapped, open, or active swap devices.
+3. It rejects disks smaller than 128 GiB, mounted disks, mapped disks, open disks, and active swap devices.
 4. It rejects label conflicts and detected LVM, Linux RAID, or ZFS members.
-5. It makes sure that UEFI, Secure Boot, and the EFI variable filesystem are safe.
+5. It makes sure that UEFI is active, Secure Boot is disabled, and EFI variables are writable.
 6. It stores an immutable flake snapshot under a garbage-collection root.
-7. It uses Disko `--dry-run` to build the system and partition script without disk changes.
-8. It makes sure that the disk has space for the system, swap, and free-space margin.
-9. It reads the root, `chen`, and LUKS passwords twice.
-10. It makes sure that the disk identity is unchanged and shows the complete device tree.
-11. It requires the exact text `ERASE /dev/disk/by-id/...` before disk erasure.
-12. Disko partitions the disk, copies the password hashes and machine ID, and installs NixOS.
+7. It builds the pinned Disko and `nixos-install` tools.
+8. It builds the two pinned Haskell extensions, including the replacement for the old failed URL.
+9. It evaluates the full system and calculates the build plan.
+10. It reads the root, `chen`, and LUKS passwords twice.
+11. It makes sure that the disk identity is unchanged and shows the complete device tree.
+12. It requires the exact text `ERASE /dev/disk/by-id/...` before disk erasure.
+13. Disko formats and mounts the target disk.
+14. The installer makes sure that `/nix` is a bind mount from the encrypted ext4 filesystem.
+15. It creates and activates the 32 GiB swap file on the target disk.
+16. `nixos-install` builds the complete system in the target Nix store and installs systemd-boot.
 
 Disconnect all disks that are not the installation media or the target disk.
 This action prevents ambiguous labels, mappings, and multi-device filesystems.
 
-After installation, restart the computer and remove the installation media.
+CAUTION: Do not assume that the build plan proves a complete build.
+The plan does not download or build the complete package closure.
+It cannot find every unavailable URL or build failure before disk erasure.
+
+After Disko completes, a network, download, build, or space failure can leave the disk unbootable.
+Do not run the formatting command again after such a failure.
+Fix the cause.
+Then use the resume command with the same disk path:
+
+```console
+./scripts/install.sh --resume /dev/disk/by-id/nvme-EXAMPLE
+```
+
+The resume command opens the existing LUKS container and mounts its filesystems.
+It does not format partitions.
+It reuses all valid files in the target Nix store.
+It asks for the root and `chen` passwords again.
+It replaces their password hashes.
+
+If Disko does not complete, the layout can be incomplete.
+Inspect the disk before you start a new formatting attempt.
+
+After a successful installation, remove the installation media.
+Then restart the computer.
+The computer starts the complete configuration. A second installation stage is not necessary.
 
 ## First boot
 

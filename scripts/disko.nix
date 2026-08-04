@@ -38,8 +38,8 @@
 
     disk.main = {
       type = "disk";
-      # The installer overrides this with `--disk main /dev/disk/by-id/...`.
-      # Keeping an invalid default prevents an accidental unqualified wipe.
+      # The standalone installer wrapper replaces this value with its required
+      # `device` argument. This invalid default prevents an unqualified wipe.
       device = lib.mkDefault "/dev/disk/by-id/CHANGE-ME";
 
       content = {
